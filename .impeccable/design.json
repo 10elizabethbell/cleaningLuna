@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T01:54:32.901217+00:00",
+  "title": "Design System: Cleaning Luna LLC",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Monogram Navy",
+        "tonalRamp": [
+          "#082145",
+          "#0d3772",
+          "#124ca0",
+          "#1762ce",
+          "#317ce8",
+          "#689fee",
+          "#a3c5f5",
+          "#dfebfb"
+        ]
+      },
+      "navy-2": {
+        "role": "primary",
+        "displayName": "Group Navy",
+        "tonalRamp": [
+          "#0b2141",
+          "#13376d",
+          "#1a4d98",
+          "#2263c4",
+          "#3b7cdd",
+          "#6f9fe6",
+          "#a8c5f0",
+          "#e1ebfa"
+        ]
+      },
+      "navy-ink": {
+        "role": "primary",
+        "displayName": "Ink Navy",
+        "tonalRamp": [
+          "#0a2042",
+          "#11366e",
+          "#184b9a",
+          "#1f60c6",
+          "#397ae0",
+          "#6e9de8",
+          "#a7c4f1",
+          "#e0eafa"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Crescent Gold",
+        "tonalRamp": [
+          "#402f0d",
+          "#6a4e16",
+          "#946d1e",
+          "#bf8c27",
+          "#d8a540",
+          "#e3bd73",
+          "#eed7aa",
+          "#f9f1e1"
+        ]
+      },
+      "gold-hi": {
+        "role": "secondary",
+        "displayName": "Moonlight Gold",
+        "tonalRamp": [
+          "#463407",
+          "#75570b",
+          "#a37a0f",
+          "#d29d14",
+          "#ebb72d",
+          "#f1ca65",
+          "#f6dfa2",
+          "#fcf4de"
+        ]
+      },
+      "gold-deep": {
+        "role": "secondary",
+        "displayName": "Brass Gold",
+        "tonalRamp": [
+          "#422e0a",
+          "#6e4d11",
+          "#9b6c18",
+          "#c78b1f",
+          "#e0a538",
+          "#e9bd6d",
+          "#f1d7a7",
+          "#faf1e0"
+        ]
+      },
+      "accent": {
+        "role": "tertiary",
+        "displayName": "Form Blue",
+        "tonalRamp": [
+          "#0b2041",
+          "#12366d",
+          "#1a4b99",
+          "#2161c4",
+          "#3b7ade",
+          "#6f9ee7",
+          "#a8c4f0",
+          "#e0eafa"
+        ]
+      },
+      "wall": {
+        "role": "neutral",
+        "displayName": "Painted Wall",
+        "tonalRamp": [
+          "#392c13",
+          "#604920",
+          "#86662d",
+          "#ac8339",
+          "#c69d53",
+          "#d5b781",
+          "#e6d3b2",
+          "#f6f0e4"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Fresh Paper",
+        "tonalRamp": [
+          "#4c3700",
+          "#805b00",
+          "#b28000",
+          "#e6a400",
+          "#ffbd1a",
+          "#ffcf57",
+          "#ffe299",
+          "#fff5db"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Night Sky",
+        "tonalRamp": [
+          "#0a1f43",
+          "#11336f",
+          "#17489b",
+          "#1e5cc8",
+          "#3776e1",
+          "#6d9ae9",
+          "#a6c2f2",
+          "#e0eafa"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(10,42,88,.14)",
+        "tonalRamp": [
+          "#082145",
+          "#0d3772",
+          "#124ca0",
+          "#1762ce",
+          "#317ce8",
+          "#689fee",
+          "#a3c5f5",
+          "#dfebfb"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet Slate",
+        "tonalRamp": [
+          "#1d232f",
+          "#313b4f",
+          "#44536e",
+          "#586a8e",
+          "#7184a7",
+          "#97a5bf",
+          "#c0c8d8",
+          "#e9ecf1"
+        ]
+      },
+      "night-text": {
+        "role": "neutral",
+        "displayName": "Starlight",
+        "tonalRamp": [
+          "#152138",
+          "#23375d",
+          "#314d82",
+          "#3f63a7",
+          "#587dc0",
+          "#859fd1",
+          "#b5c5e3",
+          "#e5ebf5"
+        ]
+      },
+      "night-muted": {
+        "role": "neutral",
+        "displayName": "Dim Starlight",
+        "tonalRamp": [
+          "#192233",
+          "#2a3955",
+          "#3b5078",
+          "#4c669a",
+          "#6580b3",
+          "#8ea2c7",
+          "#bbc7dd",
+          "#e7ebf3"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error Red",
+        "tonalRamp": [
+          "#420e0b",
+          "#6d1712",
+          "#99201a",
+          "#c52a21",
+          "#de433a",
+          "#e7756f",
+          "#f0aca8",
+          "#fae2e0"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; second half italic Brass Gold."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2s; close h2 scales to clamp(2.3rem, 9vw, 4rem)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Italic service-group names; upright step titles on night."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, legends; buttons use 700/17px."
+      }
+    },
+    "shadows": [
+      {
+        "name": "gold-lift",
+        "value": "0 8px 18px -10px rgba(10,34,70,.45)",
+        "purpose": "Under the gold button on day grounds only."
+      },
+      {
+        "name": "baseboard",
+        "value": "0 4px 8px rgba(60,35,10,.28)",
+        "purpose": "Painted baseboard across the top of the hero floor."
+      },
+      {
+        "name": "threshold",
+        "value": "0 3px 6px rgba(80,50,10,.25)",
+        "purpose": "Under the brass threshold that ends the hero."
+      },
+      {
+        "name": "halo",
+        "value": "0 0 0 3px rgba(42,111,219,.18)",
+        "purpose": "Inputs and chips on hover/focus."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state",
+        "value": "0.2s ease",
+        "purpose": "Button fill and arrow-circle fill transitions."
+      },
+      {
+        "name": "press",
+        "value": "transform 0.15s, translateY(1px)",
+        "purpose": "Button press."
+      },
+      {
+        "name": "field",
+        "value": "0.15s ease",
+        "purpose": "Input and chip border/halo transitions."
+      },
+      {
+        "name": "hint-fade",
+        "value": "opacity 0.6s",
+        "purpose": "Floor hint disappears after first mop."
+      },
+      {
+        "name": "chip-burst",
+        "value": "600ms",
+        "purpose": "Four gold sparkles when a service chip is ticked."
+      },
+      {
+        "name": "TUNE.regrow",
+        "value": "0.0035 per frame",
+        "purpose": "Dust creep-back on the hero floor."
+      },
+      {
+        "name": "TUNE.wetFade",
+        "value": "0.022",
+        "purpose": "Wet streak drying rate."
+      },
+      {
+        "name": "TUNE.idleMs",
+        "value": "2600ms",
+        "purpose": "Stillness before the mop resumes autopilot figure-eights."
+      },
+      {
+        "name": "TUNE.sparkleChance",
+        "value": "0.1",
+        "purpose": "Gold sparkles left behind the moving mop per frame."
+      },
+      {
+        "name": "TUNE.stars",
+        "value": "34 phone / 80 desktop",
+        "purpose": "Stars per night section; spring aside within ~110px of the pointer, avoid text."
+      },
+      {
+        "name": "TUNE.seamSpeed",
+        "value": "1.0",
+        "purpose": "Drift speed of the gold seam lines."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "still frame",
+        "purpose": "Floor, stars and seams draw once; chip burst and smooth scroll off."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "max-width 379px"
+      },
+      {
+        "name": "md",
+        "value": "760px"
+      },
+      {
+        "name": "steps",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Gold pill for the one action that matters (Book on WhatsApp / Send on WhatsApp).",
+      "html": "<a class=\"ds-btn ds-btn-gold\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9z\"/></svg>Book on WhatsApp</a>",
+      "css": ":host{--navy:#0a2a58;--navy-2:#13386f;--navy-ink:#0b2246;--night:#0c2550;--gold:#d6a035;--gold-hi:#f2cf74;--gold-deep:#8f6416;--wall:#f8f3ea;--paper:#fffdf8;--line:rgba(10,42,88,.14);--muted:#4a5a78;--night-text:#dfe6f3;--night-muted:#b4c1da;--accent:#2a6fdb;--serif:\"Iowan Old Style\",\"Palatino Linotype\",Palatino,\"Book Antiqua\",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;font:700 17px/1 var(--sans);text-decoration:none;border:2px solid var(--navy);cursor:pointer;transition:background .2s,color .2s,transform .15s} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px} .ds-btn-gold{background:var(--gold);color:var(--navy-ink);box-shadow:0 8px 18px -10px rgba(10,34,70,.45)} .ds-btn-gold:hover,.ds-btn-gold:active{background:var(--gold-hi)}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Navy outline pill; only ever beside the gold button in the hero.",
+      "html": "<a class=\"ds-btn ds-btn-line\" href=\"#\">Get a quote</a>",
+      "css": ":host{--navy:#0a2a58;--navy-2:#13386f;--navy-ink:#0b2246;--night:#0c2550;--gold:#d6a035;--gold-hi:#f2cf74;--gold-deep:#8f6416;--wall:#f8f3ea;--paper:#fffdf8;--line:rgba(10,42,88,.14);--muted:#4a5a78;--night-text:#dfe6f3;--night-muted:#b4c1da;--accent:#2a6fdb;--serif:\"Iowan Old Style\",\"Palatino Linotype\",Palatino,\"Book Antiqua\",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;font:700 17px/1 var(--sans);text-decoration:none;border:2px solid var(--navy);cursor:pointer;transition:background .2s,color .2s,transform .15s} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px} .ds-btn-line{background:transparent;color:var(--navy)} .ds-btn-line:hover{background:var(--navy);color:var(--wall)}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Hairline row that opens WhatsApp; only the arrow circle fills gold on hover/focus.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\">House cleaning<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\">Deep cleaning<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a></li></ul>",
+      "css": ":host{--navy:#0a2a58;--navy-2:#13386f;--navy-ink:#0b2246;--night:#0c2550;--gold:#d6a035;--gold-hi:#f2cf74;--gold-deep:#8f6416;--wall:#f8f3ea;--paper:#fffdf8;--line:rgba(10,42,88,.14);--muted:#4a5a78;--night-text:#dfe6f3;--night-muted:#b4c1da;--accent:#2a6fdb;--serif:\"Iowan Old Style\",\"Palatino Linotype\",Palatino,\"Book Antiqua\",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-rows{list-style:none;margin:0;padding:0;background:var(--wall)} .ds-row{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:60px;padding:8px 0;border-bottom:1px solid var(--line);text-decoration:none;font:600 17px/1.3 var(--sans);color:var(--navy-ink);outline:none} .ds-arrow{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);color:var(--navy);transition:background .2s,border-color .2s,color .2s} .ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow{background:var(--gold);border-color:var(--gold);color:var(--navy-ink)} .ds-row:focus-visible .ds-arrow{outline:3px solid var(--accent);outline-offset:3px}"
+    },
+    {
+      "name": "Service Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill checkbox for picking services in the quote form; Form Blue on hover/focus, navy when selected.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"checkbox\" checked><span>House cleaning</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Offices</span></label></div>",
+      "css": ":host{--navy:#0a2a58;--navy-2:#13386f;--navy-ink:#0b2246;--night:#0c2550;--gold:#d6a035;--gold-hi:#f2cf74;--gold-deep:#8f6416;--wall:#f8f3ea;--paper:#fffdf8;--line:rgba(10,42,88,.14);--muted:#4a5a78;--night-text:#dfe6f3;--night-muted:#b4c1da;--accent:#2a6fdb;--serif:\"Iowan Old Style\",\"Palatino Linotype\",Palatino,\"Book Antiqua\",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-chips{display:flex;flex-wrap:wrap;gap:8px} .ds-chip{position:relative} .ds-chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0} .ds-chip span{display:flex;align-items:center;min-height:44px;padding:8px 16px;border-radius:999px;border:1.5px solid rgba(10,42,88,.28);background:var(--paper);color:var(--navy-ink);font:600 16px/1.25 var(--sans);cursor:pointer;transition:border-color .15s,background .15s,box-shadow .15s} .ds-chip span:hover,.ds-chip input:focus-visible + span{border-color:var(--accent);box-shadow:0 0 0 3px rgba(42,111,219,.18)} .ds-chip input:checked + span{background:var(--navy);border-color:var(--navy);color:#fff}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Paper field with a soft 14px radius; Form Blue border and halo on hover/focus, brass caret.",
+      "html": "<label class=\"ds-field\"><span>Town or address</span><input class=\"ds-input\" type=\"text\" placeholder=\"e.g. Elizabeth, near Jersey Gardens\"></label>",
+      "css": ":host{--navy:#0a2a58;--navy-2:#13386f;--navy-ink:#0b2246;--night:#0c2550;--gold:#d6a035;--gold-hi:#f2cf74;--gold-deep:#8f6416;--wall:#f8f3ea;--paper:#fffdf8;--line:rgba(10,42,88,.14);--muted:#4a5a78;--night-text:#dfe6f3;--night-muted:#b4c1da;--accent:#2a6fdb;--serif:\"Iowan Old Style\",\"Palatino Linotype\",Palatino,\"Book Antiqua\",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-field{display:grid;gap:8px;font:700 16px/1.3 var(--sans);color:var(--navy-ink)} .ds-input{width:100%;min-height:54px;padding:13px 16px;border-radius:14px;border:1.5px solid rgba(10,42,88,.28);background:var(--paper);font:400 17px/1.4 var(--sans);color:var(--navy-ink);caret-color:var(--gold-deep);transition:border-color .15s,box-shadow .15s} .ds-input::placeholder{color:#5b6882} .ds-input:hover,.ds-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(42,111,219,.18)}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Mark and italic serif wordmark left, tap-to-call number top-right; scrolls away, never sticky.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M58 8a44 44 0 1 0 34 64A36 36 0 1 1 58 8z\" fill=\"#d6a035\"/></svg><span>Cleaning Luna</span></a><a class=\"ds-phone\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z\"/></svg>973-246-2624</a></header>",
+      "css": ":host{--navy:#0a2a58;--navy-2:#13386f;--navy-ink:#0b2246;--night:#0c2550;--gold:#d6a035;--gold-hi:#f2cf74;--gold-deep:#8f6416;--wall:#f8f3ea;--paper:#fffdf8;--line:rgba(10,42,88,.14);--muted:#4a5a78;--night-text:#dfe6f3;--night-muted:#b4c1da;--accent:#2a6fdb;--serif:\"Iowan Old Style\",\"Palatino Linotype\",Palatino,\"Book Antiqua\",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:0 16px;background:var(--wall)} .ds-brand{display:flex;align-items:center;gap:8px;text-decoration:none;min-height:44px} .ds-brand span{font:italic 700 21px/1 var(--serif);color:var(--navy);white-space:nowrap} .ds-phone{display:flex;align-items:center;gap:7px;min-height:44px;font:700 16px/1 var(--sans);color:var(--navy);text-decoration:none;font-variant-numeric:tabular-nums} .ds-phone svg{color:var(--gold-deep)} .ds-phone:hover{color:var(--gold-deep)} .ds-phone:focus-visible,.ds-brand:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}"
+    },
+    {
+      "name": "Step Ring",
+      "kind": "custom",
+      "refersTo": "step-ring",
+      "description": "Numbered gold ring beside a serif step title on the night ground.",
+      "html": "<ol class=\"ds-steps\"><li><span class=\"ds-n\">1</span><div><h3>Message us</h3><p>Send a WhatsApp with what needs cleaning and where.</p></div></li></ol>",
+      "css": ":host{--navy:#0a2a58;--navy-2:#13386f;--navy-ink:#0b2246;--night:#0c2550;--gold:#d6a035;--gold-hi:#f2cf74;--gold-deep:#8f6416;--wall:#f8f3ea;--paper:#fffdf8;--line:rgba(10,42,88,.14);--muted:#4a5a78;--night-text:#dfe6f3;--night-muted:#b4c1da;--accent:#2a6fdb;--serif:\"Iowan Old Style\",\"Palatino Linotype\",Palatino,\"Book Antiqua\",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-steps{list-style:none;margin:0;padding:24px;background:var(--night)} .ds-steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start} .ds-n{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:700 24px/1 var(--serif);color:var(--gold-hi);border:2px solid rgba(242,207,116,.7)} .ds-steps h3{font:700 24px/1.2 var(--serif);color:#fff;margin:6px 0} .ds-steps p{margin:0;font:400 17px/1.55 var(--sans);color:var(--night-muted)}"
+    },
+    {
+      "name": "Wave Seam",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Day-to-night seam: wave filled with the upper ground, crossed by gold lines (animated in the build via TUNE.seamSpeed).",
+      "html": "<div class=\"ds-seam\"><svg viewBox=\"0 0 1440 46\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><rect width=\"1440\" height=\"46\" fill=\"#0c2550\"/><path d=\"M0 0H1440V22C1200 34 960 12 720 22S240 34 0 22Z\" fill=\"#f8f3ea\"/><path d=\"M0 22C240 34 480 12 720 22S1200 34 1440 22\" fill=\"none\" stroke=\"#d6a035\" stroke-width=\"2.5\" vector-effect=\"non-scaling-stroke\"/><path d=\"M0 28C240 38 480 18 720 28S1200 38 1440 28\" fill=\"none\" stroke=\"rgba(242,207,116,.45)\" stroke-width=\"1.5\" vector-effect=\"non-scaling-stroke\"/></svg></div>",
+      "css": ".ds-seam svg{display:block;width:100%;height:46px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Room After We Leave",
+    "overview": "The page is the room the crew cleans. Day sections are a cream painted wall; the hero floor is honey hardwood seen from the doorway, dusty until it is mopped; night sections are the sky outside the window (\"Luna\"), full of stars. Deep navy and warm metallic gold come straight from the logo's CL monogram and crescent moon, and gold is spent only where something is clean or active. The visitor does the cleaning: the hero floor responds to a finger before anything else on the page asks for one.\n\nDensity is calm and phone-first: one column, generous section padding, lists as rows rather than cards, and every interactive element at least 44px tall. Type is system-only by house rule (no web fonts): a bookish serif stack echoing the monogram for display, the platform sans for everything read. Depth is mostly tonal (wall vs. paper vs. night) with a few physical cues taken from the room: a baseboard shadow, a brass threshold, a soft drop under the gold button.",
+    "keyCharacteristics": [
+      "Two grounds, day (cream wall) and night (deep navy sky), joined by animated gold wave seams.",
+      "Gold means clean or active: buttons, sparkles, hovered arrows, the threshold. Never decoration on resting text.",
+      "Serif display with an italic gold second half; system sans body.",
+      "Rows, not cards. Pills for actions and choices, circles for markers.",
+      "A living hero floor and pointer-shy night stars; reduced motion gets a still frame."
+    ],
+    "rules": [
+      {
+        "name": "The Gold Is Clean Rule",
+        "body": "Gold appears only where something is clean or active: the primary button, sparkles, a hovered arrow, the threshold, the seams' light line, the step rings. Resting text and decoration stay navy.",
+        "section": "colors"
+      },
+      {
+        "name": "The Blue Belongs To The Form Rule",
+        "body": "Form Blue is used only for focus rings and form-control hover/focus outlines. It never fills anything and never appears as brand color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Relaxed Half Rule",
+        "body": "Display lines that pair work and rest set the rest half in italic Brass Gold on its own line. One per page, in the hero.",
+        "section": "typography"
+      },
+      {
+        "name": "The System Stack Rule",
+        "body": "Display uses the serif stack, everything else the sans stack, both from the operating system. No font files.",
+        "section": "typography"
+      },
+      {
+        "name": "The Phone Screen Rule",
+        "body": "On a phone the first screen holds the header (mark left, phone number right), the two-line headline, one promise line, at most two buttons, and the start of the floor. Nothing else is added above the floor.",
+        "section": "layout"
+      },
+      {
+        "name": "The Room Has Edges Rule",
+        "body": "Shadows describe the room (baseboard, threshold) or the one action you should take (gold lift). Content blocks never float; there are no card shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep gold for clean or active things: the primary button, sparkles, the hovered arrow circle, step rings, seam lines, the threshold.",
+      "**Do** use Form Blue only for focus rings and the hover/focus outline of inputs, chips and form buttons.",
+      "**Do** set display type in the system serif stack and everything else in the system sans stack.",
+      "**Do** list services and similar choices as hairline rows with an arrow circle, not as cards.",
+      "**Do** join day and night sections with the gold-lined wave seam.",
+      "**Do** keep every tap target at least 44px (buttons 56px, rows 60px).",
+      "**Do** give every animated piece a still frame under `prefers-reduced-motion`, and change motion through `TUNE` rather than inline numbers."
+    ],
+    "donts": [
+      "**Don't** add a sticky bottom bar or any sticky/fixed call-to-action.",
+      "**Don't** show the phone number anywhere on the first screen except the header top-right.",
+      "**Don't** add email links; there is no email address.",
+      "**Don't** link Facebook anywhere but the footer (it is a personal profile).",
+      "**Don't** add captions, eyebrows or kicker labels above headlines.",
+      "**Don't** style anything that isn't clickable as a button or pill.",
+      "**Don't** put more than two buttons together; the hero holds exactly gold + outline.",
+      "**Don't** add web fonts, card shadows, or gold on resting body text."
+    ]
+  }
+}
