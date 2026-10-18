@@ -39,8 +39,9 @@ a{color:inherit;text-underline-offset:.2em}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
 h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.01em;text-wrap:balance;margin:0}
 h2{font-size:clamp(2rem,7.4vw,3.25rem);line-height:1.05}
-p{margin:0}
+p{margin:0;text-wrap:pretty}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+@supports (padding:max(0px)){ .wrap{padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right))} }
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* ===== Buttons ===== */
@@ -48,9 +49,9 @@ p{margin:0}
 .btn:active{transform:translateY(1px)}
 .btn svg{width:22px;height:22px;flex:none}
 .btn-gold{background:var(--gold);color:var(--navy-ink);box-shadow:0 8px 18px -10px rgba(10,34,70,.45)}
-.btn-gold:hover{background:var(--gold-hi)}
+.btn-gold:active{background:var(--gold-hi)}
+@media (hover:hover){ .btn-gold:hover{background:var(--gold-hi)} .btn-line:hover{background:var(--navy);color:var(--wall)} .top-phone:hover{color:var(--gold-deep)} .night .btn-line:hover{background:var(--night-text);color:var(--night)} }
 .btn-line{background:transparent;color:var(--navy)}
-.btn-line:hover{background:var(--navy);color:var(--wall)}
 .night .btn-gold{box-shadow:none}
 .night .btn-line{border-color:var(--night-text);color:var(--night-text)}
 
@@ -59,11 +60,11 @@ p{margin:0}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
 .brand{display:flex;align-items:center;gap:8px;text-decoration:none;min-height:44px}
 .brand img{width:44px;height:44px;mix-blend-mode:multiply}
-.brand span{font:italic 700 21px/1 var(--serif);color:var(--navy)}
+.brand span{font:italic 700 21px/1 var(--serif);color:var(--navy);white-space:nowrap}
+@media (max-width:379px){ .brand span{font-size:18px} .brand img{width:38px;height:38px} .top-phone{font-size:16px} }
 .top-phone{font:700 16px/1 var(--sans);color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:7px;min-height:44px;padding:0 2px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .top-phone svg{width:17px;height:17px;flex:none;color:var(--gold-deep)}
-.top-phone:hover{color:var(--gold-deep)}
-@media (min-width:760px){ .brand img{width:52px;height:52px} .brand span{font-size:25px} .top-phone{font-size:18px} .top .wrap{min-height:80px} }
+@media (min-width:760px){ .brand img{width:52px;height:52px} .brand span{font-size:24px} .top-phone{font-size:18px} .top .wrap{min-height:80px} }
 
 /* ===== Hero: the wall ===== */
 .hero{position:relative;background:var(--wall)}
@@ -72,16 +73,17 @@ p{margin:0}
 .hero h1{font-size:clamp(2.9rem,13.2vw,6rem);line-height:.98;color:var(--navy)}
 .hero h1 em{display:block;font-style:italic;color:var(--gold-deep)}
 .promise{font-size:clamp(17px,4.6vw,20px);line-height:1.5;color:var(--muted);max-width:34ch}
-.ctas{display:grid;gap:10px;margin-top:6px}
+.wall-text{display:grid;gap:16px}
+.ctas{display:grid;gap:10px;margin-top:4px}
 .window{display:none}
 @media (min-width:760px){
   .ctas{grid-template-columns:auto auto;justify-content:start}
   .wall{padding:32px 0 44px}
 }
 @media (min-width:1024px){
-  .wall .wrap{grid-template-columns:1fr 300px;align-items:end;column-gap:48px}
-  .wall-text{display:grid;gap:22px}
-  .window{display:block;width:300px;margin-right:6%;filter:drop-shadow(0 18px 30px rgba(10,42,88,.22))}
+  .wall .wrap{grid-template-columns:1fr 340px;align-items:end;column-gap:48px}
+  .wall-text{gap:22px}
+  .window{display:block;width:340px;margin-right:6%;filter:drop-shadow(0 18px 30px rgba(10,42,88,.22))}
 }
 
 /* ===== Hero: the floor ===== */
@@ -90,10 +92,12 @@ p{margin:0}
   repeating-linear-gradient(90deg,#c08a4e 0 54px,#7a4f27 54px 55px,#b47d43 55px 110px,#7a4f27 110px 111px);
   touch-action:none;overflow:hidden;user-select:none;-webkit-user-select:none}
 @media (min-width:760px){ .floor{height:clamp(300px,44svh,460px)} }
+@media (orientation:landscape) and (max-height:500px){ .floor{height:180px} }
+@media (prefers-reduced-motion:reduce){ .floor{touch-action:pan-y} }
 .floor canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .baseboard{position:absolute;left:0;right:0;top:0;height:16px;background:linear-gradient(#fffdf8,#eee6d6 70%,#d9cdb6);box-shadow:0 4px 8px rgba(60,35,10,.28);z-index:2}
-.floor::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(rgba(40,20,5,0),rgba(40,20,5,.5));pointer-events:none;z-index:1}
-.hint{position:absolute;left:var(--gutter);bottom:14px;z-index:2;display:flex;align-items:center;gap:8px;font:600 14px/1.2 var(--sans);color:#fffaf0;text-shadow:0 1px 3px rgba(40,20,5,.7);transition:opacity .6s;pointer-events:none}
+.floor::after{content:"";position:absolute;left:0;right:0;bottom:0;height:80px;background:linear-gradient(rgba(40,20,5,0),rgba(40,20,5,.62));pointer-events:none;z-index:1}
+.hint{position:absolute;left:max(var(--gutter),env(safe-area-inset-left));bottom:14px;z-index:2;display:flex;align-items:center;gap:8px;font:600 16px/1.2 var(--sans);color:#fffaf0;text-shadow:0 1px 2px rgba(40,20,5,.95),0 2px 8px rgba(40,20,5,.8);transition:opacity .6s;pointer-events:none}
 .hint svg{width:20px;height:20px}
 .hint.gone{opacity:0}
 .threshold{height:12px;background:linear-gradient(#f4d98c,#d6a035 45%,#9c6d1b);box-shadow:0 3px 6px rgba(80,50,10,.25)}
@@ -116,9 +120,9 @@ section{position:relative}
 /* ===== Services ===== */
 .groups{display:grid;gap:34px}
 @media (min-width:1024px){ .groups{grid-template-columns:repeat(3,1fr);gap:40px} }
-.group h3{font-size:24px;color:var(--gold-deep);font-style:italic;margin-bottom:6px}
+.group h3{font-size:24px;color:var(--navy-2);font-style:italic;margin-bottom:6px}
 .rows{list-style:none;margin:0;padding:0}
-.row{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:60px;padding:8px 0;border-bottom:1px solid var(--line);text-decoration:none;font:600 18px/1.3 var(--sans);color:var(--navy-ink)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:60px;padding:8px 0;border-bottom:1px solid var(--line);text-decoration:none;font:600 17px/1.3 var(--sans);color:var(--navy-ink)}
 .row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
 .arrow{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);color:var(--navy);transition:background .2s,border-color .2s,color .2s}
 .arrow svg{width:18px;height:18px}
@@ -129,13 +133,13 @@ section{position:relative}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:28px;counter-reset:s}
 @media (min-width:900px){ .steps{grid-template-columns:repeat(3,1fr);gap:40px} }
 .steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
-.steps .n{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:700 24px/1 var(--serif);color:var(--navy-ink);background:var(--gold)}
+.steps .n{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:700 24px/1 var(--serif);color:var(--gold-hi);border:2px solid rgba(242,207,116,.7)}
 .steps h3{font-size:24px;color:#fff;margin:6px 0 6px}
 .steps p{color:var(--night-muted)}
 
 /* ===== Quote form ===== */
 .quote-grid{display:grid;gap:30px}
-@media (min-width:1024px){ .quote-grid{grid-template-columns:.8fr 1.2fr;gap:64px} }
+@media (min-width:1024px){ .quote-grid{max-width:800px} }
 form{display:grid;gap:22px}
 .field{display:grid;gap:8px}
 .field > label,.field legend{font:700 16px/1.3 var(--sans);color:var(--navy-ink);padding:0}
@@ -169,7 +173,7 @@ form .btn:hover,form .btn:focus-visible{outline:3px solid var(--accent);outline-
 .close .wrap{display:grid;justify-items:center;gap:18px}
 .moon{width:92px;height:92px;margin-bottom:4px}
 .close h2{font-size:clamp(2.3rem,9vw,4rem)}
-.close .area{font:italic 400 clamp(20px,5vw,26px)/1.35 var(--serif);color:var(--night-text)}
+.close .area{font:italic 400 clamp(21px,5vw,24px)/1.35 var(--serif);color:var(--night-text)}
 .close .trio{color:var(--night-muted);font-size:16px}
 .close .btn{width:100%;max-width:360px;margin-top:8px}
 
@@ -214,7 +218,7 @@ RAISES: gold reserved for clean/active states (palette law); dust creeps back at
           <a class="btn btn-line" href="#quote">Get a quote</a>
         </div>
       </div>
-      <svg class="window" viewBox="0 0 300 330" aria-hidden="true">
+      <svg class="window" viewBox="-10 0 320 330" aria-hidden="true">
         <defs>
           <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#081d40"/><stop offset="1" stop-color="#1d4384"/></linearGradient>
           <linearGradient id="goldg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc8e"/><stop offset=".55" stop-color="#d6a035"/><stop offset="1" stop-color="#a8761f"/></linearGradient>
@@ -282,11 +286,11 @@ RAISES: gold reserved for clean/active states (palette law); dust creeps back at
 <section class="sec night" id="how" aria-labelledby="how-h">
   <canvas class="sky" aria-hidden="true"></canvas>
   <div class="wrap">
-    <div class="sec-head"><h2 id="how-h">Booking takes one message</h2></div>
+    <div class="sec-head"><h2 id="how-h">Booking starts with one message</h2></div>
     <ol class="steps">
       <li><span class="n">1</span><div><h3>Message us</h3><p>Send a WhatsApp with what needs cleaning and where.</p></div></li>
       <li><span class="n">2</span><div><h3>Pick a day</h3><p>We find a time that works around your week.</p></div></li>
-      <li><span class="n">3</span><div><h3>Come home to it</h3><p>We clean. You relax.</p></div></li>
+      <li><span class="n">3</span><div><h3>Come home to it</h3><p>We leave it the way we'd want our own place left.</p></div></li>
     </ol>
   </div>
 </section>
@@ -301,30 +305,30 @@ RAISES: gold reserved for clean/active states (palette law); dust creeps back at
     <form id="quoteForm" novalidate>
       <div class="field" id="f-name">
         <label for="qName">Your name</label>
-        <input type="text" id="qName" name="name" autocomplete="name">
-        <p class="err">Please add your name so we know who we're talking to.</p>
+        <input type="text" id="qName" name="name" autocomplete="name" autocapitalize="words" maxlength="120" aria-describedby="e-name">
+        <p class="err" id="e-name">Please add your name so we know who we're talking to.</p>
       </div>
-      <fieldset class="field" id="f-svc">
+      <fieldset class="field" id="f-svc" aria-describedby="e-svc">
         <legend>What needs cleaning?</legend>
         <div class="chips" id="chips"></div>
-        <p class="err">Pick at least one, even if it's a guess.</p>
+        <p class="err" id="e-svc">Pick at least one, even if it's a guess.</p>
       </fieldset>
       <div class="field" id="f-where">
         <label for="qWhere">Town or address</label>
-        <input type="text" id="qWhere" name="where" autocomplete="street-address" placeholder="e.g. Elizabeth, near Jersey Gardens">
-        <p class="err">Tell us where, so we know we can get to you.</p>
+        <input type="text" id="qWhere" name="where" autocomplete="street-address" placeholder="e.g. Elizabeth, near Jersey Gardens" maxlength="160" aria-describedby="e-where">
+        <p class="err" id="e-where">Tell us where, so we know we can get to you.</p>
       </div>
       <div class="field">
         <label for="qWhen">When works for you? <span class="opt">(optional)</span></label>
-        <input type="text" id="qWhen" name="when" placeholder="e.g. Saturday morning">
+        <input type="text" id="qWhen" name="when" maxlength="120" placeholder="e.g. Saturday morning">
       </div>
       <div class="field">
         <label for="qNotes">Anything we should know? <span class="opt">(optional)</span></label>
-        <textarea id="qNotes" name="notes" placeholder="Rooms, size, pets, the stove that needs extra love…"></textarea>
+        <textarea id="qNotes" name="notes" maxlength="800" placeholder="Rooms, size, pets, the stove that needs extra love…"></textarea>
       </div>
       <button class="btn btn-gold" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>Send on WhatsApp</button>
-      <div class="sent" id="sent" aria-live="polite">
-        <p><strong>WhatsApp should be opening.</strong> If it didn't, copy this and send it to 973-246-2624:</p>
+      <div class="sent" id="sent" role="status">
+        <p><strong>WhatsApp should be opening.</strong> If it didn't, copy this and send it on WhatsApp to 973-246-2624:</p>
         <pre id="sentText"></pre>
         <button type="button" id="copyBtn">Copy message</button>
       </div>
@@ -364,8 +368,8 @@ var TUNE = {
   regrow: 0.0035,                        // dust creep-back per frame (0 = stays clean)
   wetFade: 0.022,                        // how fast the wet streak dries
   idleMs: 2600,                          // the mop starts mopping by itself after this much stillness
-  debrisPhone: 70, debrisDesktop: 170,   // crumbs, sawdust and grit on the floor
-  sparkleChance: 0.22,                   // gold sparkles left behind the mop (per frame while mopping)
+  debrisPhone: 60, debrisDesktop: 110,   // crumbs, sawdust and grit on the floor
+  sparkleChance: 0.16,                   // gold sparkles left behind the mop (per frame while mopping)
   starsPhone: 34, starsDesktop: 80,      // stars in the night sections
   seamSpeed: 1.0
 };
@@ -435,13 +439,13 @@ function rand(a, b){ return a + Math.random() * (b - a); }
 
 /* ===== Hero: the floor you mop ===== */
 (function(){
-  var floorEl = document.getElementById('floor'), canvas = document.getElementById('floorCanvas'), ctx = canvas.getContext('2d');
+  var floorEl = document.getElementById('floor'), canvas = document.getElementById('floorCanvas'), ctx = canvas.getContext('2d', { alpha: false });
   var hint = document.getElementById('hint');
   var base = document.createElement('canvas'), wood = document.createElement('canvas');
   var dirt = document.createElement('canvas'), dirtSrc = document.createElement('canvas'), wet = document.createElement('canvas');
   var stamp = document.createElement('canvas');
   var W = 0, H = 0, dpr = 1, D = 1, cx = 0, K = 1, padW = 100, built = '';
-  var debris = [], sparks = [], mopped = false;
+  var debris = [], sparks = [], mopped = false, wetT = 0;
   var mop = { x: 0, y: 0, vx: 0, vy: 0, ang: 0, t: -1 };
 
   // perspective: row y (0 = wall, H = near edge) has scale s(y); world depth z maps to a row
@@ -461,8 +465,9 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     wet.getContext('2d').clearRect(0, 0, wet.width, wet.height);
     seedDebris();
     // a first S of clean so the very first frame shows the difference
-    var rx = PHONE ? .7 : .79;
-    for (var k = 0; k <= 160; k++) { var u = k / 160, a = u * Math.PI * 6; wipe(W * (rx - .22 + .2 * Math.sin(a)), H * (.18 + .7 * u) + Math.sin(a * 2) * H * .05, .9); }
+    var win = document.querySelector('.window'), rx = .62;
+    if (win && getComputedStyle(win).display !== 'none') { var wr = win.getBoundingClientRect(), fr = floorEl.getBoundingClientRect(); rx = (wr.left + wr.width / 2 - fr.left) / W - .08; }
+    for (var k = 0; k <= 220; k++) { var u = k / 220, a = u * Math.PI * 9; wipe(W * (rx + (PHONE ? .3 : .2) * Math.sin(a)), H * (.12 + .78 * u), .9); }
     return true;
   }
 
@@ -519,24 +524,29 @@ function rand(a, b){ return a + Math.random() * (b - a); }
   function paintBase(){
     var c = base.getContext('2d'); c.setTransform(1, 0, 0, 1, 0, 0); c.drawImage(wood, 0, 0); c.setTransform(dpr, 0, 0, dpr, 0, 0);
     // varnish gloss
-    var g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, 'rgba(255,240,210,.26)'); g.addColorStop(.5, 'rgba(255,240,210,.1)'); g.addColorStop(1, 'rgba(255,240,210,.2)');
+    var g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, 'rgba(255,240,210,.36)'); g.addColorStop(.5, 'rgba(255,240,210,.18)'); g.addColorStop(1, 'rgba(255,240,210,.3)');
     c.fillStyle = g; c.fillRect(0, 0, W, H);
     // reflection of the moonlit window, drawn small and scaled up so it comes out soft
     var R = document.createElement('canvas'), q = 8; R.width = Math.ceil(W / q); R.height = Math.ceil(H / q);
     var r = R.getContext('2d'); r.scale(1 / q, 1 / q);
-    var wx = PHONE ? W * .7 : W * .79, ww = PHONE ? W * .3 : Math.min(300, W * .22), len = H * .95;
-    var x0 = wx - ww / 2, x1 = wx + ww / 2, sb = s(len) / s(0);
+    var wx = W * .7, ww = W * .3, win = document.querySelector('.window');
+    if (win && getComputedStyle(win).display !== 'none') { var wr = win.getBoundingClientRect(), fr = floorEl.getBoundingClientRect(); wx = wr.left + wr.width / 2 - fr.left; ww = wr.width * .9; }
+    var len = H * .95, x0 = wx - ww / 2, x1 = wx + ww / 2, sb = s(len) / s(0);
     function quad(a0, a1, t0, t1){ // a = across the window (0..1), t = down the reflection (0..1)
       var ya = len * t0, yb = len * t1, ka = 1 + (sb - 1) * t0, kb = 1 + (sb - 1) * t1;
       r.beginPath();
       r.moveTo(wx + (x0 + (x1 - x0) * a0 - wx) * ka, ya); r.lineTo(wx + (x0 + (x1 - x0) * a1 - wx) * ka, ya);
       r.lineTo(wx + (x0 + (x1 - x0) * a1 - wx) * kb, yb); r.lineTo(wx + (x0 + (x1 - x0) * a0 - wx) * kb, yb); r.closePath();
     }
-    var gl = r.createLinearGradient(0, 0, 0, len); gl.addColorStop(0, 'rgba(215,228,255,.85)'); gl.addColorStop(.55, 'rgba(190,205,240,.35)'); gl.addColorStop(1, 'rgba(190,205,240,0)');
-    r.fillStyle = gl;
-    [[.03, .47, .02, .42], [.53, .97, .02, .42], [.03, .47, .48, .98], [.53, .97, .48, .98]].forEach(function(p){ quad(p[0], p[1], p[2], p[3]); r.fill(); });
-    r.fillStyle = 'rgba(242,207,116,.9)'; r.beginPath(); r.ellipse(wx + ww * .14, len * .2, ww * .1, len * .07, 0, 0, 6.29); r.fill();
-    c.save(); c.globalCompositeOperation = 'screen'; c.globalAlpha = .9; c.imageSmoothingEnabled = true; c.drawImage(R, 0, 0, R.width * q, R.height * q); c.restore();
+    // the white frame shows as a pale glow, the night panes as dark glass, the moon as a gold smear
+    r.fillStyle = 'rgba(255,250,238,.5)'; quad(0, 1, 0, 1); r.fill();
+    r.fillStyle = 'rgba(14,36,86,.55)';
+    [[.05, .47, .03, .46], [.53, .95, .03, .46], [.05, .47, .52, .97], [.53, .95, .52, .97]].forEach(function(p){ quad(p[0], p[1], p[2], p[3]); r.fill(); });
+    r.fillStyle = 'rgba(242,207,116,.85)'; r.beginPath(); r.ellipse(wx + ww * .12, len * .22, ww * .1, len * .08, 0, 0, 6.29); r.fill();
+    r.globalCompositeOperation = 'destination-out';
+    var gl = r.createLinearGradient(0, 0, 0, len); gl.addColorStop(0, 'rgba(0,0,0,0)'); gl.addColorStop(.45, 'rgba(0,0,0,.35)'); gl.addColorStop(1, 'rgba(0,0,0,1)');
+    r.fillStyle = gl; r.fillRect(0, 0, W, len + 2); r.globalCompositeOperation = 'source-over';
+    c.save(); c.globalAlpha = .85; c.imageSmoothingEnabled = true; c.drawImage(R, 0, 0, R.width * q, R.height * q); c.restore();
     // a broad soft highlight near the viewer
     var hl = c.createRadialGradient(W * .3, H * 1.05, 10, W * .3, H * 1.05, W * .6); hl.addColorStop(0, 'rgba(255,245,220,.22)'); hl.addColorStop(1, 'rgba(255,245,220,0)');
     c.fillStyle = hl; c.fillRect(0, 0, W, H);
@@ -552,7 +562,7 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     var c = dirtSrc.getContext('2d'); c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, dirtSrc.width, dirtSrc.height);
     c.drawImage(wood, 0, 0); c.setTransform(dpr, 0, 0, dpr, 0, 0);
     // dull haze of dust over unvarnished-looking wood
-    c.fillStyle = 'rgba(150,142,132,.5)'; c.fillRect(0, 0, W, H);
+    c.fillStyle = 'rgba(150,142,132,.42)'; c.fillRect(0, 0, W, H);
     var seed = 11; function rnd(){ seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
     for (var i = 0; i < W * H / 60; i++) { var x = rnd() * W, y = rnd() * H, k = s(y); c.fillStyle = rnd() < .5 ? 'rgba(120,105,85,.16)' : 'rgba(235,228,215,.22)'; c.fillRect(x, y, 1.6 * k, 1.6 * k); }
     // cloudy patches
@@ -560,13 +570,13 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     // plaster dust along the wall, from the job-site work
     var pg = c.createLinearGradient(0, 0, 0, H * .25); pg.addColorStop(0, 'rgba(240,236,228,.6)'); pg.addColorStop(1, 'rgba(240,236,228,0)'); c.fillStyle = pg; c.fillRect(0, 0, W, H * .25);
     // tracked-in footprints
-    c.fillStyle = 'rgba(70,50,32,.38)';
+    c.fillStyle = 'rgba(70,50,32,.3)';
     for (var t = 0; t < (PHONE ? 2 : 3); t++) {
       var fx = rnd() * W, fy = H * (.95 + rnd() * .1), dir = -Math.PI / 2 + (rnd() - .5) * 1.1, step = 0;
       while (fy > 8 && step < 14) {
         var k = s(fy), side = step % 2 ? 1 : -1, nx = Math.cos(dir + Math.PI / 2) * 9 * side * k;
-        shoe(c, fx + nx, fy, k * 1.15, dir + Math.PI / 2, side < 0);
-        fx += Math.cos(dir) * 34 * k; fy += Math.sin(dir) * 34 * k * 1.1; dir += (rnd() - .5) * .18; step++;
+        shoe(c, fx + nx, fy, k * 1.4, dir + Math.PI / 2, side < 0);
+        fx += Math.cos(dir) * 40 * k; fy += Math.sin(dir) * 40 * k * 1.1; dir += (rnd() - .5) * .18; step++;
       }
     }
     // black heel scuffs
@@ -581,6 +591,7 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     var k = s(y), w = padW * k * 1.05, h = padW * .38 * k;
     var dc = dirt.getContext('2d'); dc.save(); dc.setTransform(dpr, 0, 0, dpr, 0, 0); dc.globalCompositeOperation = 'destination-out'; dc.globalAlpha = strength;
     dc.drawImage(stamp, x - w / 2, y - h / 2, w, h); dc.restore();
+    wetT = performance.now();
     var wc = wet.getContext('2d'); wc.save(); wc.setTransform(dpr, 0, 0, dpr, 0, 0); wc.globalAlpha = .06 * strength;
     wc.drawImage(stamp, x - w * .45, y - h * .45, w * .9, h * .9); wc.restore();
   }
@@ -597,7 +608,7 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     var k = s(b.y) * b.sz, x = b.x * dpr, y = b.y * dpr, d = dpr * k;
     ctx.save(); ctx.globalAlpha = b.a; ctx.translate(x, y); ctx.rotate(b.rot);
     if (b.kind === 'crumb') { ctx.fillStyle = '#6b4320'; ctx.beginPath(); ctx.moveTo(-2.2 * d, -1 * d); ctx.lineTo(1.4 * d, -2 * d); ctx.lineTo(2.4 * d, 1 * d); ctx.lineTo(-.8 * d, 2 * d); ctx.closePath(); ctx.fill(); }
-    else if (b.kind === 'saw') { ctx.strokeStyle = '#e9cf98'; ctx.lineWidth = 1.4 * d; ctx.lineCap = 'round'; ctx.beginPath(); ctx.arc(0, 0, 3.2 * d, .3, 3.6); ctx.stroke(); }
+    else if (b.kind === 'saw') { ctx.fillStyle = '#e6c88c'; ctx.beginPath(); ctx.ellipse(0, 0, 2.6 * d, 1.1 * d, 0, 0, 6.29); ctx.fill(); ctx.fillStyle = '#c9a66a'; ctx.beginPath(); ctx.ellipse(.6 * d, .3 * d, 1.2 * d, .5 * d, 0, 0, 6.29); ctx.fill(); }
     else if (b.kind === 'grit') { ctx.fillStyle = '#9a958c'; ctx.beginPath(); ctx.arc(0, 0, 1.5 * d, 0, 6.29); ctx.fill(); ctx.fillStyle = '#c9c4ba'; ctx.beginPath(); ctx.arc(-.4 * d, -.4 * d, .7 * d, 0, 6.29); ctx.fill(); }
     else { var g = ctx.createRadialGradient(0, 0, 0, 0, 0, 7 * d); g.addColorStop(0, 'rgba(150,145,140,.85)'); g.addColorStop(.6, 'rgba(170,165,160,.5)'); g.addColorStop(1, 'rgba(170,165,160,0)'); ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(0, 0, 7 * d, 4.5 * d, 0, 0, 6.29); ctx.fill(); }
     ctx.restore();
@@ -630,7 +641,7 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(base, 0, 0);
     // wet streak: a fresh sheen where the mop just passed, drying off
-    ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.drawImage(wetLayer(), 0, 0); ctx.restore();
+    if (performance.now() - wetT < 4000) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.drawImage(wetLayer(), 0, 0); ctx.restore(); }
     ctx.drawImage(dirt, 0, 0);
     for (var i = 0; i < debris.length; i++) if (debris[i].a > 0) drawBit(debris[i]);
     for (var j = 0; j < sparks.length; j++) { var sp = sparks[j], u = sp.t / sp.life, a = Math.sin(u * Math.PI); sparkle(ctx, sp.x * dpr, sp.y * dpr, sp.r * dpr * (.5 + .5 * a), a, sp.rot + u * .6); }
@@ -716,6 +727,7 @@ function rand(a, b){ return a + Math.random() * (b - a); }
   size();
   if (REDUCED) {
     hint.classList.add('gone'); mop.x = W * .55; mop.y = H * .5; mop.t = 0;
+    canvas.setAttribute('aria-label', 'A hardwood floor half mopped, dusty on one side and shining on the other');
     draw();
     window.addEventListener('resize', function(){ if (size()) draw(); });
   } else {
@@ -726,14 +738,16 @@ function rand(a, b){ return a + Math.random() * (b - a); }
 /* ===== Night sections: stars that move aside for a finger ===== */
 (function(){
   document.querySelectorAll('.night .sky').forEach(function(canvas){
-    var sec = canvas.parentElement, ctx = canvas.getContext('2d'), stars = [], W = 0, H = 0, dpr = 1, built = '';
+    var sec = canvas.parentElement, ctx = canvas.getContext('2d'), stars = [], boxes = [], W = 0, H = 0, dpr = 1, built = '';
     function size(){
       var r = sec.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height), key = w + 'x' + h;
       if (key === built) return; built = key; W = w; H = h; dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
       var n = PHONE ? TUNE.starsPhone : TUNE.starsDesktop; stars = [];
-      for (var i = 0; i < n; i++) stars.push({ hx: Math.random() * W, hy: Math.random() * H, ox: 0, oy: 0, vx: 0, vy: 0, r: Math.random() < .14 ? rand(4, 8) : rand(.6, 1.6), ph: Math.random() * 6.28, sp: rand(.8, 2.2) });
+      boxes = [].map.call(sec.querySelectorAll('h2,h3,p,.n,.btn,.moon'), function(e){ var b = e.getBoundingClientRect(); return [b.left - r.left - 12, b.top - r.top - 12, b.right - r.left + 12, b.bottom - r.top + 12]; });
+      for (var i = 0; i < n; i++) { var hx, hy, tries = 0; do { hx = Math.random() * W; hy = Math.random() * H; } while (inText(hx, hy) && ++tries < 30); if (tries < 30) stars.push({ hx: hx, hy: hy, ox: 0, oy: 0, vx: 0, vy: 0, r: Math.random() < .14 ? rand(4, 8) : rand(.6, 1.6), ph: Math.random() * 6.28, sp: rand(.8, 2.2) }); }
     }
+    function inText(x, y){ for (var i = 0; i < boxes.length; i++) { var b = boxes[i]; if (x > b[0] && x < b[2] && y > b[1] && y < b[3]) return true; } return false; }
     function draw(t){
       ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (var i = 0; i < stars.length; i++) {
@@ -750,6 +764,7 @@ function rand(a, b){ return a + Math.random() * (b - a); }
         if (live) { var dx = s.hx + s.ox - lx, dy = s.hy + s.oy - ly, d2 = dx * dx + dy * dy, R = 110;
           if (d2 < R * R) { var d = Math.sqrt(d2) || 1, f = (1 - d / R) * 1400; s.vx += (dx / d * f + P.vx * .4 * (1 - d / R)) * dt; s.vy += (dy / d * f + P.vy * .4 * (1 - d / R)) * dt; } }
         s.vx += (-38 * s.ox - 6.5 * s.vx) * dt; s.vy += (-38 * s.oy - 6.5 * s.vy) * dt; s.ox += s.vx * dt; s.oy += s.vy * dt;
+        if (inText(s.hx + s.ox, s.hy + s.oy)) { s.ox *= .8; s.oy *= .8; s.vx *= -.3; s.vy *= -.3; }
       }
       draw(t);
     } };
@@ -786,7 +801,7 @@ function rand(a, b){ return a + Math.random() * (b - a); }
 /* ===== Quote form → WhatsApp ===== */
 (function(){
   var SVCS = ['House Cleaning', 'Deep Cleaning', 'Move-In & Move-Out Cleaning', 'Apartment & Condo Cleaning', 'Airbnb & Rental Property Cleaning', 'Office Cleaning', 'Commercial Cleaning', 'Post-Construction Cleaning', 'Construction Debris & Trash Removal', 'Concrete, Wood & Job-Site Debris Removal', 'Organization & Detailed Cleaning'];
-  var LABELS = ['House', 'Deep clean', 'Move-in / move-out', 'Apartment or condo', 'Airbnb or rental', 'Office', 'Commercial', 'Post-construction', 'Debris & trash', 'Concrete & wood debris', 'Organizing'];
+  var LABELS = ['House cleaning', 'Deep cleaning', 'Move-in & move-out', 'Apartments & condos', 'Airbnb & rentals', 'Offices', 'Commercial spaces', 'Post-construction', 'Debris & trash removal', 'Concrete & wood haul-away', 'Organizing & detail work'];
   var chips = document.getElementById('chips');
   SVCS.forEach(function(s, i){
     var l = document.createElement('label'); l.className = 'chip';
@@ -796,8 +811,19 @@ function rand(a, b){ return a + Math.random() * (b - a); }
   });
   var form = document.getElementById('quoteForm'), sent = document.getElementById('sent'), sentText = document.getElementById('sentText');
   function val(id){ return document.getElementById(id).value.trim(); }
-  function mark(id, bad){ document.getElementById(id).classList.toggle('bad', bad); }
-  form.addEventListener('input', function(e){ var f = e.target.closest('.field'); if (f) f.classList.remove('bad'); });
+  function mark(id, bad){ var f = document.getElementById(id); f.classList.toggle('bad', bad); var i = f.querySelector('input[type=text]'); if (i) i.setAttribute('aria-invalid', bad ? 'true' : 'false'); }
+  form.addEventListener('input', function(e){ var f = e.target.closest('.field'); if (f) { f.classList.remove('bad'); var i = f.querySelector('input[type=text]'); if (i) i.removeAttribute('aria-invalid'); } });
+  // a little gold burst when a service is ticked
+  chips.addEventListener('change', function(e){
+    if (REDUCED || !e.target.checked) return;
+    var lab = e.target.parentNode, c = document.createElement('canvas'), W = 120, H = 80, d = Math.min(window.devicePixelRatio || 1, 2);
+    c.width = W * d; c.height = H * d; c.style.cssText = 'position:absolute;left:50%;top:50%;width:' + W + 'px;height:' + H + 'px;margin:-' + H / 2 + 'px 0 0 -' + W / 2 + 'px;pointer-events:none;z-index:2';
+    lab.appendChild(c); var x = c.getContext('2d'), bits = [], t0 = performance.now();
+    for (var i = 0; i < 4; i++) bits.push({ a: rand(0, 6.28), v: rand(18, 34), r: rand(4, 7) });
+    (function f(now){ var u = (now - t0) / 600; x.clearRect(0, 0, c.width, c.height); if (u >= 1) { c.remove(); return; }
+      bits.forEach(function(b){ sparkle(x, (W / 2 + Math.cos(b.a) * b.v * u * 1.6) * d, (H / 2 + Math.sin(b.a) * b.v * u) * d, b.r * d * (1 - u * .5), Math.sin(u * Math.PI), u); });
+      requestAnimationFrame(f); })(t0);
+  });
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var name = val('qName'), where = val('qWhere'), when = val('qWhen'), notes = val('qNotes');

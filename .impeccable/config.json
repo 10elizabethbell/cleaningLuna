@@ -8,6 +8,48 @@
         "value": "roboto",
         "createdAt": "2026-10-18T01:39:54.535Z",
         "reason": "Ellie's pitch-site house style mandates the system font stack; Roboto is only the Android fallback inside it, not a chosen face"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:44:22.319Z",
+        "reason": "Static plank fallback under the floor canvas so the hero isn't blank before JS paints; not decoration"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:44:22.390Z",
+        "reason": "The cream is the painted wall of the room the hero depicts (own-world), matching the logo's white/cream ground; chosen in the direction contract"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "#fffaf0",
+        "createdAt": "2026-10-18T01:47:58.969Z",
+        "reason": "Floor hint sits on the painted canvas plus a 62% dark scrim and offset text-shadow; detector reads the pre-JS fallback color"
+      },
+      {
+        "rule": "shape-assembled-illustration",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:47:59.042Z",
+        "reason": "Deliberately drawn wall window that the floor reflection is keyed to; both review passes found it reads clearly as a window"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:48:06.087Z",
+        "reason": "Flagged child is the full-bleed star canvas (.sky, position:absolute inset:0) inside night sections; all text sits in .wrap with gutter padding"
       }
     ]
   }
