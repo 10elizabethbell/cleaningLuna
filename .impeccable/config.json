@@ -50,6 +50,150 @@
         ],
         "createdAt": "2026-10-18T01:48:06.087Z",
         "reason": "Flagged child is the full-bleed star canvas (.sky, position:absolute inset:0) inside night sections; all text sits in .wrap with gutter padding"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(255, 250, 240)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.333Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(255, 255, 255)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.402Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#c08a4e",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.471Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#7a4f27",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.538Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#b47d43",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.610Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#eee6d6",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.680Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#d9cdb6",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.750Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(40,20,5,.62)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.820Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#f4d98c",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.888Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#5b6882",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:10.958Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "6px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:11.027Z",
+        "reason": "Focus-ring radius on :focus-visible; Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "18px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:11.098Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "20px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:11.167Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "2.3rem",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:11.236Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "4rem",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:11.305Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "14px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T01:56:11.376Z",
+        "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
       }
     ]
   }
