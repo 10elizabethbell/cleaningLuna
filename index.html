@@ -83,7 +83,7 @@ p{margin:0;text-wrap:pretty}
 @media (min-width:1024px){
   .wall .wrap{grid-template-columns:1fr 340px;align-items:end;column-gap:48px}
   .wall-text{gap:22px}
-  .window{display:block;width:340px;margin-right:6%;filter:drop-shadow(0 18px 30px rgba(10,42,88,.22))}
+  .window{display:block;width:340px;margin-right:6%;filter:drop-shadow(0 2px 3px rgba(10,42,88,.14))}
 }
 
 /* ===== Hero: the floor ===== */
@@ -225,7 +225,9 @@ RAISES: gold reserved for clean/active states (palette law); dust creeps back at
           <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e9e1d1"/></linearGradient>
         </defs>
         <rect x="0" y="0" width="300" height="314" rx="6" fill="url(#frame)"/>
+        <rect x="10" y="10" width="280" height="294" fill="#d9cdb6"/>
         <rect x="16" y="16" width="268" height="282" fill="url(#sky)"/>
+        <rect x="16" y="16" width="268" height="10" fill="#000" opacity=".22"/>
         <g fill="#fff"><circle cx="60" cy="70" r="1.4"/><circle cx="110" cy="40" r="1"/><circle cx="240" cy="200" r="1.2"/><circle cx="70" cy="230" r="1"/><circle cx="200" cy="260" r="1.3"/><circle cx="130" cy="180" r="1"/><circle cx="250" cy="60" r="1"/></g>
         <path d="M178 56a52 52 0 1 0 50 72a42 42 0 1 1-50-72z" fill="url(#goldg)"/>
         <path d="M92 116l4 13 13 4-13 4-4 13-4-13-13-4 13-4z" fill="url(#goldg)"/>
@@ -369,7 +371,7 @@ var TUNE = {
   wetFade: 0.022,                        // how fast the wet streak dries
   idleMs: 2600,                          // the mop starts mopping by itself after this much stillness
   debrisPhone: 60, debrisDesktop: 110,   // crumbs, sawdust and grit on the floor
-  sparkleChance: 0.16,                   // gold sparkles left behind the mop (per frame while mopping)
+  sparkleChance: 0.1,                   // gold sparkles left behind the mop (per frame while mopping)
   starsPhone: 34, starsDesktop: 80,      // stars in the night sections
   seamSpeed: 1.0
 };
@@ -441,6 +443,7 @@ function rand(a, b){ return a + Math.random() * (b - a); }
 (function(){
   var floorEl = document.getElementById('floor'), canvas = document.getElementById('floorCanvas'), ctx = canvas.getContext('2d', { alpha: false });
   var hint = document.getElementById('hint');
+  if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) hint.lastChild.textContent = 'Move across the floor to mop it';
   var base = document.createElement('canvas'), wood = document.createElement('canvas');
   var dirt = document.createElement('canvas'), dirtSrc = document.createElement('canvas'), wet = document.createElement('canvas');
   var stamp = document.createElement('canvas');
@@ -527,8 +530,8 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     var g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, 'rgba(255,240,210,.36)'); g.addColorStop(.5, 'rgba(255,240,210,.18)'); g.addColorStop(1, 'rgba(255,240,210,.3)');
     c.fillStyle = g; c.fillRect(0, 0, W, H);
     // reflection of the moonlit window, drawn small and scaled up so it comes out soft
-    var R = document.createElement('canvas'), q = 8; R.width = Math.ceil(W / q); R.height = Math.ceil(H / q);
-    var r = R.getContext('2d'); r.scale(1 / q, 1 / q);
+    var R = document.createElement('canvas'), q = 3; R.width = Math.ceil(W / q); R.height = Math.ceil(H / q);
+    var r = R.getContext('2d'); r.scale(1 / q, 1 / q); if ('filter' in r) r.filter = 'blur(2px)';
     var wx = W * .7, ww = W * .3, win = document.querySelector('.window');
     if (win && getComputedStyle(win).display !== 'none') { var wr = win.getBoundingClientRect(), fr = floorEl.getBoundingClientRect(); wx = wr.left + wr.width / 2 - fr.left; ww = wr.width * .9; }
     var len = H * .95, x0 = wx - ww / 2, x1 = wx + ww / 2, sb = s(len) / s(0);
@@ -542,7 +545,7 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     r.fillStyle = 'rgba(255,250,238,.5)'; quad(0, 1, 0, 1); r.fill();
     r.fillStyle = 'rgba(14,36,86,.55)';
     [[.05, .47, .03, .46], [.53, .95, .03, .46], [.05, .47, .52, .97], [.53, .95, .52, .97]].forEach(function(p){ quad(p[0], p[1], p[2], p[3]); r.fill(); });
-    r.fillStyle = 'rgba(242,207,116,.85)'; r.beginPath(); r.ellipse(wx + ww * .12, len * .22, ww * .1, len * .08, 0, 0, 6.29); r.fill();
+    r.fillStyle = 'rgba(242,207,116,.6)'; r.beginPath(); r.ellipse(wx + ww * .16, len * .2, ww * .06, len * .045, 0, 0, 6.29); r.fill();
     r.globalCompositeOperation = 'destination-out';
     var gl = r.createLinearGradient(0, 0, 0, len); gl.addColorStop(0, 'rgba(0,0,0,0)'); gl.addColorStop(.45, 'rgba(0,0,0,.35)'); gl.addColorStop(1, 'rgba(0,0,0,1)');
     r.fillStyle = gl; r.fillRect(0, 0, W, len + 2); r.globalCompositeOperation = 'source-over';
@@ -554,8 +557,8 @@ function rand(a, b){ return a + Math.random() * (b - a); }
 
   function shoe(c, x, y, k, ang, left){
     c.save(); c.translate(x, y); c.scale(k, k * .55); c.rotate(ang); if (left) c.scale(-1, 1);
-    c.beginPath(); c.moveTo(-5, -4); c.bezierCurveTo(-7, -16, -3, -24, 2, -24); c.bezierCurveTo(8, -24, 9, -14, 7, -4); c.bezierCurveTo(6, 2, -4, 2, -5, -4); c.fill();
-    c.beginPath(); c.ellipse(1, 12, 5.2, 6.5, 0, 0, 6.29); c.fill();
+    c.beginPath(); c.moveTo(1, -24); c.bezierCurveTo(8, -24, 9, -12, 7, -3); c.bezierCurveTo(5.5, 4, 6.5, 10, 5.5, 15);
+    c.bezierCurveTo(4.5, 20, -3, 20, -4, 15); c.bezierCurveTo(-5, 9, -3.5, 3, -5, -4); c.bezierCurveTo(-7, -15, -4, -24, 1, -24); c.fill();
     c.restore();
   }
   function paintDirt(){
@@ -570,18 +573,18 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     // plaster dust along the wall, from the job-site work
     var pg = c.createLinearGradient(0, 0, 0, H * .25); pg.addColorStop(0, 'rgba(240,236,228,.6)'); pg.addColorStop(1, 'rgba(240,236,228,0)'); c.fillStyle = pg; c.fillRect(0, 0, W, H * .25);
     // tracked-in footprints
-    c.fillStyle = 'rgba(70,50,32,.3)';
+    c.fillStyle = 'rgba(228,218,204,.4)';
     for (var t = 0; t < (PHONE ? 2 : 3); t++) {
       var fx = rnd() * W, fy = H * (.95 + rnd() * .1), dir = -Math.PI / 2 + (rnd() - .5) * 1.1, step = 0;
-      while (fy > 8 && step < 14) {
+      while (fy > 8 && step < 8) {
         var k = s(fy), side = step % 2 ? 1 : -1, nx = Math.cos(dir + Math.PI / 2) * 9 * side * k;
         shoe(c, fx + nx, fy, k * 1.4, dir + Math.PI / 2, side < 0);
-        fx += Math.cos(dir) * 40 * k; fy += Math.sin(dir) * 40 * k * 1.1; dir += (rnd() - .5) * .18; step++;
+        fx += Math.cos(dir) * 62 * k; fy += Math.sin(dir) * 62 * k * 1.1; dir += (rnd() - .5) * .18; step++;
       }
     }
     // black heel scuffs
     c.strokeStyle = 'rgba(30,22,16,.4)'; c.lineCap = 'round';
-    for (var m = 0; m < (PHONE ? 6 : 12); m++) { var sx = rnd() * W, sy = H * (.15 + rnd() * .85), sk = s(sy); c.lineWidth = 2.2 * sk; c.beginPath(); c.moveTo(sx, sy); c.quadraticCurveTo(sx + 10 * sk, sy - 4 * sk, sx + (16 + rnd() * 14) * sk, sy + (rnd() - .5) * 6 * sk); c.stroke(); }
+    for (var m = 0; m < (PHONE ? 6 : 12); m++) { var sx = rnd() * W, sy = H * (.15 + rnd() * .85), sk = s(sy); c.lineWidth = 1.8 * sk; c.beginPath(); c.moveTo(sx, sy); c.lineTo(sx + (8 + rnd() * 9) * sk, sy + (rnd() - .5) * 3 * sk); c.stroke(); }
     // the stamp: a soft-edged pad print
     stamp.width = 64; stamp.height = 64; var st = stamp.getContext('2d'), sg = st.createRadialGradient(32, 32, 0, 32, 32, 32);
     sg.addColorStop(0, 'rgba(0,0,0,1)'); sg.addColorStop(.6, 'rgba(0,0,0,.85)'); sg.addColorStop(1, 'rgba(0,0,0,0)'); st.fillStyle = sg; st.fillRect(0, 0, 64, 64);
@@ -629,8 +632,11 @@ function rand(a, b){ return a + Math.random() * (b - a); }
     ctx.fillStyle = 'rgba(30,15,5,.32)'; ctx.beginPath(); ctx.ellipse(2 * dpr, ph * .55, pw * .56, ph * .8, 0, 0, 6.29); ctx.fill();
     ctx.fillStyle = '#1b3d78'; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(-pw / 2, -ph / 2, pw, ph, ph * .45) : ctx.rect(-pw / 2, -ph / 2, pw, ph); ctx.fill();
     ctx.strokeStyle = '#2f5a9e'; ctx.lineWidth = 1.1 * dpr;
-    for (var i = 0; i <= 40; i++) { var fx = -pw / 2 + pw * i / 40, j1 = ((i * 7) % 5) / 5; ctx.beginPath(); ctx.moveTo(fx, ph / 2 - 2 * dpr); ctx.lineTo(fx + (j1 - .5) * 3 * dpr, ph / 2 + (2 + 3 * j1) * dpr * k); ctx.stroke(); ctx.beginPath(); ctx.moveTo(fx, -ph / 2 + 2 * dpr); ctx.lineTo(fx - (j1 - .5) * 3 * dpr, -ph / 2 - (1.5 + 2.5 * j1) * dpr * k); ctx.stroke(); }
-    for (var e = -1; e <= 1; e += 2) { ctx.beginPath(); ctx.ellipse(e * pw / 2, 0, 3 * dpr * k, ph * .5, 0, 0, 6.29); ctx.fillStyle = '#2f5a9e'; ctx.fill(); }
+    var lr = Math.max(2, 3.4 * dpr * k), cols = ['#2f5a9e', '#24497f', '#3a66aa'];
+    for (var i = 0, nL = Math.ceil(pw / (lr * 1.3)); i <= nL; i++) { var fx = -pw / 2 + pw * i / nL;
+      ctx.fillStyle = cols[i % 3]; ctx.beginPath(); ctx.arc(fx, ph / 2, lr, 0, 6.29); ctx.fill();
+      ctx.fillStyle = cols[(i + 1) % 3]; ctx.beginPath(); ctx.arc(fx + lr * .4, -ph / 2, lr * .9, 0, 6.29); ctx.fill(); }
+    for (var e = -1; e <= 1; e += 2) for (var j = -1; j <= 1; j++) { ctx.fillStyle = cols[(j + 3) % 3]; ctx.beginPath(); ctx.arc(e * pw / 2, j * ph * .3, lr, 0, 6.29); ctx.fill(); }
     ctx.fillStyle = '#c9d0db'; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(-pw * .42, -ph * .32, pw * .84, ph * .5, ph * .2) : ctx.rect(-pw * .42, -ph * .32, pw * .84, ph * .5); ctx.fill();
     var jg = ctx.createRadialGradient(-2 * dpr, -4 * dpr, 0, 0, -2 * dpr, 7 * dpr * k); jg.addColorStop(0, '#f6dc8e'); jg.addColorStop(1, '#a8761f');
     ctx.fillStyle = jg; ctx.beginPath(); ctx.arc(0, -2 * dpr, 6 * dpr * k, 0, 6.29); ctx.fill();
@@ -640,28 +646,27 @@ function rand(a, b){ return a + Math.random() * (b - a); }
   function draw(){
     ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(base, 0, 0);
-    // wet streak: a fresh sheen where the mop just passed, drying off
-    if (performance.now() - wetT < 4000) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.drawImage(wetLayer(), 0, 0); ctx.restore(); }
+    // wet streak: the just-mopped wood is a shade darker until it dries
+    if (performance.now() - wetT < 4000) { ctx.save(); ctx.globalCompositeOperation = 'multiply'; ctx.globalAlpha = .35; ctx.drawImage(wetLayer(), 0, 0); ctx.restore(); }
     ctx.drawImage(dirt, 0, 0);
     for (var i = 0; i < debris.length; i++) if (debris[i].a > 0) drawBit(debris[i]);
     for (var j = 0; j < sparks.length; j++) { var sp = sparks[j], u = sp.t / sp.life, a = Math.sin(u * Math.PI); sparkle(ctx, sp.x * dpr, sp.y * dpr, sp.r * dpr * (.5 + .5 * a), a, sp.rot + u * .6); }
     if (mop.t >= 0) drawMop();
   }
   var tintC = document.createElement('canvas');
-  function wetLayer(){ // the wet mask recolored warm white, laid on with screen so the just-mopped wood shines
+  function wetLayer(){ // the wet mask recolored warm brown, laid on with multiply
     if (tintC.width !== wet.width || tintC.height !== wet.height) { tintC.width = wet.width; tintC.height = wet.height; }
     var c = tintC.getContext('2d');
     c.globalCompositeOperation = 'copy'; c.drawImage(wet, 0, 0);
-    c.globalCompositeOperation = 'source-in'; c.fillStyle = 'rgb(255,246,228)'; c.fillRect(0, 0, tintC.width, tintC.height);
+    c.globalCompositeOperation = 'source-in'; c.fillStyle = 'rgb(120,80,45)'; c.fillRect(0, 0, tintC.width, tintC.height);
     c.globalCompositeOperation = 'source-over';
     return tintC;
   }
 
-  var auto = { tx: 0, ty: 0, until: 0, n: 0, on: false };
-  function nextTarget(now){
-    auto.n++;
-    var band = H * (.3 + .45 * (.5 + .5 * Math.sin(auto.n * .45)));
-    auto.tx = (auto.n % 2 ? .12 : .88) * W + rand(-.06, .06) * W; auto.ty = band + rand(-.08, .08) * H; auto.until = now + 900;
+  var auto = { tx: 0, ty: 0, until: 0, n: 0, on: false, t: 0 };
+  function nextTarget(now){ // a mopper's figure-eight, drifting slowly across the room
+    var t = auto.t, x0 = W * (.5 + .3 * Math.sin(t * .11)), y0 = H * (.55 + .12 * Math.sin(t * .07));
+    auto.tx = x0 + W * (PHONE ? .3 : .17) * Math.sin(t); auto.ty = y0 + H * .2 * Math.sin(2 * t); auto.until = now;
   }
   var lastWipe = null;
   function mopTo(x, y, dt, follow){
@@ -714,8 +719,8 @@ function rand(a, b){ return a + Math.random() * (b - a); }
         if (!mopped) { mopped = true; hint.classList.add('gone'); }
       } else if (now - P.user > TUNE.idleMs || P.user === 0) {
         if (!auto.on) { auto.on = true; if (mop.t < 0) { mop.x = W * .2; mop.y = H * .7; } lastWipe = null; nextTarget(now); }
-        if (now > auto.until) nextTarget(now);
-        mopTo(auto.tx, auto.ty, dt, 3.2); mop.t = now;
+        auto.t += dt * 1.6; nextTarget(now);
+        mopTo(auto.tx, auto.ty, dt, 6); mop.t = now;
       } else { lastWipe = null; }
       pushDebris(dt);
       var dc = dirt.getContext('2d'); dc.globalAlpha = TUNE.regrow; dc.drawImage(dirtSrc, 0, 0); dc.globalAlpha = 1;
