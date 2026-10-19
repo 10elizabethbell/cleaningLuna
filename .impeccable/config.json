@@ -194,6 +194,24 @@
         ],
         "createdAt": "2026-10-18T01:56:11.376Z",
         "reason": "Shipped one-off value predating DESIGN.md (documenter left drawn-material/fallback values out of the token set); intentional"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T22:45:50.831Z",
+        "reason": "Agent: only hit is the floor hint #fffaf0, measured against the pre-paint fallback #ccc0b3; it renders on the darkened canvas floor (checked in screenshots)"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T22:45:50.909Z",
+        "reason": "Agent: 16px form labels beside 17px body copy; display steps (h1/h2) carry the hierarchy"
       }
     ]
   }
