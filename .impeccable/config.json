@@ -2,6 +2,25 @@
   "detector": {
     "ignoreRules": [],
     "ignoreFiles": [],
-    "ignoreValues": []
+    "ignoreValues": [
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T01:42:14.657Z",
+        "reason": "Ellie's calm band style (pitch-site calm-photo-style.md item 2, 2026-10-19): the faint 135deg line texture on deep bands is a chosen house feature"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T01:42:14.717Z",
+        "reason": "Agent: detector reads only the fixed small UI sizes (14-20px); hierarchy is carried by the clamp()ed Cal Sans h1 (44-84px) and h2 (30-48px) it doesn't count"
+      }
+    ]
   }
 }

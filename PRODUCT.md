@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-static single-file HTML/CSS/JS (inline, no frameworks, no tracking, no web fonts). Hosted on GitHub Pages.
+static single-file HTML/CSS/JS (inline, no frameworks, no tracking). One web font: Cal Sans from Google Fonts for headings (house calm band style, 2026-10-19). Hosted on GitHub Pages.
 
 ## Users
 
@@ -54,4 +54,4 @@ Their own words: "We Clean. You Relax." and "Reliable Service • Professional T
 1. Phone first: the first phone screen says who, what, and opens WhatsApp in one tap.
 2. Only their facts. Unknowns stay off the page and go to HANDOFF.md.
 3. Speak as the crew ("we"), about how they treat a customer's home or business.
-4. The page should feel like their brand: moonlight, sparkle, and a clean that the visitor can do with their own finger.
+4. The page should feel like their brand: the logo's navy night and moon gold, in Ellie's calm band style (paper and navy bands, gold as a fill).
