@@ -3,849 +3,498 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Cleaning Luna LLC · Cleaning in Elizabeth, NJ</title>
-<meta name="description" content="House, deep, move-in/move-out, Airbnb, office, commercial and post-construction cleaning in Elizabeth, NJ and the surrounding areas. Book on WhatsApp.">
-<meta name="theme-color" content="#f8f3ea">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<title>Cleaning Luna LLC · House, office &amp; post-construction cleaning · Elizabeth, NJ</title>
+<meta name="description" content="Cleaning Luna LLC cleans homes, rentals, offices and job sites in Elizabeth, NJ and the surrounding areas. We clean. You relax. Book on WhatsApp: 973-246-2624.">
+<meta name="theme-color" content="#f4f6fb">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Cleaning Luna LLC · We clean. You relax.">
-<meta property="og:description" content="House, office, Airbnb and post-construction cleaning in Elizabeth, NJ and the surrounding areas. Book on WhatsApp.">
+<meta property="og:title" content="Cleaning Luna LLC · In Elizabeth, we clean. You relax.">
+<meta property="og:description" content="Homes, rentals, offices and job sites in Elizabeth, NJ and the surrounding areas. Book on WhatsApp.">
 <meta property="og:url" content="https://10elizabethbell.github.io/cleaningLuna/">
 <meta property="og:image" content="https://10elizabethbell.github.io/cleaningLuna/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap">
 <style>
-/* ===== Tokens ===== */
+/* ---------- Tokens ---------- */
 :root{
-  --navy:#0a2a58; --navy-2:#13386f; --navy-ink:#0b2246; --night:#0c2550;
-  --gold:#d6a035; --gold-hi:#f2cf74; --gold-deep:#8f6416;
-  --wall:#f8f3ea; --paper:#fffdf8; --line:rgba(10,42,88,.14);
-  --muted:#4a5a78; --night-text:#dfe6f3; --night-muted:#b4c1da;
-  --accent:#2a6fdb; /* form outline: stands apart from the gold buttons */
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --gutter:16px; --max:1180px;
+  /* off-white paper, the logo's two navies, the logo's moon gold */
+  --paper:#f4f6fb;       /* page ground */
+  --card:#ffffff;
+  --field:#e6ecf5;       /* inputs and chips on the white form card */
+  --ink:#0a2350;         /* headings, text on gold */
+  --body:#26364d;        /* running text on light */
+  --soft:#4a5870;        /* secondary text on light */
+  --navy:#173d7a;        /* hero, services, close */
+  --deep:#0a2350;        /* how it works, footer (line texture) */
+  --on-dark:#f4f7fb;
+  --on-dark-soft:#c9d6ea;
+  --gold:#d6a035;        /* fills only; text on it is --ink */
+  --gold-2:#e2b452;
+  --gold-ink:#7f5a12;    /* gold as text on light (5.8:1) */
+  --line:rgba(10,35,80,.12);
+  --focus:#173d7a;       /* form hover/focus outline, distinct from the gold fill */
+  --error:#b3261e;
+  --texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px);
+  --display:"Cal Sans","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --text:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --r-card:24px;--r-field:10px;--pill:999px;
+  --gutter:20px;
 }
-@media (min-width:760px){ :root{ --gutter:32px; } }
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--paper)}
+body{margin:0;font:16px/1.7 var(--text);color:var(--body);background:var(--paper)}
+::selection{background:var(--gold);color:var(--ink)}
+img,svg{display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.on-navy :focus-visible,.on-deep :focus-visible,.hero :focus-visible,footer :focus-visible{outline-color:var(--gold)}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:400;line-height:1.08;letter-spacing:-.005em;color:var(--ink);text-wrap:balance}
+h2{font-size:clamp(30px,7.6vw,48px)}
+p{margin:0}
 
-/* ===== Base ===== */
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px;overscroll-behavior-y:none}
-body{margin:0;background:var(--wall);color:var(--navy-ink);font:400 17px/1.55 var(--sans);overflow-x:hidden}
-img{max-width:100%;display:block}
-a{color:inherit;text-underline-offset:.2em}
-::selection{background:rgba(214,160,53,.35);color:var(--navy-ink)}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.01em;text-wrap:balance;margin:0}
-h2{font-size:clamp(2rem,7.4vw,3.25rem);line-height:1.05}
-p{margin:0;text-wrap:pretty}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-@supports (padding:max(0px)){ .wrap{padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right))} }
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* ---------- Bands ---------- */
+section{padding:64px 0}
+.on-paper{background:var(--paper)}
+.on-navy{background:var(--navy);color:var(--on-dark-soft)}
+.on-deep{background-color:var(--deep);background-image:var(--texture);color:var(--on-dark-soft)}
+.on-navy h2,.on-deep h2,.on-navy h3,.on-deep h3{color:var(--on-dark)}
+.accent{color:var(--gold-ink)}
+.on-navy .accent,.on-deep .accent,.hero .accent{color:var(--gold)}
+.head{display:grid;gap:16px;justify-items:start;max-width:640px}
+.lede{font-size:clamp(17px,4.6vw,19px);color:var(--soft);max-width:38ch}
+.on-navy .lede,.on-deep .lede{color:var(--on-dark-soft)}
 
-/* ===== Buttons ===== */
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;font:700 17px/1 var(--sans);text-decoration:none;border:2px solid var(--navy);transition:background .2s,color .2s,transform .15s,box-shadow .2s;cursor:pointer;-webkit-tap-highlight-color:transparent}
-.btn:active{transform:translateY(1px)}
+/* Eyebrow: a few key headings only. A label, not a button. */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 14px/1 var(--text);letter-spacing:.02em;color:var(--ink);background:rgba(10,35,80,.06);padding:9px 14px;border-radius:var(--pill)}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.hero .eyebrow,.on-navy .eyebrow,.on-deep .eyebrow{color:var(--on-dark);background:rgba(255,255,255,.12)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:var(--pill);font:400 18px/1 var(--display);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,color .2s,border-color .2s,transform .12s}
+.btn:active{transform:scale(.98)}
 .btn svg{width:22px;height:22px;flex:none}
-.btn-gold{background:var(--gold);color:var(--navy-ink);box-shadow:0 8px 18px -10px rgba(10,34,70,.45)}
-.btn-gold:active{background:var(--gold-hi)}
-@media (hover:hover){ .btn-gold:hover{background:var(--gold-hi)} .btn-line:hover{background:var(--navy);color:var(--wall)} .top-phone:hover{color:var(--gold-deep)} .night .btn-line:hover{background:var(--night-text);color:var(--night)} }
-.btn-line{background:transparent;color:var(--navy)}
-.night .btn-gold{box-shadow:none}
-.night .btn-line{border-color:var(--night-text);color:var(--night-text)}
+.btn-primary{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.btn-ghost{background:transparent;color:var(--on-dark);border-color:rgba(244,247,251,.7)}
 
-/* ===== Header ===== */
-.top{position:relative;z-index:3;background:var(--wall)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
-.brand{display:flex;align-items:center;gap:8px;text-decoration:none;min-height:44px}
-.brand img{width:44px;height:44px;mix-blend-mode:multiply}
-.brand span{font:italic 700 21px/1 var(--serif);color:var(--navy);white-space:nowrap}
-@media (max-width:379px){ .brand span{font-size:18px} .brand img{width:38px;height:38px} .top-phone{font-size:16px} }
-.top-phone{font:700 16px/1 var(--sans);color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:7px;min-height:44px;padding:0 2px;font-variant-numeric:tabular-nums;white-space:nowrap}
-.top-phone svg{width:17px;height:17px;flex:none;color:var(--gold-deep)}
-@media (min-width:760px){ .brand img{width:52px;height:52px} .brand span{font-size:24px} .top-phone{font-size:18px} .top .wrap{min-height:80px} }
+/* ---------- Header ---------- */
+.top{background:var(--paper);color:var(--ink)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding-top:max(8px,env(safe-area-inset-top))}
+.brand{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;line-height:1}
+.brand img{width:40px;height:40px;flex:none}
+.brand b{display:block;font:400 20px/1 var(--display);letter-spacing:.01em;white-space:nowrap}
+.brand small{display:block;font:600 11px/1 var(--text);letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
+.tel{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font:400 17px/1 var(--display);text-decoration:none;white-space:nowrap}
+.tel svg{width:18px;height:18px;flex:none;color:var(--gold-ink)}
+@media (max-width:374px){.brand small{display:none}.brand b{font-size:19px}.tel{font-size:16px;gap:6px}.tel svg{width:16px;height:16px}}
 
-/* ===== Hero: the wall ===== */
-.hero{position:relative;background:var(--wall)}
-.wall{position:relative;padding:18px 0 30px}
-.wall .wrap{display:grid;gap:18px}
-.hero h1{font-size:clamp(2.9rem,13.2vw,6rem);line-height:.98;color:var(--navy)}
-.hero h1 em{display:block;font-style:italic;color:var(--gold-deep)}
-.promise{font-size:clamp(17px,4.6vw,20px);line-height:1.5;color:var(--muted);max-width:34ch}
-.wall-text{display:grid;gap:16px}
-.ctas{display:grid;gap:10px;margin-top:4px}
-.window{display:none}
+/* ---------- Hero ---------- */
+.hero{padding:0;position:relative;background-color:var(--navy);background-image:var(--texture);color:var(--on-dark);overflow:hidden}
+.hero-copy{position:relative;z-index:1;display:grid;gap:20px;justify-items:start;padding-top:56px;padding-bottom:72px}
+.hero h1{color:#fff;font-size:clamp(44px,12.4vw,84px);line-height:1.02;max-width:11ch}
+/* H1 bounce-in (after lpmr.co.uk): each letter slides in from 50px right with a slight overshoot, 20ms apart */
+.hero h1 .w{display:inline-block;white-space:nowrap}
+.hero h1 .c{display:inline-block;opacity:0;transform:translateX(50px);animation:letter-in 1s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:calc(var(--i) * 20ms)}
+@keyframes letter-in{to{opacity:1;transform:none}}
+.promise{font-size:clamp(17px,4.7vw,20px);line-height:1.5;color:var(--on-dark-soft);max-width:30ch}
+.actions{display:grid;gap:12px;width:100%;margin-top:4px}
+/* the logo's crescent moon, desktop only, clear of the text */
+.moon{display:none}
+
+/* ---------- Care ---------- */
+.claims{list-style:none;margin:28px 0 0;padding:0;display:grid}
+.claims li{display:flex;align-items:center;gap:16px;padding:16px 0;font:400 clamp(20px,5.4vw,24px)/1.15 var(--display);color:var(--ink)}
+.claims li+li{border-top:1px solid var(--line)}
+.claims svg{width:40px;height:40px;flex:none;color:var(--gold-ink)}
+
+/* ---------- Services: rows on navy; only the arrow changes on hover ---------- */
+.groups{display:grid;gap:36px;margin-top:36px}
+.group h3{font:600 13px/1 var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark-soft);margin-bottom:6px}
+.rows{list-style:none;margin:0;padding:0}
+.rows li+li{border-top:1px solid rgba(255,255,255,.12)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:8px 0;color:var(--on-dark);text-decoration:none;font:400 clamp(19px,5.2vw,22px)/1.2 var(--display)}
+.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:var(--on-dark);transition:background-color .2s,color .2s}
+.arrow svg{width:18px;height:18px}
+.row:focus-visible .arrow{background:var(--gold);color:var(--ink);outline:3px solid var(--gold);outline-offset:3px}
+
+/* ---------- How it works ---------- */
+.steps{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:24px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;counter-increment:s}
+.steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);font:400 20px/1 var(--display)}
+.steps b{display:block;font:400 21px/1.2 var(--display);color:var(--on-dark);margin-top:4px}
+.steps span{display:block;margin-top:4px}
+
+/* ---------- Form ---------- */
+.ask .wrap{display:grid;gap:28px}
+form{background:var(--card);border-radius:var(--r-card);padding:clamp(20px,5vw,32px);display:grid;gap:22px;max-width:640px}
+.field{display:grid;gap:8px;min-width:0}
+.field label,.field legend{font:400 17px/1.2 var(--display);color:var(--ink);padding:0}
+.field small{font:400 14px/1 var(--text);color:var(--soft);margin-left:4px}
+.field legend{margin-bottom:8px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+input[type=text],textarea{width:100%;font:16px/1.4 var(--text);color:var(--ink);background:var(--field);border:2px solid transparent;border-radius:var(--r-field);padding:13px 14px;min-height:52px;caret-color:var(--navy);transition:border-color .15s}
+textarea{min-height:110px;resize:vertical}
+input::placeholder,textarea::placeholder{color:var(--soft)}
+input[type=text]:focus,textarea:focus{outline:none;border-color:var(--focus)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
+.chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--pill);background:var(--field);border:2px solid transparent;font:16px/1.2 var(--text);color:var(--ink);cursor:pointer;margin:0;transition:border-color .15s,background-color .15s,color .15s}
+.chips input:focus-visible+label{border-color:var(--focus);outline:3px solid var(--focus);outline-offset:2px}
+.chips input:checked+label{background:var(--ink);color:#fff}
+.err{display:none;font-size:15px;color:var(--error)}
+.field.bad .err{display:block}
+.field.bad input[type=text],.field.bad textarea,.field.bad input[type=text]:focus{border-color:var(--error)}
+.field.bad .chips label{border-color:var(--error)}
+form .btn-primary{width:100%}
+form .btn-primary:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.after{font-size:15px;color:var(--soft)}
+.sent{display:grid;gap:12px;color:var(--ink)}
+.sent pre{margin:0;white-space:pre-wrap;font:15px/1.5 var(--text);background:var(--field);border-radius:var(--r-field);padding:12px 14px}
+.sent .again{display:flex;flex-wrap:wrap;gap:10px}
+.btn-soft{min-height:48px;padding:0 20px;font-size:16px;background:var(--field);color:var(--ink)}
+.sent a.nw{display:inline-block;padding:11px 0;margin:-11px 0}
+@media (max-width:380px){.chips label{padding:0 14px}}
+
+/* ---------- Close ---------- */
+.close .who{margin-top:14px;font-size:clamp(18px,5vw,20px);color:var(--on-dark-soft)}
+.bigtel{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font:400 clamp(30px,9vw,52px)/1 var(--display);text-decoration:none;color:var(--on-dark);min-height:56px;white-space:nowrap}
+.bigtel svg{width:.8em;height:.8em;flex:none;color:var(--gold)}
+.area{margin-top:22px;max-width:40ch}
+
+/* ---------- Footer ---------- */
+footer{background-color:var(--deep);background-image:var(--texture);color:var(--on-dark-soft);padding:48px 0 calc(96px + env(safe-area-inset-bottom));font-size:16px}
+footer .wrap{display:grid;gap:14px}
+.nw{white-space:nowrap}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-dark);text-decoration:none}
+
+/* ---------- Floating WhatsApp circle (one circle, never a bottom bar) ---------- */
+.float{position:fixed;z-index:15;right:calc(16px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);box-shadow:0 10px 28px rgba(6,20,46,.3);transform:translateY(120px);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.float.on{transform:none}
+.float svg{width:28px;height:28px}
+.float:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:50%}
+
+/* ---------- Motion: one fade-up, only for things below the first screen ---------- */
+.js .rise{transition:opacity .4s ease-out,transform .4s ease-out}
+.js .rise.below{opacity:0;transform:translateY(12px)}
+
+/* ---------- Desktop ---------- */
 @media (min-width:760px){
-  .ctas{grid-template-columns:auto auto;justify-content:start}
-  .wall{padding:32px 0 44px}
+  :root{--gutter:40px}
+  .top .wrap{min-height:76px}
+  .brand img{width:48px;height:48px}
+  .brand b{font-size:24px}
+  .tel{font-size:20px}
+  section{padding:96px 0}
+  .hero-copy{padding-top:96px;padding-bottom:112px}
+  .promise{max-width:36ch}
+  .actions{grid-auto-flow:column;justify-content:start;width:auto}
+  .actions .btn{min-width:240px}
 }
 @media (min-width:1024px){
-  .wall .wrap{grid-template-columns:1fr 340px;align-items:end;column-gap:48px}
-  .wall-text{gap:22px}
-  .window{display:block;width:340px;margin-right:6%;filter:drop-shadow(0 2px 3px rgba(10,42,88,.14))}
+  .moon{display:block;position:absolute;right:max(40px,calc(50% - 560px));top:50%;width:300px;height:300px;transform:translateY(-50%)}
+  .hero h1{max-width:12ch}
+  .split{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;align-items:start}
+  .split .claims{margin-top:0}
+  .groups{grid-template-columns:1fr 1fr;column-gap:64px;row-gap:36px}
+  .groups .group:first-child{grid-row:span 2}
+  .ask .wrap{grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+  .ask .head{position:sticky;top:40px}
+  .close .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end}
+  .bigtel{margin-top:0}
+  .how .steps{grid-template-columns:repeat(3,1fr);gap:40px}
+  .steps b{font-size:22px}
 }
-
-/* ===== Hero: the floor ===== */
-.floor{position:relative;height:clamp(250px,40svh,340px);background:
-  linear-gradient(rgba(70,40,15,.25),transparent 30%),
-  repeating-linear-gradient(90deg,#c08a4e 0 54px,#7a4f27 54px 55px,#b47d43 55px 110px,#7a4f27 110px 111px);
-  touch-action:none;overflow:hidden;user-select:none;-webkit-user-select:none}
-@media (min-width:760px){ .floor{height:clamp(300px,44svh,460px)} }
-@media (orientation:landscape) and (max-height:500px){ .floor{height:180px} }
-@media (prefers-reduced-motion:reduce){ .floor{touch-action:pan-y} }
-.floor canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.baseboard{position:absolute;left:0;right:0;top:0;height:16px;background:linear-gradient(#fffdf8,#eee6d6 70%,#d9cdb6);box-shadow:0 4px 8px rgba(60,35,10,.28);z-index:2}
-.floor::after{content:"";position:absolute;left:0;right:0;bottom:0;height:80px;background:linear-gradient(rgba(40,20,5,0),rgba(40,20,5,.62));pointer-events:none;z-index:1}
-.hint{position:absolute;left:max(var(--gutter),env(safe-area-inset-left));bottom:14px;z-index:2;display:flex;align-items:center;gap:8px;font:600 16px/1.2 var(--sans);color:#fffaf0;text-shadow:0 1px 2px rgba(40,20,5,.95),0 2px 8px rgba(40,20,5,.8);transition:opacity .6s;pointer-events:none}
-.hint svg{width:20px;height:20px}
-.hint.gone{opacity:0}
-.threshold{height:12px;background:linear-gradient(#f4d98c,#d6a035 45%,#9c6d1b);box-shadow:0 3px 6px rgba(80,50,10,.25)}
-
-/* ===== Sections ===== */
-section{position:relative}
-.sec{padding:64px 0 72px}
-@media (min-width:760px){ .sec{padding:96px 0 104px} }
-.sec-head{display:grid;gap:12px;margin-bottom:30px;align-content:start}
-.sec-head p{color:var(--muted);max-width:44ch}
-.night{background:var(--night);color:var(--night-text)}
-.night h2{color:#fff}
-.night .sec-head p{color:var(--night-muted)}
-.sky{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.night .wrap{position:relative;z-index:1}
-
-/* ===== Seams ===== */
-.seam{display:block;width:100%;height:46px;margin:-1px 0}
-
-/* ===== Services ===== */
-.groups{display:grid;gap:34px}
-@media (min-width:1024px){ .groups{grid-template-columns:repeat(3,1fr);gap:40px} }
-.group h3{font-size:24px;color:var(--navy-2);font-style:italic;margin-bottom:6px}
-.rows{list-style:none;margin:0;padding:0}
-.row{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:60px;padding:8px 0;border-bottom:1px solid var(--line);text-decoration:none;font:600 17px/1.3 var(--sans);color:var(--navy-ink)}
-.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
-.arrow{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);color:var(--navy);transition:background .2s,border-color .2s,color .2s}
-.arrow svg{width:18px;height:18px}
-.row:hover .arrow,.row:focus-visible .arrow{background:var(--gold);border-color:var(--gold);color:var(--navy-ink)}
-.row:focus-visible .arrow{outline:3px solid var(--accent);outline-offset:3px}
-
-/* ===== How it works ===== */
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:28px;counter-reset:s}
-@media (min-width:900px){ .steps{grid-template-columns:repeat(3,1fr);gap:40px} }
-.steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
-.steps .n{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:700 24px/1 var(--serif);color:var(--gold-hi);border:2px solid rgba(242,207,116,.7)}
-.steps h3{font-size:24px;color:#fff;margin:6px 0 6px}
-.steps p{color:var(--night-muted)}
-
-/* ===== Quote form ===== */
-.quote-grid{display:grid;gap:30px}
-@media (min-width:1024px){ .quote-grid{max-width:800px} }
-form{display:grid;gap:22px}
-.field{display:grid;gap:8px}
-.field > label,.field legend{font:700 16px/1.3 var(--sans);color:var(--navy-ink);padding:0}
-.opt{font-weight:400;color:var(--muted)}
-fieldset{border:0;margin:0;padding:0;min-width:0}
-input[type=text],textarea{width:100%;min-height:54px;padding:13px 16px;border-radius:14px;border:1.5px solid rgba(10,42,88,.28);background:var(--paper);font:400 17px/1.4 var(--sans);color:var(--navy-ink);caret-color:var(--gold-deep);transition:border-color .15s,box-shadow .15s}
-textarea{min-height:110px;resize:vertical}
-input[type=text]::placeholder,textarea::placeholder{color:#5b6882}
-input[type=text]:hover,textarea:hover,input[type=text]:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(42,111,219,.18)}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{position:relative}
-.chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
-.chip span{display:flex;align-items:center;min-height:44px;padding:8px 16px;border-radius:999px;border:1.5px solid rgba(10,42,88,.28);background:var(--paper);font:600 16px/1.25 var(--sans);cursor:pointer;transition:border-color .15s,background .15s,box-shadow .15s}
-.chip span:hover,.chip input:focus-visible + span{border-color:var(--accent);box-shadow:0 0 0 3px rgba(42,111,219,.18)}
-.chip input:checked + span{background:var(--navy);border-color:var(--navy);color:#fff}
-.chip input:checked + span:hover{border-color:var(--accent)}
-.err{color:#b3261e;font:600 16px/1.35 var(--sans);display:none}
-.field.bad .err{display:block}
-.field.bad input[type=text]{border-color:#b3261e}
-form .btn{justify-self:stretch}
-form .btn:hover,form .btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-@media (min-width:760px){ form .btn{justify-self:start} }
-.sent{display:none;gap:12px;padding:18px;border-radius:16px;background:var(--paper);border:1.5px solid var(--line)}
-.sent.show{display:grid}
-.sent pre{margin:0;white-space:pre-wrap;font:400 16px/1.5 var(--sans);color:var(--muted)}
-.sent button{justify-self:start;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--navy);background:none;font:700 16px/1 var(--sans);color:var(--navy);cursor:pointer}
-.sent button:hover,.sent button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-
-/* ===== Close ===== */
-.close{text-align:center;overflow:hidden}
-.close .wrap{display:grid;justify-items:center;gap:18px}
-.moon{width:92px;height:92px;margin-bottom:4px}
-.close h2{font-size:clamp(2.3rem,9vw,4rem)}
-.close .area{font:italic 400 clamp(21px,5vw,24px)/1.35 var(--serif);color:var(--night-text)}
-.close .trio{color:var(--night-muted);font-size:16px}
-.close .btn{width:100%;max-width:360px;margin-top:8px}
-
-/* ===== Footer ===== */
-footer{background:var(--paper);padding:44px 0 52px;border-top:1px solid var(--line)}
-footer .wrap{display:grid;gap:22px;justify-items:center;text-align:center}
-footer img{width:200px;mix-blend-mode:multiply}
-.foot-links{display:grid;gap:4px;font-size:17px}
-.foot-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;text-decoration:none;color:var(--navy);font-weight:600}
-.foot-links a:hover{text-decoration:underline}
-.foot-links .tel{font-variant-numeric:tabular-nums}
-.copy{font-size:14px;color:var(--muted)}
-
-@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} .btn,.arrow{transition:none} }
+/* hover styles only where there is a real pointer, so taps don't leave them stuck on */
+@media (hover:hover){
+.tel:hover{color:var(--gold-ink)}
+.btn-primary:hover{background:var(--gold-2);border-color:var(--gold-2)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.row:hover .arrow{background:var(--gold);color:var(--ink)}
+input[type=text]:hover,textarea:hover{border-color:var(--focus)}
+.chips label:hover{border-color:var(--focus)}
+form .btn-primary:hover,.btn-soft:hover{outline:2px solid var(--focus);outline-offset:2px}
+.sent a:hover{color:var(--navy)}
+.bigtel:hover{color:var(--gold)}
+footer a:hover{color:var(--gold)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rise,.float,.btn{transition:none}
+  .js .rise.below{opacity:1;transform:none}
+  .hero h1 .c{animation:none;opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 <!--
-THESIS: Cleaning Luna turns a dull, tracked-in floor into a mirror shine, and the visitor does it with their own finger in the first screen.
-OWN-WORLD: The room they clean. A cream wall with the brand's lettering, honey hardwood seen from the doorway, a navy microfiber mop, a moonlit window whose reflection only shows where the floor is clean, gold four-point sparkles from the logo. Navy sections are the night outside ("Luna"), full of stars that move aside for a finger.
-STORY: Who they are and the promise (wall) → you mop the floor (hero) → what we clean (rows that open WhatsApp) → how booking works (night) → tell us about your place (form → WhatsApp) → book today, where we work (night, moon) → footer with logo.
-FIRST VIEWPORT: Phone: header with the CL moon mark and the number top-right; "We clean. You relax." huge in navy and gold italic; one promise line; Book on WhatsApp (gold) and Get a quote (outline); the floor below, being mopped. Desktop adds the moonlit window on the wall that the floor reflects.
-FORM: Iowan/Palatino serif display from the logo's monogram, italic gold for the relaxing half; system sans body. Gold only where something is clean or active (buttons, sparkles, hover arrows, the threshold). Rows, not cards.
-RAISES: gold reserved for clean/active states (palette law); dust creeps back at a steady, predictable rate so the clean patch lasts a few seconds.
+THESIS: A local cleaning crew's site that earns trust through calm order (after lpmr.co.uk): their own promise (in Elizabeth, we clean. You relax.), their own three words (reliable, professional, quality), and one WhatsApp message to book.
+OWN-WORLD: The logo's night: off-white paper, moonlit navy (#173d7a) and midnight (#0a2350, faint diagonal lines) bands, the crescent moon's gold (#d6a035) as the one warm accent (fills only; #7f5a12 when it has to be text on light). Cal Sans display, system body at 16/1.7.
+STORY: The visitor sees who cleans in Elizabeth and what they look after, believes the crew treats a place like their own, picks what needs cleaning, and sends it on WhatsApp.
+FIRST VIEWPORT: Paper header with the CL moon mark and wordmark left, tap-to-call number top right. Navy hero: eyebrow (Homes, rentals & businesses), "In Elizabeth, we clean. You relax.", one promise line, two pill buttons (Book on WhatsApp, Get a quote). Desktop adds the logo's gold crescent at the right.
+FORM: calm band system without photos (none supplied); the earlier mopped-floor world is in git history (commit 81c63b2).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h3.5l1.8 4.6-2.3 1.5a11 11 0 0 0 6 6l1.5-2.3L20 14.5V18a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></symbol>
+</svg>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#" aria-label="Cleaning Luna LLC, back to top"><img src="assets/mark.webp" width="44" height="44" alt=""><span>Cleaning Luna</span></a>
-    <a class="top-phone" href="tel:+19732462624"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>973-246-2624</a>
+    <a class="brand" href="#" aria-label="Cleaning Luna LLC, back to top"><img src="assets/mark.webp" width="40" height="40" alt=""><span><b>Cleaning Luna</b><small>LLC · Elizabeth, NJ</small></span></a>
+    <a class="tel" href="tel:+19732462624"><svg aria-hidden="true"><use href="#i-phone"/></svg>973-246-2624</a>
   </div>
 </header>
 
-<main>
-<section class="hero" aria-label="Cleaning Luna">
-  <div class="wall">
-    <div class="wrap">
-      <div class="wall-text">
-        <h1>We clean. <em>You relax.</em></h1>
-        <p class="promise">We look after your home, your rental or your office like it's our own, so you can walk back in and finally sit down.</p>
-        <div class="ctas">
-          <a class="btn btn-gold" data-wa="Hi Cleaning Luna! I'd like to book a cleaning." href="https://wa.me/19732462624"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>Book on WhatsApp</a>
-          <a class="btn btn-line" href="#quote">Get a quote</a>
-        </div>
-      </div>
-      <svg class="window" viewBox="-10 0 320 330" aria-hidden="true">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#081d40"/><stop offset="1" stop-color="#1d4384"/></linearGradient>
-          <linearGradient id="goldg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc8e"/><stop offset=".55" stop-color="#d6a035"/><stop offset="1" stop-color="#a8761f"/></linearGradient>
-          <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e9e1d1"/></linearGradient>
-        </defs>
-        <rect x="0" y="0" width="300" height="314" rx="6" fill="url(#frame)"/>
-        <rect x="10" y="10" width="280" height="294" fill="#d9cdb6"/>
-        <rect x="16" y="16" width="268" height="282" fill="url(#sky)"/>
-        <rect x="16" y="16" width="268" height="10" fill="#000" opacity=".22"/>
-        <g fill="#fff"><circle cx="60" cy="70" r="1.4"/><circle cx="110" cy="40" r="1"/><circle cx="240" cy="200" r="1.2"/><circle cx="70" cy="230" r="1"/><circle cx="200" cy="260" r="1.3"/><circle cx="130" cy="180" r="1"/><circle cx="250" cy="60" r="1"/></g>
-        <path d="M178 56a52 52 0 1 0 50 72a42 42 0 1 1-50-72z" fill="url(#goldg)"/>
-        <path d="M92 116l4 13 13 4-13 4-4 13-4-13-13-4 13-4z" fill="url(#goldg)"/>
-        <path d="M236 150l2.6 8.4 8.4 2.6-8.4 2.6-2.6 8.4-2.6-8.4-8.4-2.6 8.4-2.6z" fill="#f2cf74"/>
-        <rect x="144" y="16" width="12" height="282" fill="url(#frame)"/>
-        <rect x="16" y="150" width="268" height="12" fill="url(#frame)"/>
-        <rect x="-8" y="306" width="316" height="18" rx="4" fill="#fffdf8"/>
-        <rect x="-8" y="320" width="316" height="6" rx="3" fill="#e2d7c2"/>
-      </svg>
+<main id="top">
+<section class="hero" id="hero" aria-labelledby="h1">
+  <svg class="moon" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d58a"/><stop offset=".55" stop-color="#d6a035"/><stop offset="1" stop-color="#a8761f"/></linearGradient></defs><path d="M58 8a44 44 0 1 0 34 64A36 36 0 1 1 58 8z" fill="url(#mg)"/><path d="M84 14l2 6.5 6.5 2-6.5 2-2 6.5-2-6.5-6.5-2 6.5-2z" fill="#e2b452"/></svg>
+  <div class="wrap hero-copy">
+    <p class="eyebrow">Homes, rentals &amp; businesses</p>
+    <h1 id="h1">In Elizabeth,<br> we clean. <span class="accent">You relax.</span></h1>
+    <p class="promise">We look after your home, your rental or your office like it's our own.</p>
+    <div class="actions">
+      <a class="btn btn-primary" data-wa="Hi Cleaning Luna! I'd like to book a cleaning." href="https://wa.me/19732462624"><svg aria-hidden="true"><use href="#i-wa"/></svg>Book on WhatsApp</a>
+      <a class="btn btn-ghost" href="#ask">Get a quote</a>
     </div>
   </div>
-  <div class="floor" id="floor">
-    <div class="baseboard"></div>
-    <canvas id="floorCanvas" role="img" aria-label="A hardwood floor being mopped from dusty to a mirror shine. Drag across it to mop."></canvas>
-    <p class="hint" id="hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 11V5a2 2 0 1 1 4 0v5m0-1a2 2 0 1 1 4 0v2m0 0a2 2 0 1 1 4 0v3a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.5L4.5 14a2 2 0 0 1 3.4-2L9 13.5"/></svg>Drag across the floor to mop it</p>
-  </div>
-  <div class="threshold" aria-hidden="true"></div>
 </section>
 
-<section class="sec" id="services" aria-labelledby="services-h">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 id="services-h">What we clean</h2>
-      <p>Tap one and WhatsApp opens with it already written for you.</p>
+<section class="on-paper" aria-labelledby="h-care">
+  <div class="wrap split">
+    <div class="rise">
+      <h2 id="h-care">We treat your place like our own.</h2>
+      <p class="lede" style="margin-top:16px">You're letting us into your home or your business. We take that seriously on every visit, big job or small.</p>
     </div>
+    <ul class="claims">
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="8" width="30" height="27" rx="4"/><path d="M5 16h30M13 4v7M27 4v7"/><path d="M14 25l4 4 8-8"/></svg>Reliable service</li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="13" r="5"/><circle cx="27" cy="14" r="4"/><path d="M4 33c0-6 4.5-10 10-10s10 4 10 10M23 23.5c1-.3 2.2-.5 4-.5 5 0 9 3.5 9 9"/></svg>Professional team</li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4l3.6 10.4L34 18l-10.4 3.6L20 32l-3.6-10.4L6 18l10.4-3.6z"/><path d="M32 28l1.2 3.8L37 33l-3.8 1.2L32 38l-1.2-3.8L27 33l3.8-1.2z"/></svg>Quality work</li>
+    </ul>
+  </div>
+</section>
+
+<section class="on-navy" id="services" aria-labelledby="h-svc">
+  <div class="wrap">
+    <h2 id="h-svc" class="rise">What we <span class="accent">clean.</span></h2>
     <div class="groups">
-      <div class="group">
+      <div class="group rise">
         <h3>Homes</h3>
         <ul class="rows">
-          <li><a class="row" data-svc="House Cleaning">House cleaning<span class="arrow"></span></a></li>
-          <li><a class="row" data-svc="Deep Cleaning">Deep cleaning<span class="arrow"></span></a></li>
-          <li><a class="row" data-svc="Apartment &amp; Condo Cleaning">Apartments &amp; condos<span class="arrow"></span></a></li>
-          <li><a class="row" data-svc="Move-In &amp; Move-Out Cleaning">Move-in &amp; move-out<span class="arrow"></span></a></li>
-          <li><a class="row" data-svc="Organization &amp; Detailed Cleaning">Organizing &amp; detail work<span class="arrow"></span></a></li>
+          <li><a class="row" href="#ask" data-svc="House Cleaning">House cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Deep Cleaning">Deep cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Apartment &amp; Condo Cleaning">Apartments &amp; condos<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Move-In &amp; Move-Out Cleaning">Move-in &amp; move-out<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Organization &amp; Detailed Cleaning">Organizing &amp; detail work<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
         </ul>
       </div>
-      <div class="group">
+      <div class="group rise">
         <h3>Rentals &amp; businesses</h3>
         <ul class="rows">
-          <li><a class="row" data-svc="Airbnb &amp; Rental Property Cleaning">Airbnb &amp; rentals<span class="arrow"></span></a></li>
-          <li><a class="row" data-svc="Office Cleaning">Offices<span class="arrow"></span></a></li>
-          <li><a class="row" data-svc="Commercial Cleaning">Commercial spaces<span class="arrow"></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Airbnb &amp; Rental Property Cleaning">Airbnb &amp; rentals<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Office Cleaning">Offices<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Commercial Cleaning">Commercial spaces<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
         </ul>
       </div>
-      <div class="group">
+      <div class="group rise">
         <h3>Job sites</h3>
         <ul class="rows">
-          <li><a class="row" data-svc="Post-Construction Cleaning">Post-construction cleaning<span class="arrow"></span></a></li>
-          <li><a class="row" data-svc="Construction Debris &amp; Trash Removal">Debris &amp; trash removal<span class="arrow"></span></a></li>
-          <li><a class="row" data-svc="Concrete, Wood &amp; Job-Site Debris Removal">Concrete &amp; wood haul-away<span class="arrow"></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Post-Construction Cleaning">Post-construction cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Construction Debris &amp; Trash Removal">Debris &amp; trash removal<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Concrete, Wood &amp; Job-Site Debris Removal">Concrete &amp; wood haul-away<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<svg class="seam" data-seam data-top="#f8f3ea" data-bottom="#0c2550" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"></svg>
-<section class="sec night" id="how" aria-labelledby="how-h">
-  <canvas class="sky" aria-hidden="true"></canvas>
+<section class="on-deep how" aria-labelledby="h-how">
   <div class="wrap">
-    <div class="sec-head"><h2 id="how-h">Booking starts with one message</h2></div>
+    <h2 id="h-how" class="rise">Booking takes <span class="accent">one message.</span></h2>
     <ol class="steps">
-      <li><span class="n">1</span><div><h3>Message us</h3><p>Send a WhatsApp with what needs cleaning and where.</p></div></li>
-      <li><span class="n">2</span><div><h3>Pick a day</h3><p>We find a time that works around your week.</p></div></li>
-      <li><span class="n">3</span><div><h3>Come home to it</h3><p>We leave it the way we'd want our own place left.</p></div></li>
+      <li class="rise"><div><b>Message us on WhatsApp.</b><span>Say what needs cleaning and where.</span></div></li>
+      <li class="rise"><div><b>Pick a day.</b><span>We find a time that works around your week.</span></div></li>
+      <li class="rise"><div><b>Come home to it.</b><span>We leave it the way we'd want our own place left.</span></div></li>
     </ol>
   </div>
 </section>
-<svg class="seam" data-seam data-top="#0c2550" data-bottom="#f8f3ea" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"></svg>
 
-<section class="sec" id="quote" aria-labelledby="quote-h">
-  <div class="wrap quote-grid">
-    <div class="sec-head">
-      <h2 id="quote-h">Tell us about your place</h2>
-      <p>We'll read it on WhatsApp and get back to you with a quote.</p>
+<section class="on-paper ask" id="ask" aria-labelledby="h-ask">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="eyebrow">Quotes on WhatsApp</p>
+      <h2 id="h-ask">Tell us about your place</h2>
+      <p class="lede">We'll read it on WhatsApp and get back to you with a quote.</p>
     </div>
-    <form id="quoteForm" novalidate>
+    <form id="quoteForm" class="rise" novalidate>
       <div class="field" id="f-name">
         <label for="qName">Your name</label>
-        <input type="text" id="qName" name="name" autocomplete="name" autocapitalize="words" maxlength="120" aria-describedby="e-name">
-        <p class="err" id="e-name">Please add your name so we know who we're talking to.</p>
+        <input type="text" id="qName" name="name" autocomplete="name" autocapitalize="words" maxlength="80" placeholder="First name is fine" aria-describedby="e-name">
+        <p class="err" id="e-name">Add your name so we know who we're talking to.</p>
       </div>
       <fieldset class="field" id="f-svc" aria-describedby="e-svc">
         <legend>What needs cleaning?</legend>
-        <div class="chips" id="chips"></div>
+        <div class="chips">
+          <input type="checkbox" name="svc" id="s1" value="House Cleaning"><label for="s1">House cleaning</label>
+          <input type="checkbox" name="svc" id="s2" value="Deep Cleaning"><label for="s2">Deep cleaning</label>
+          <input type="checkbox" name="svc" id="s3" value="Apartment &amp; Condo Cleaning"><label for="s3">Apartment or condo</label>
+          <input type="checkbox" name="svc" id="s4" value="Move-In &amp; Move-Out Cleaning"><label for="s4">Move-in or move-out</label>
+          <input type="checkbox" name="svc" id="s5" value="Organization &amp; Detailed Cleaning"><label for="s5">Organizing &amp; detail</label>
+          <input type="checkbox" name="svc" id="s6" value="Airbnb &amp; Rental Property Cleaning"><label for="s6">Airbnb or rental</label>
+          <input type="checkbox" name="svc" id="s7" value="Office Cleaning"><label for="s7">Office</label>
+          <input type="checkbox" name="svc" id="s8" value="Commercial Cleaning"><label for="s8">Commercial space</label>
+          <input type="checkbox" name="svc" id="s9" value="Post-Construction Cleaning"><label for="s9">Post-construction</label>
+          <input type="checkbox" name="svc" id="s10" value="Construction Debris &amp; Trash Removal"><label for="s10">Debris &amp; trash</label>
+          <input type="checkbox" name="svc" id="s11" value="Concrete, Wood &amp; Job-Site Debris Removal"><label for="s11">Concrete &amp; wood</label>
+        </div>
         <p class="err" id="e-svc">Pick at least one, even if it's a guess.</p>
       </fieldset>
       <div class="field" id="f-where">
-        <label for="qWhere">Town or address</label>
-        <input type="text" id="qWhere" name="where" autocomplete="street-address" placeholder="e.g. Elizabeth, near Jersey Gardens" maxlength="160" aria-describedby="e-where">
+        <label for="qWhere">Your town or street</label>
+        <input type="text" id="qWhere" name="where" autocomplete="address-level2" maxlength="120" placeholder="e.g. Elizabeth" aria-describedby="e-where">
         <p class="err" id="e-where">Tell us where, so we know we can get to you.</p>
       </div>
       <div class="field">
-        <label for="qWhen">When works for you? <span class="opt">(optional)</span></label>
-        <input type="text" id="qWhen" name="when" maxlength="120" placeholder="e.g. Saturday morning">
+        <label for="qWhen">When works for you? <small>(optional)</small></label>
+        <input type="text" id="qWhen" name="when" maxlength="80" placeholder="e.g. Saturday morning">
       </div>
       <div class="field">
-        <label for="qNotes">Anything we should know? <span class="opt">(optional)</span></label>
-        <textarea id="qNotes" name="notes" maxlength="800" placeholder="Rooms, size, pets, the stove that needs extra love…"></textarea>
+        <label for="qNotes">Anything we should know? <small>(optional)</small></label>
+        <textarea id="qNotes" name="notes" maxlength="600" placeholder="Rooms, size, pets…"></textarea>
       </div>
-      <button class="btn btn-gold" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>Send on WhatsApp</button>
-      <div class="sent" id="sent" role="status">
-        <p><strong>WhatsApp should be opening.</strong> If it didn't, copy this and send it on WhatsApp to 973-246-2624:</p>
+      <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send on WhatsApp</button>
+      <div class="sent" id="sent" role="status" hidden>
+        <p><strong>WhatsApp should be opening.</strong> If it didn't, send this on WhatsApp to <a class="nw" href="tel:+19732462624">973-246-2624</a>:</p>
         <pre id="sentText"></pre>
-        <button type="button" id="copyBtn">Copy message</button>
+        <div class="again"><a class="btn btn-soft" id="openWa" href="https://wa.me/19732462624">Open WhatsApp</a><button class="btn btn-soft" type="button" id="copyBtn">Copy message</button></div>
       </div>
+      <p class="after">Opens WhatsApp with this written out.</p>
     </form>
   </div>
 </section>
 
-<svg class="seam" data-seam data-top="#f8f3ea" data-bottom="#0c2550" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"></svg>
-<section class="sec night close" id="book" aria-labelledby="book-h">
-  <canvas class="sky" aria-hidden="true"></canvas>
+<section class="on-navy close" id="close" aria-labelledby="h-close">
   <div class="wrap">
-    <svg class="moon" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc8e"/><stop offset=".55" stop-color="#d6a035"/><stop offset="1" stop-color="#a8761f"/></linearGradient></defs><path d="M58 8a44 44 0 1 0 34 64A36 36 0 1 1 58 8z" fill="url(#mg)"/></svg>
-    <h2 id="book-h">Book your cleaning today</h2>
-    <p class="area">Elizabeth, NJ and the surrounding areas</p>
-    <p class="trio">Reliable service · Professional team · Quality work</p>
-    <a class="btn btn-gold" data-wa="Hi Cleaning Luna! I'd like to book a cleaning." href="https://wa.me/19732462624"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>Book on WhatsApp</a>
+    <div class="rise">
+      <h2 id="h-close">Book your cleaning <span class="accent">today.</span></h2>
+      <p class="who">Cleaning Luna LLC. We clean. You relax.</p>
+      <p class="area">Elizabeth, NJ and the surrounding areas. Not sure we cover your street? Ask us.</p>
+    </div>
+    <a class="bigtel rise" href="tel:+19732462624"><svg aria-hidden="true"><use href="#i-phone"/></svg>973-246-2624</a>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <img src="assets/logo.webp" width="200" height="186" alt="Cleaning Luna LLC. We clean. You relax." loading="lazy">
-    <div class="foot-links">
-      <a class="tel" href="tel:+19732462624">973-246-2624</a>
-      <a href="https://www.facebook.com/profile.php?id=100002877613762">Facebook</a>
-    </div>
-    <p class="copy">Cleaning Luna LLC · Elizabeth, NJ · © <span id="yr">2026</span></p>
+    <span>Cleaning Luna LLC · Elizabeth, NJ · <span class="nw">973-246-2624</span></span>
+    <nav aria-label="Contact">
+      <a href="https://www.facebook.com/profile.php?id=100002877613762" rel="noopener">Facebook</a>
+    </nav>
   </div>
 </footer>
 
+<a class="float" id="float" data-wa="Hi Cleaning Luna! I'd like to book a cleaning." href="https://wa.me/19732462624" aria-label="Message Cleaning Luna on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
 <script>
-/* ===== Tunables (Ellie: change these) ===== */
-var TUNE = {
-  boardsPhone: 6.5, boardsDesktop: 12,   // planks visible across the near edge
-  padPhone: 84, padDesktop: 120,         // mop pad width at the near edge (css px)
-  regrow: 0.0035,                        // dust creep-back per frame (0 = stays clean)
-  wetFade: 0.022,                        // how fast the wet streak dries
-  idleMs: 2600,                          // the mop starts mopping by itself after this much stillness
-  debrisPhone: 60, debrisDesktop: 110,   // crumbs, sawdust and grit on the floor
-  sparkleChance: 0.1,                   // gold sparkles left behind the mop (per frame while mopping)
-  starsPhone: 34, starsDesktop: 80,      // stars in the night sections
-  seamSpeed: 1.0
+/* ===== Config ===== */
+var CONFIG = {
+  WA: '19732462624', // WhatsApp number, country code first
+  FLOAT: true        // the floating WhatsApp circle; false removes it
 };
-var PHONE = window.matchMedia('(max-width: 759px)').matches;
-var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var BIZ = { wa: '19732462624' };
-function waLink(msg){ return 'https://wa.me/' + BIZ.wa + '?text=' + encodeURIComponent(msg); }
+document.documentElement.classList.add('js');
+function waLink(msg){return 'https://wa.me/'+CONFIG.WA+'?text='+encodeURIComponent(msg)}
 
-/* ===== WhatsApp links ===== */
+/* ===== WhatsApp links: pre-written messages ===== */
+[].forEach.call(document.querySelectorAll('[data-wa]'),function(a){a.href=waLink(a.getAttribute('data-wa'))});
+
+/* ===== Hero H1 bounce-in: split into letters (JS only, so no-JS and reduced motion keep the plain heading) ===== */
 (function(){
-  document.querySelectorAll('[data-wa]').forEach(function(a){ a.href = waLink(a.getAttribute('data-wa')); });
-  var arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-  document.querySelectorAll('.row[data-svc]').forEach(function(a){
-    a.href = waLink("Hi Cleaning Luna! I'd like to book: " + a.getAttribute('data-svc') + '.');
-    a.querySelector('.arrow').innerHTML = arrow;
-  });
-  document.getElementById('yr').textContent = new Date().getFullYear();
+  var h=document.getElementById('h1');
+  if(!h||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var plain=h.innerHTML,i=0,last=null;
+  h.setAttribute('aria-label',h.textContent.replace(/\s+/g,' ').trim());
+  function split(node,into){
+    [].slice.call(node.childNodes).forEach(function(n){
+      if(n.nodeType===3){
+        n.textContent.split(/(\s+)/).forEach(function(part){
+          if(!part)return;
+          if(/^\s+$/.test(part)){into.appendChild(document.createTextNode(' '));return}
+          var w=document.createElement('span');w.className='w';w.setAttribute('aria-hidden','true');
+          for(var k=0;k<part.length;k++){var c=document.createElement('span');c.className='c';c.style.setProperty('--i',i++);c.textContent=part[k];w.appendChild(c);last=c}
+          into.appendChild(w);
+        });
+      }else if(n.nodeType===1){var copy=n.cloneNode(false);split(n,copy);into.appendChild(copy)}
+    });
+  }
+  var frag=document.createDocumentFragment();split(h,frag);h.textContent='';h.appendChild(frag);
+  // once the last letter lands, put the plain heading back so kerning and text selection return
+  if(last)last.addEventListener('animationend',function(){h.innerHTML=plain;h.removeAttribute('aria-label')});
 })();
 
-/* ===== Shared pointer (mouse + finger) ===== */
-var P = { x: -9999, y: -9999, vx: 0, vy: 0, t: 0, active: false, user: 0 };
+/* ===== Service rows: jump to the form with that service ticked ===== */
 (function(){
-  var lx = 0, ly = 0, lt = 0;
-  function move(x, y){
-    var now = performance.now(), dt = Math.max(8, now - lt);
-    if (lt && now - lt < 120) { P.vx = P.vx * .5 + (x - lx) / dt * 1000 * .5; P.vy = P.vy * .5 + (y - ly) / dt * 1000 * .5; }
-    else { P.vx = 0; P.vy = 0; }
-    P.x = x; P.y = y; lx = x; ly = y; lt = now; P.t = now; P.active = true; P.user = now;
-  }
-  window.addEventListener('pointermove', function(e){ if (e.pointerType === 'mouse') move(e.clientX, e.clientY); }, { passive: true });
-  window.addEventListener('touchstart', function(e){ var t = e.touches[0]; lt = 0; move(t.clientX, t.clientY); }, { passive: true });
-  window.addEventListener('touchmove', function(e){ var t = e.touches[0]; move(t.clientX, t.clientY); }, { passive: true });
-  window.addEventListener('touchend', function(){ P.active = false; }, { passive: true });
-  document.addEventListener('mouseleave', function(){ P.active = false; });
-})();
-
-/* ===== One loop for everything ===== */
-var Loop = (function(){
-  var items = [], running = false, last = 0;
-  function frame(now){
-    var dt = Math.min(0.05, (now - last) / 1000 || 0.016); last = now;
-    var any = false;
-    for (var i = 0; i < items.length; i++) if (items[i].visible) { items[i].tick(dt, now / 1000); any = true; }
-    if (!P.active && now - P.t > 120) { P.vx *= .9; P.vy *= .9; }
-    if (any) requestAnimationFrame(frame); else running = false;
-  }
-  function wake(){ if (!running && !REDUCED) { running = true; last = performance.now(); requestAnimationFrame(frame); } }
-  function add(item, el){
-    item.visible = true; items.push(item);
-    if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ item.visible = es[0].isIntersecting; if (item.visible) wake(); }, { rootMargin: '80px' }).observe(el);
-    wake();
-  }
-  return { add: add };
-})();
-
-/* ===== Sparkle: the logo's four-point star ===== */
-function sparkle(c, x, y, r, a, rot){
-  c.save(); c.translate(x, y); c.rotate(rot || 0); c.globalAlpha = a;
-  var g = c.createRadialGradient(0, 0, 0, 0, 0, r);
-  g.addColorStop(0, '#fff8dc'); g.addColorStop(.35, '#f2cf74'); g.addColorStop(1, '#d6a035');
-  c.fillStyle = g; c.beginPath(); c.moveTo(0, -r);
-  c.quadraticCurveTo(r * .12, -r * .12, r, 0); c.quadraticCurveTo(r * .12, r * .12, 0, r);
-  c.quadraticCurveTo(-r * .12, r * .12, -r, 0); c.quadraticCurveTo(-r * .12, -r * .12, 0, -r); c.fill();
-  c.restore();
-}
-function rand(a, b){ return a + Math.random() * (b - a); }
-
-/* ===== Hero: the floor you mop ===== */
-(function(){
-  var floorEl = document.getElementById('floor'), canvas = document.getElementById('floorCanvas'), ctx = canvas.getContext('2d', { alpha: false });
-  var hint = document.getElementById('hint');
-  if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) hint.lastChild.textContent = 'Move across the floor to mop it';
-  var base = document.createElement('canvas'), wood = document.createElement('canvas');
-  var dirt = document.createElement('canvas'), dirtSrc = document.createElement('canvas'), wet = document.createElement('canvas');
-  var stamp = document.createElement('canvas');
-  var W = 0, H = 0, dpr = 1, D = 1, cx = 0, K = 1, padW = 100, built = '';
-  var debris = [], sparks = [], mopped = false, wetT = 0;
-  var mop = { x: 0, y: 0, vx: 0, vy: 0, ang: 0, t: -1 };
-
-  // perspective: row y (0 = wall, H = near edge) has scale s(y); world depth z maps to a row
-  function s(y){ return (y + D) / (H + D); }
-  function yAt(z){ return (H + D) / (1 + z / K) - D; }
-  function zFar(){ return K * ((H + D) / D - 1); }
-
-  function size(){
-    var r = floorEl.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height);
-    var key = w + 'x' + h; if (key === built) return false; built = key;
-    W = w; H = h; dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    D = H * 1.7; cx = W * (PHONE ? .55 : .62); K = H * 1.1;
-    padW = PHONE ? TUNE.padPhone : TUNE.padDesktop;
-    [canvas, base, wood, dirt, dirtSrc, wet].forEach(function(c){ c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); });
-    paintWood(); paintBase(); paintDirt();
-    var dc = dirt.getContext('2d'); dc.clearRect(0, 0, dirt.width, dirt.height); dc.drawImage(dirtSrc, 0, 0);
-    wet.getContext('2d').clearRect(0, 0, wet.width, wet.height);
-    seedDebris();
-    // a first S of clean so the very first frame shows the difference
-    var win = document.querySelector('.window'), rx = .62;
-    if (win && getComputedStyle(win).display !== 'none') { var wr = win.getBoundingClientRect(), fr = floorEl.getBoundingClientRect(); rx = (wr.left + wr.width / 2 - fr.left) / W - .08; }
-    for (var k = 0; k <= 220; k++) { var u = k / 220, a = u * Math.PI * 9; wipe(W * (rx + (PHONE ? .3 : .2) * Math.sin(a)), H * (.12 + .78 * u), .9); }
-    return true;
-  }
-
-  function paintWood(){
-    var c = wood.getContext('2d'); c.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var boards = PHONE ? TUNE.boardsPhone : TUNE.boardsDesktop, pw = W / boards, s0 = s(0), zf = zFar();
-    var nMin = Math.floor((-cx / s0) / pw) - 1, nMax = Math.ceil(((W - cx) / s0) / pw) + 1;
-    var seed = 7; function rnd(){ seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
-    for (var n = nMin; n <= nMax; n++) {
-      var X0 = n * pw, X1 = X0 + pw, Lb = pw * rand(4.5, 7), z = -rnd() * Lb;
-      while (z < zf) {
-        var z1 = z + Lb * (.55 + rnd() * .9), ya = yAt(Math.max(z, 0)), yb = yAt(Math.min(z1, zf));
-        if (yb < ya) {
-          var sa = s(ya), sb = s(yb);
-          c.save(); c.beginPath();
-          c.moveTo(cx + X0 * sa, ya); c.lineTo(cx + X1 * sa, ya); c.lineTo(cx + X1 * sb, yb); c.lineTo(cx + X0 * sb, yb); c.closePath(); c.clip();
-          var h = 30 + rnd() * 7, sat = 34 + rnd() * 12, l = 52 + rnd() * 12;
-          c.fillStyle = 'hsl(' + h + ',' + sat + '%,' + l + '%)'; c.fillRect(0, 0, W, H);
-          // grain: wavy lines along the board, a flame figure now and then
-          var lines = 9 + Math.floor(rnd() * 6), flame = rnd() < .45;
-          for (var g = 0; g < lines; g++) {
-            var Xg = X0 + pw * (g + rnd()) / lines, ph = rnd() * 6, fq = .02 + rnd() * .03, dark = rnd() < .65;
-            c.strokeStyle = dark ? 'rgba(80,42,12,' + (.10 + rnd() * .2) + ')' : 'rgba(255,226,170,' + (.08 + rnd() * .12) + ')';
-            c.lineWidth = .5 + rnd() * 1.1;
-            c.beginPath();
-            for (var zz = Math.max(z, 0), first = true; zz <= Math.min(z1, zf) + 4; zz += 4) {
-              var mid = (zz - z) / (z1 - z), bump = flame ? Math.sin(mid * Math.PI) * pw * .22 * Math.sin(g * .9 + ph) : 0;
-              var X = Xg + Math.sin(zz * fq + ph) * pw * .03 + bump, yy = yAt(zz), sx = cx + X * s(yy);
-              if (first) { c.moveTo(sx, yy); first = false; } else c.lineTo(sx, yy);
-            }
-            c.stroke();
-          }
-          if (rnd() < .18) { // a small knot
-            var kz = z + (z1 - z) * (.2 + rnd() * .6), ky = yAt(Math.max(kz, 0)), ks = s(ky), kx = cx + (X0 + pw * (.25 + rnd() * .5)) * ks;
-            c.fillStyle = 'rgba(70,35,10,.45)'; c.beginPath(); c.ellipse(kx, ky, 3.2 * ks, 1.6 * ks, 0, 0, 6.29); c.fill();
-            c.strokeStyle = 'rgba(70,35,10,.2)'; c.lineWidth = 1; c.beginPath(); c.ellipse(kx, ky, 7 * ks, 3 * ks, 0, 0, 6.29); c.stroke();
-          }
-          c.restore();
-          // board-end joint
-          if (z > 0) { c.strokeStyle = 'rgba(45,22,6,.55)'; c.lineWidth = 1.2 * sa; c.beginPath(); c.moveTo(cx + X0 * sa, ya); c.lineTo(cx + X1 * sa, ya); c.stroke(); }
-        }
-        z = z1;
-      }
-      // seam between planks
-      c.strokeStyle = 'rgba(40,20,5,.6)'; c.lineWidth = 1.3;
-      c.beginPath(); c.moveTo(cx + X0 * s(0), 0); c.lineTo(cx + X0, H); c.stroke();
-    }
-    // far end darker, shadow under the baseboard
-    var g1 = c.createLinearGradient(0, 0, 0, H);
-    g1.addColorStop(0, 'rgba(50,25,8,.45)'); g1.addColorStop(.08, 'rgba(50,25,8,.18)'); g1.addColorStop(.4, 'rgba(50,25,8,0)'); g1.addColorStop(1, 'rgba(50,25,8,.12)');
-    c.fillStyle = g1; c.fillRect(0, 0, W, H);
-  }
-
-  function paintBase(){
-    var c = base.getContext('2d'); c.setTransform(1, 0, 0, 1, 0, 0); c.drawImage(wood, 0, 0); c.setTransform(dpr, 0, 0, dpr, 0, 0);
-    // varnish gloss
-    var g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, 'rgba(255,240,210,.36)'); g.addColorStop(.5, 'rgba(255,240,210,.18)'); g.addColorStop(1, 'rgba(255,240,210,.3)');
-    c.fillStyle = g; c.fillRect(0, 0, W, H);
-    // reflection of the moonlit window, drawn small and scaled up so it comes out soft
-    var R = document.createElement('canvas'), q = 3; R.width = Math.ceil(W / q); R.height = Math.ceil(H / q);
-    var r = R.getContext('2d'); r.scale(1 / q, 1 / q); if ('filter' in r) r.filter = 'blur(2px)';
-    var wx = W * .7, ww = W * .3, win = document.querySelector('.window');
-    if (win && getComputedStyle(win).display !== 'none') { var wr = win.getBoundingClientRect(), fr = floorEl.getBoundingClientRect(); wx = wr.left + wr.width / 2 - fr.left; ww = wr.width * .9; }
-    var len = H * .95, x0 = wx - ww / 2, x1 = wx + ww / 2, sb = s(len) / s(0);
-    function quad(a0, a1, t0, t1){ // a = across the window (0..1), t = down the reflection (0..1)
-      var ya = len * t0, yb = len * t1, ka = 1 + (sb - 1) * t0, kb = 1 + (sb - 1) * t1;
-      r.beginPath();
-      r.moveTo(wx + (x0 + (x1 - x0) * a0 - wx) * ka, ya); r.lineTo(wx + (x0 + (x1 - x0) * a1 - wx) * ka, ya);
-      r.lineTo(wx + (x0 + (x1 - x0) * a1 - wx) * kb, yb); r.lineTo(wx + (x0 + (x1 - x0) * a0 - wx) * kb, yb); r.closePath();
-    }
-    // the white frame shows as a pale glow, the night panes as dark glass, the moon as a gold smear
-    r.fillStyle = 'rgba(255,250,238,.5)'; quad(0, 1, 0, 1); r.fill();
-    r.fillStyle = 'rgba(14,36,86,.55)';
-    [[.05, .47, .03, .46], [.53, .95, .03, .46], [.05, .47, .52, .97], [.53, .95, .52, .97]].forEach(function(p){ quad(p[0], p[1], p[2], p[3]); r.fill(); });
-    r.fillStyle = 'rgba(242,207,116,.6)'; r.beginPath(); r.ellipse(wx + ww * .16, len * .2, ww * .06, len * .045, 0, 0, 6.29); r.fill();
-    r.globalCompositeOperation = 'destination-out';
-    var gl = r.createLinearGradient(0, 0, 0, len); gl.addColorStop(0, 'rgba(0,0,0,0)'); gl.addColorStop(.45, 'rgba(0,0,0,.35)'); gl.addColorStop(1, 'rgba(0,0,0,1)');
-    r.fillStyle = gl; r.fillRect(0, 0, W, len + 2); r.globalCompositeOperation = 'source-over';
-    c.save(); c.globalAlpha = .85; c.imageSmoothingEnabled = true; c.drawImage(R, 0, 0, R.width * q, R.height * q); c.restore();
-    // a broad soft highlight near the viewer
-    var hl = c.createRadialGradient(W * .3, H * 1.05, 10, W * .3, H * 1.05, W * .6); hl.addColorStop(0, 'rgba(255,245,220,.22)'); hl.addColorStop(1, 'rgba(255,245,220,0)');
-    c.fillStyle = hl; c.fillRect(0, 0, W, H);
-  }
-
-  function shoe(c, x, y, k, ang, left){
-    c.save(); c.translate(x, y); c.scale(k, k * .55); c.rotate(ang); if (left) c.scale(-1, 1);
-    c.beginPath(); c.moveTo(1, -24); c.bezierCurveTo(8, -24, 9, -12, 7, -3); c.bezierCurveTo(5.5, 4, 6.5, 10, 5.5, 15);
-    c.bezierCurveTo(4.5, 20, -3, 20, -4, 15); c.bezierCurveTo(-5, 9, -3.5, 3, -5, -4); c.bezierCurveTo(-7, -15, -4, -24, 1, -24); c.fill();
-    c.restore();
-  }
-  function paintDirt(){
-    var c = dirtSrc.getContext('2d'); c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, dirtSrc.width, dirtSrc.height);
-    c.drawImage(wood, 0, 0); c.setTransform(dpr, 0, 0, dpr, 0, 0);
-    // dull haze of dust over unvarnished-looking wood
-    c.fillStyle = 'rgba(150,142,132,.42)'; c.fillRect(0, 0, W, H);
-    var seed = 11; function rnd(){ seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
-    for (var i = 0; i < W * H / 60; i++) { var x = rnd() * W, y = rnd() * H, k = s(y); c.fillStyle = rnd() < .5 ? 'rgba(120,105,85,.16)' : 'rgba(235,228,215,.22)'; c.fillRect(x, y, 1.6 * k, 1.6 * k); }
-    // cloudy patches
-    for (var j = 0; j < 14; j++) { var px = rnd() * W, py = rnd() * H, pr = (40 + rnd() * 90) * s(py), g = c.createRadialGradient(px, py, 0, px, py, pr); g.addColorStop(0, 'rgba(225,218,205,.35)'); g.addColorStop(1, 'rgba(225,218,205,0)'); c.fillStyle = g; c.fillRect(px - pr, py - pr, pr * 2, pr * 2); }
-    // plaster dust along the wall, from the job-site work
-    var pg = c.createLinearGradient(0, 0, 0, H * .25); pg.addColorStop(0, 'rgba(240,236,228,.6)'); pg.addColorStop(1, 'rgba(240,236,228,0)'); c.fillStyle = pg; c.fillRect(0, 0, W, H * .25);
-    // tracked-in footprints
-    c.fillStyle = 'rgba(228,218,204,.4)';
-    for (var t = 0; t < (PHONE ? 2 : 3); t++) {
-      var fx = rnd() * W, fy = H * (.95 + rnd() * .1), dir = -Math.PI / 2 + (rnd() - .5) * 1.1, step = 0;
-      while (fy > 8 && step < 8) {
-        var k = s(fy), side = step % 2 ? 1 : -1, nx = Math.cos(dir + Math.PI / 2) * 9 * side * k;
-        shoe(c, fx + nx, fy, k * 1.4, dir + Math.PI / 2, side < 0);
-        fx += Math.cos(dir) * 62 * k; fy += Math.sin(dir) * 62 * k * 1.1; dir += (rnd() - .5) * .18; step++;
-      }
-    }
-    // black heel scuffs
-    c.strokeStyle = 'rgba(30,22,16,.4)'; c.lineCap = 'round';
-    for (var m = 0; m < (PHONE ? 6 : 12); m++) { var sx = rnd() * W, sy = H * (.15 + rnd() * .85), sk = s(sy); c.lineWidth = 1.8 * sk; c.beginPath(); c.moveTo(sx, sy); c.lineTo(sx + (8 + rnd() * 9) * sk, sy + (rnd() - .5) * 3 * sk); c.stroke(); }
-    // the stamp: a soft-edged pad print
-    stamp.width = 64; stamp.height = 64; var st = stamp.getContext('2d'), sg = st.createRadialGradient(32, 32, 0, 32, 32, 32);
-    sg.addColorStop(0, 'rgba(0,0,0,1)'); sg.addColorStop(.6, 'rgba(0,0,0,.85)'); sg.addColorStop(1, 'rgba(0,0,0,0)'); st.fillStyle = sg; st.fillRect(0, 0, 64, 64);
-  }
-
-  function wipe(x, y, strength){
-    var k = s(y), w = padW * k * 1.05, h = padW * .38 * k;
-    var dc = dirt.getContext('2d'); dc.save(); dc.setTransform(dpr, 0, 0, dpr, 0, 0); dc.globalCompositeOperation = 'destination-out'; dc.globalAlpha = strength;
-    dc.drawImage(stamp, x - w / 2, y - h / 2, w, h); dc.restore();
-    wetT = performance.now();
-    var wc = wet.getContext('2d'); wc.save(); wc.setTransform(dpr, 0, 0, dpr, 0, 0); wc.globalAlpha = .06 * strength;
-    wc.drawImage(stamp, x - w * .45, y - h * .45, w * .9, h * .9); wc.restore();
-  }
-
-  var KINDS = ['crumb', 'crumb', 'saw', 'saw', 'grit', 'grit', 'grit', 'bunny'];
-  function newBit(x, y){
-    return { x: x, y: y, vx: 0, vy: 0, kind: KINDS[Math.floor(Math.random() * KINDS.length)], rot: Math.random() * 6.28, vr: 0, a: 1, sz: rand(.8, 1.3), wait: 0 };
-  }
-  function seedDebris(){
-    debris = []; var n = PHONE ? TUNE.debrisPhone : TUNE.debrisDesktop;
-    for (var i = 0; i < n; i++) debris.push(newBit(Math.random() * W, rand(10, H - 6)));
-  }
-  function drawBit(b){
-    var k = s(b.y) * b.sz, x = b.x * dpr, y = b.y * dpr, d = dpr * k;
-    ctx.save(); ctx.globalAlpha = b.a; ctx.translate(x, y); ctx.rotate(b.rot);
-    if (b.kind === 'crumb') { ctx.fillStyle = '#6b4320'; ctx.beginPath(); ctx.moveTo(-2.2 * d, -1 * d); ctx.lineTo(1.4 * d, -2 * d); ctx.lineTo(2.4 * d, 1 * d); ctx.lineTo(-.8 * d, 2 * d); ctx.closePath(); ctx.fill(); }
-    else if (b.kind === 'saw') { ctx.fillStyle = '#e6c88c'; ctx.beginPath(); ctx.ellipse(0, 0, 2.6 * d, 1.1 * d, 0, 0, 6.29); ctx.fill(); ctx.fillStyle = '#c9a66a'; ctx.beginPath(); ctx.ellipse(.6 * d, .3 * d, 1.2 * d, .5 * d, 0, 0, 6.29); ctx.fill(); }
-    else if (b.kind === 'grit') { ctx.fillStyle = '#9a958c'; ctx.beginPath(); ctx.arc(0, 0, 1.5 * d, 0, 6.29); ctx.fill(); ctx.fillStyle = '#c9c4ba'; ctx.beginPath(); ctx.arc(-.4 * d, -.4 * d, .7 * d, 0, 6.29); ctx.fill(); }
-    else { var g = ctx.createRadialGradient(0, 0, 0, 0, 0, 7 * d); g.addColorStop(0, 'rgba(150,145,140,.85)'); g.addColorStop(.6, 'rgba(170,165,160,.5)'); g.addColorStop(1, 'rgba(170,165,160,0)'); ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(0, 0, 7 * d, 4.5 * d, 0, 0, 6.29); ctx.fill(); }
-    ctx.restore();
-  }
-
-  function drawMop(){
-    var k = s(mop.y), x = mop.x * dpr, y = mop.y * dpr, pw = padW * k * dpr, ph = padW * .3 * k * dpr;
-    ctx.save();
-    // handle: toward the viewer, as if you're holding it
-    var hx = x + W * dpr * .16, hy = (H + 40) * dpr;
-    ctx.lineCap = 'round';
-    ctx.strokeStyle = 'rgba(40,20,5,.25)'; ctx.lineWidth = 12 * dpr; ctx.beginPath(); ctx.moveTo(x + 8 * dpr, y + 6 * dpr); ctx.lineTo(hx + 10 * dpr, hy + 6 * dpr); ctx.stroke();
-    var hg = ctx.createLinearGradient(x, y, hx, hy); hg.addColorStop(0, '#d9dee6'); hg.addColorStop(1, '#f6f8fb');
-    ctx.strokeStyle = '#9aa3b1'; ctx.lineWidth = 9 * dpr; ctx.beginPath(); ctx.moveTo(x, y - 2 * dpr); ctx.lineTo(hx, hy); ctx.stroke();
-    ctx.strokeStyle = hg; ctx.lineWidth = 6.5 * dpr; ctx.beginPath(); ctx.moveTo(x, y - 2 * dpr); ctx.lineTo(hx, hy); ctx.stroke();
-    ctx.translate(x, y); ctx.rotate(mop.ang);
-    // shadow, pad, fringe, plate, gold swivel
-    ctx.fillStyle = 'rgba(30,15,5,.32)'; ctx.beginPath(); ctx.ellipse(2 * dpr, ph * .55, pw * .56, ph * .8, 0, 0, 6.29); ctx.fill();
-    ctx.fillStyle = '#1b3d78'; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(-pw / 2, -ph / 2, pw, ph, ph * .45) : ctx.rect(-pw / 2, -ph / 2, pw, ph); ctx.fill();
-    ctx.strokeStyle = '#2f5a9e'; ctx.lineWidth = 1.1 * dpr;
-    var lr = Math.max(2, 3.4 * dpr * k), cols = ['#2f5a9e', '#24497f', '#3a66aa'];
-    for (var i = 0, nL = Math.ceil(pw / (lr * 1.3)); i <= nL; i++) { var fx = -pw / 2 + pw * i / nL;
-      ctx.fillStyle = cols[i % 3]; ctx.beginPath(); ctx.arc(fx, ph / 2, lr, 0, 6.29); ctx.fill();
-      ctx.fillStyle = cols[(i + 1) % 3]; ctx.beginPath(); ctx.arc(fx + lr * .4, -ph / 2, lr * .9, 0, 6.29); ctx.fill(); }
-    for (var e = -1; e <= 1; e += 2) for (var j = -1; j <= 1; j++) { ctx.fillStyle = cols[(j + 3) % 3]; ctx.beginPath(); ctx.arc(e * pw / 2, j * ph * .3, lr, 0, 6.29); ctx.fill(); }
-    ctx.fillStyle = '#c9d0db'; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(-pw * .42, -ph * .32, pw * .84, ph * .5, ph * .2) : ctx.rect(-pw * .42, -ph * .32, pw * .84, ph * .5); ctx.fill();
-    var jg = ctx.createRadialGradient(-2 * dpr, -4 * dpr, 0, 0, -2 * dpr, 7 * dpr * k); jg.addColorStop(0, '#f6dc8e'); jg.addColorStop(1, '#a8761f');
-    ctx.fillStyle = jg; ctx.beginPath(); ctx.arc(0, -2 * dpr, 6 * dpr * k, 0, 6.29); ctx.fill();
-    ctx.restore();
-  }
-
-  function draw(){
-    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(base, 0, 0);
-    // wet streak: the just-mopped wood is a shade darker until it dries
-    if (performance.now() - wetT < 4000) { ctx.save(); ctx.globalCompositeOperation = 'multiply'; ctx.globalAlpha = .35; ctx.drawImage(wetLayer(), 0, 0); ctx.restore(); }
-    ctx.drawImage(dirt, 0, 0);
-    for (var i = 0; i < debris.length; i++) if (debris[i].a > 0) drawBit(debris[i]);
-    for (var j = 0; j < sparks.length; j++) { var sp = sparks[j], u = sp.t / sp.life, a = Math.sin(u * Math.PI); sparkle(ctx, sp.x * dpr, sp.y * dpr, sp.r * dpr * (.5 + .5 * a), a, sp.rot + u * .6); }
-    if (mop.t >= 0) drawMop();
-  }
-  var tintC = document.createElement('canvas');
-  function wetLayer(){ // the wet mask recolored warm brown, laid on with multiply
-    if (tintC.width !== wet.width || tintC.height !== wet.height) { tintC.width = wet.width; tintC.height = wet.height; }
-    var c = tintC.getContext('2d');
-    c.globalCompositeOperation = 'copy'; c.drawImage(wet, 0, 0);
-    c.globalCompositeOperation = 'source-in'; c.fillStyle = 'rgb(120,80,45)'; c.fillRect(0, 0, tintC.width, tintC.height);
-    c.globalCompositeOperation = 'source-over';
-    return tintC;
-  }
-
-  var auto = { tx: 0, ty: 0, until: 0, n: 0, on: false, t: 0 };
-  function nextTarget(now){ // a mopper's figure-eight, drifting slowly across the room
-    var t = auto.t, x0 = W * (.5 + .3 * Math.sin(t * .11)), y0 = H * (.55 + .12 * Math.sin(t * .07));
-    auto.tx = x0 + W * (PHONE ? .3 : .17) * Math.sin(t); auto.ty = y0 + H * .2 * Math.sin(2 * t); auto.until = now;
-  }
-  var lastWipe = null;
-  function mopTo(x, y, dt, follow){
-    var px = mop.x, py = mop.y;
-    mop.x += (x - mop.x) * Math.min(1, dt * follow); mop.y += (y - mop.y) * Math.min(1, dt * follow);
-    mop.vx = (mop.x - px) / Math.max(dt, .001); mop.vy = (mop.y - py) / Math.max(dt, .001);
-    mop.ang += (Math.max(-.35, Math.min(.35, mop.vx * .0006)) - mop.ang) * Math.min(1, dt * 8);
-    var steps = 1;
-    if (lastWipe) { var dx = mop.x - lastWipe.x, dy = mop.y - lastWipe.y, d = Math.sqrt(dx * dx + dy * dy); steps = Math.min(16, Math.max(1, Math.ceil(d / (padW * .12)))); }
-    for (var i = 1; i <= steps; i++) wipe(lastWipe ? lastWipe.x + (mop.x - lastWipe.x) * i / steps : mop.x, lastWipe ? lastWipe.y + (mop.y - lastWipe.y) * i / steps : mop.y, .5);
-    lastWipe = { x: mop.x, y: mop.y };
-    // gold sparkles left behind on the clean wood
-    if (Math.random() < TUNE.sparkleChance && (Math.abs(mop.vx) + Math.abs(mop.vy)) > 60) {
-      var sp = Math.sqrt(mop.vx * mop.vx + mop.vy * mop.vy) || 1, back = padW * .5 * s(mop.y);
-      sparks.push({ x: mop.x - mop.vx / sp * back + rand(-20, 20), y: mop.y - mop.vy / sp * back * .5 + rand(-8, 8), r: rand(5, 11) * s(mop.y), t: 0, life: rand(.6, 1.1), rot: rand(-.3, .3) });
-      if (sparks.length > 24) sparks.shift();
-    }
-  }
-
-  function pushDebris(dt){
-    var k = s(mop.y), hw = padW * k * .6 + 6, hh = padW * .22 * k + 6, now = performance.now();
-    for (var i = 0; i < debris.length; i++) {
-      var b = debris[i];
-      if (b.wait > 0) { // swept off the floor: settle back in somewhere after a while
-        b.wait -= dt; if (b.wait <= 0) { var nb = newBit(Math.random() * W, rand(10, H - 6)); nb.a = 0; debris[i] = nb; }
-        continue;
-      }
-      if (b.a < 1) b.a = Math.min(1, b.a + dt * .5);
-      var dx = b.x - mop.x, dy = b.y - mop.y, e = (dx * dx) / (hw * hw) + (dy * dy) / (hh * hh);
-      if (mop.t >= 0 && now - mop.t < 100 && e < 1) {
-        var ln = Math.sqrt(dx * dx + dy * dy) || 1, f = (1 - e) * 600;
-        b.vx += (mop.vx - b.vx) * .5 + dx / ln * f * dt; b.vy += (mop.vy - b.vy) * .5 + dy / ln * f * dt; b.vr += (Math.random() - .5) * 20 * dt;
-      }
-      var fr = Math.exp(-5.5 * dt); b.vx *= fr; b.vy *= fr; b.vr *= fr;
-      b.x += b.vx * dt; b.y += b.vy * dt; b.rot += b.vr * dt;
-      if (b.y < 18) { b.y = 18; b.vy = Math.abs(b.vy) * .2; } // piles up against the baseboard
-      if (b.x < -12 || b.x > W + 12 || b.y > H + 12) { b.a = 0; b.wait = rand(5, 11); }
-    }
-  }
-
-  var item = {
-    tick: function(dt){
-      if (size()) lastWipe = null;
-      var now = performance.now(), r = canvas.getBoundingClientRect(), lx = P.x - r.left, ly = P.y - r.top;
-      var inside = lx >= 0 && lx <= W && ly >= 0 && ly <= H;
-      var userNow = inside && (now - P.user < 140) && P.active;
-      if (userNow) {
-        if (auto.on || mop.t < 0) { auto.on = false; lastWipe = null; mop.x = lx; mop.y = ly; }
-        mopTo(lx, Math.max(14, ly), dt, 28); mop.t = now;
-        if (!mopped) { mopped = true; hint.classList.add('gone'); }
-      } else if (now - P.user > TUNE.idleMs || P.user === 0) {
-        if (!auto.on) { auto.on = true; if (mop.t < 0) { mop.x = W * .2; mop.y = H * .7; } lastWipe = null; nextTarget(now); }
-        auto.t += dt * 1.6; nextTarget(now);
-        mopTo(auto.tx, auto.ty, dt, 6); mop.t = now;
-      } else { lastWipe = null; }
-      pushDebris(dt);
-      var dc = dirt.getContext('2d'); dc.globalAlpha = TUNE.regrow; dc.drawImage(dirtSrc, 0, 0); dc.globalAlpha = 1;
-      var wc = wet.getContext('2d'); wc.save(); wc.globalCompositeOperation = 'destination-out'; wc.fillStyle = 'rgba(0,0,0,' + TUNE.wetFade + ')'; wc.fillRect(0, 0, wet.width, wet.height); wc.restore();
-      for (var i = sparks.length - 1; i >= 0; i--) { sparks[i].t += dt; if (sparks[i].t > sparks[i].life) sparks.splice(i, 1); }
-      draw();
-    }
-  };
-  size();
-  if (REDUCED) {
-    hint.classList.add('gone'); mop.x = W * .55; mop.y = H * .5; mop.t = 0;
-    canvas.setAttribute('aria-label', 'A hardwood floor half mopped, dusty on one side and shining on the other');
-    draw();
-    window.addEventListener('resize', function(){ if (size()) draw(); });
-  } else {
-    Loop.add(item, floorEl);
-  }
-})();
-
-/* ===== Night sections: stars that move aside for a finger ===== */
-(function(){
-  document.querySelectorAll('.night .sky').forEach(function(canvas){
-    var sec = canvas.parentElement, ctx = canvas.getContext('2d'), stars = [], boxes = [], W = 0, H = 0, dpr = 1, built = '';
-    function size(){
-      var r = sec.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height), key = w + 'x' + h;
-      if (key === built) return; built = key; W = w; H = h; dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
-      var n = PHONE ? TUNE.starsPhone : TUNE.starsDesktop; stars = [];
-      boxes = [].map.call(sec.querySelectorAll('h2,h3,p,.n,.btn,.moon'), function(e){ var b = e.getBoundingClientRect(); return [b.left - r.left - 12, b.top - r.top - 12, b.right - r.left + 12, b.bottom - r.top + 12]; });
-      for (var i = 0; i < n; i++) { var hx, hy, tries = 0; do { hx = Math.random() * W; hy = Math.random() * H; } while (inText(hx, hy) && ++tries < 30); if (tries < 30) stars.push({ hx: hx, hy: hy, ox: 0, oy: 0, vx: 0, vy: 0, r: Math.random() < .14 ? rand(4, 8) : rand(.6, 1.6), ph: Math.random() * 6.28, sp: rand(.8, 2.2) }); }
-    }
-    function inText(x, y){ for (var i = 0; i < boxes.length; i++) { var b = boxes[i]; if (x > b[0] && x < b[2] && y > b[1] && y < b[3]) return true; } return false; }
-    function draw(t){
-      ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (var i = 0; i < stars.length; i++) {
-        var s = stars[i], x = (s.hx + s.ox + Math.sin(t * .3 + s.ph) * 3) * dpr, y = (s.hy + s.oy + Math.cos(t * .25 + s.ph) * 2) * dpr, tw = .55 + .45 * Math.sin(t * s.sp + s.ph);
-        if (s.r > 3) sparkle(ctx, x, y, s.r * dpr * (.8 + .2 * tw), .5 + .4 * tw, Math.sin(t * .4 + s.ph) * .2);
-        else { ctx.globalAlpha = .35 + .5 * tw; ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(x, y, s.r * dpr, 0, 6.29); ctx.fill(); ctx.globalAlpha = 1; }
-      }
-    }
-    var item = { tick: function(dt, t){
-      size();
-      var r = canvas.getBoundingClientRect(), lx = P.x - r.left, ly = P.y - r.top, live = performance.now() - P.user < 140;
-      for (var i = 0; i < stars.length; i++) {
-        var s = stars[i];
-        if (live) { var dx = s.hx + s.ox - lx, dy = s.hy + s.oy - ly, d2 = dx * dx + dy * dy, R = 110;
-          if (d2 < R * R) { var d = Math.sqrt(d2) || 1, f = (1 - d / R) * 1400; s.vx += (dx / d * f + P.vx * .4 * (1 - d / R)) * dt; s.vy += (dy / d * f + P.vy * .4 * (1 - d / R)) * dt; } }
-        s.vx += (-38 * s.ox - 6.5 * s.vx) * dt; s.vy += (-38 * s.oy - 6.5 * s.vy) * dt; s.ox += s.vx * dt; s.oy += s.vy * dt;
-        if (inText(s.hx + s.ox, s.hy + s.oy)) { s.ox *= .8; s.oy *= .8; s.vx *= -.3; s.vy *= -.3; }
-      }
-      draw(t);
-    } };
-    size();
-    if (REDUCED) draw(0); else Loop.add(item, sec);
+  [].forEach.call(document.querySelectorAll('.row[data-svc]'),function(a){
+    a.addEventListener('click',function(){
+      var svc=a.getAttribute('data-svc');
+      [].forEach.call(document.querySelectorAll('input[name=svc]'),function(c){if(c.value===svc)c.checked=true});
+      document.getElementById('f-svc').classList.remove('bad');
+    });
   });
 })();
 
-/* ===== Seams: a slow line where day meets night, fill follows the line ===== */
+/* ===== Quote form: composes a WhatsApp message ===== */
 (function(){
-  var NS = 'http://www.w3.org/2000/svg';
-  document.querySelectorAll('[data-seam]').forEach(function(svg, idx){
-    var top = svg.getAttribute('data-top'), bot = svg.getAttribute('data-bottom');
-    var fillTop = document.createElementNS(NS, 'rect'); fillTop.setAttribute('width', 1440); fillTop.setAttribute('height', 46); fillTop.setAttribute('fill', top);
-    var fill = document.createElementNS(NS, 'path'); fill.setAttribute('fill', bot);
-    var lines = [0, 1, 2].map(function(i){ var p = document.createElementNS(NS, 'path'); p.setAttribute('fill', 'none'); p.setAttribute('stroke', i === 1 ? '#d6a035' : 'rgba(242,207,116,' + (i === 0 ? .45 : .3) + ')'); p.setAttribute('stroke-width', i === 1 ? 2.5 : 1.5); p.setAttribute('stroke-linecap', 'round'); p.setAttribute('vector-effect', 'non-scaling-stroke'); return p; });
-    svg.appendChild(fillTop); svg.appendChild(fill); lines.forEach(function(p){ svg.appendChild(p); });
-    var ph = idx * 1.7;
-    function y(x, t, i){
-      var swell = Math.sin(x * .0042 + t * .9 * TUNE.seamSpeed + ph) * 6 + Math.sin(x * .011 - t * 1.3 * TUNE.seamSpeed + ph * 2) * 3;
-      var ripple = Math.sin(x * .03 + t * (2.2 + i * .5) * TUNE.seamSpeed + i * 2 + ph) * (1.6 + .8 * Math.sin(t * .4 + i));
-      return 23 + (i - 1) * 6 + swell + ripple;
-    }
-    function render(t){
-      var ds = ['', '', ''];
-      for (var i = 0; i < 3; i++) { var d = ''; for (var x = 0; x <= 1440; x += 20) d += (x ? 'L' : 'M') + x + ' ' + y(x, t, i).toFixed(1); ds[i] = d; lines[i].setAttribute('d', d); }
-      fill.setAttribute('d', ds[1] + 'L1440 46L0 46Z');
-    }
-    render(0);
-    if (!REDUCED) Loop.add({ tick: function(dt, t){ render(t); } }, svg);
-  });
-})();
-
-/* ===== Quote form → WhatsApp ===== */
-(function(){
-  var SVCS = ['House Cleaning', 'Deep Cleaning', 'Move-In & Move-Out Cleaning', 'Apartment & Condo Cleaning', 'Airbnb & Rental Property Cleaning', 'Office Cleaning', 'Commercial Cleaning', 'Post-Construction Cleaning', 'Construction Debris & Trash Removal', 'Concrete, Wood & Job-Site Debris Removal', 'Organization & Detailed Cleaning'];
-  var LABELS = ['House cleaning', 'Deep cleaning', 'Move-in & move-out', 'Apartments & condos', 'Airbnb & rentals', 'Offices', 'Commercial spaces', 'Post-construction', 'Debris & trash removal', 'Concrete & wood haul-away', 'Organizing & detail work'];
-  var chips = document.getElementById('chips');
-  SVCS.forEach(function(s, i){
-    var l = document.createElement('label'); l.className = 'chip';
-    l.innerHTML = '<input type="checkbox" name="svc"><span></span>';
-    l.querySelector('input').value = s; l.querySelector('span').textContent = LABELS[i];
-    chips.appendChild(l);
-  });
-  var form = document.getElementById('quoteForm'), sent = document.getElementById('sent'), sentText = document.getElementById('sentText');
-  function val(id){ return document.getElementById(id).value.trim(); }
-  function mark(id, bad){ var f = document.getElementById(id); f.classList.toggle('bad', bad); var i = f.querySelector('input[type=text]'); if (i) i.setAttribute('aria-invalid', bad ? 'true' : 'false'); }
-  form.addEventListener('input', function(e){ var f = e.target.closest('.field'); if (f) { f.classList.remove('bad'); var i = f.querySelector('input[type=text]'); if (i) i.removeAttribute('aria-invalid'); } });
-  // a little gold burst when a service is ticked
-  chips.addEventListener('change', function(e){
-    if (REDUCED || !e.target.checked) return;
-    var lab = e.target.parentNode, c = document.createElement('canvas'), W = 120, H = 80, d = Math.min(window.devicePixelRatio || 1, 2);
-    c.width = W * d; c.height = H * d; c.style.cssText = 'position:absolute;left:50%;top:50%;width:' + W + 'px;height:' + H + 'px;margin:-' + H / 2 + 'px 0 0 -' + W / 2 + 'px;pointer-events:none;z-index:2';
-    lab.appendChild(c); var x = c.getContext('2d'), bits = [], t0 = performance.now();
-    for (var i = 0; i < 4; i++) bits.push({ a: rand(0, 6.28), v: rand(18, 34), r: rand(4, 7) });
-    (function f(now){ var u = (now - t0) / 600; x.clearRect(0, 0, c.width, c.height); if (u >= 1) { c.remove(); return; }
-      bits.forEach(function(b){ sparkle(x, (W / 2 + Math.cos(b.a) * b.v * u * 1.6) * d, (H / 2 + Math.sin(b.a) * b.v * u) * d, b.r * d * (1 - u * .5), Math.sin(u * Math.PI), u); });
-      requestAnimationFrame(f); })(t0);
-  });
-  form.addEventListener('submit', function(e){
+  var form=document.getElementById('quoteForm');if(!form)return;
+  var sent=document.getElementById('sent'),sentText=document.getElementById('sentText');
+  function val(id){return document.getElementById(id).value.trim()}
+  function mark(id,bad){var f=document.getElementById(id);f.classList.toggle('bad',bad);var i=f.querySelector('input[type=text]');if(i)i.setAttribute('aria-invalid',bad?'true':'false')}
+  form.addEventListener('input',function(e){var f=e.target.closest('.field');if(f&&f.classList.contains('bad')&&(e.target.type==='checkbox'?e.target.checked:e.target.value.trim()))mark(f.id,false)});
+  form.addEventListener('change',function(e){if(e.target.name==='svc'&&e.target.checked)mark('f-svc',false)});
+  form.addEventListener('submit',function(e){
     e.preventDefault();
-    var name = val('qName'), where = val('qWhere'), when = val('qWhen'), notes = val('qNotes');
-    var picked = [].map.call(form.querySelectorAll('input[name=svc]:checked'), function(i){ return i.value; });
-    mark('f-name', !name); mark('f-svc', !picked.length); mark('f-where', !where);
-    var firstBad = form.querySelector('.field.bad'); if (firstBad) { var inp = firstBad.querySelector('input'); if (inp) inp.focus(); return; }
-    var msg = "Hi Cleaning Luna! I'd like a quote.\nName: " + name + '\nCleaning: ' + picked.join(', ') + '\nWhere: ' + where + (when ? '\nWhen: ' + when : '') + (notes ? '\nNotes: ' + notes : '');
-    sentText.textContent = msg; sent.classList.add('show');
-    window.location.href = waLink(msg);
+    var name=val('qName'),where=val('qWhere'),when=val('qWhen'),notes=val('qNotes');
+    var picked=[].map.call(form.querySelectorAll('input[name=svc]:checked'),function(i){return i.value});
+    mark('f-name',!name);mark('f-svc',!picked.length);mark('f-where',!where);
+    var bad=form.querySelector('.field.bad');if(bad){bad.querySelector('input').focus();return}
+    var msg="Hi Cleaning Luna! I'd like a quote.\nName: "+name+'\nCleaning: '+picked.join(', ')+'\nWhere: '+where+(when?'\nWhen: '+when:'')+(notes?'\nNotes: '+notes:'');
+    sentText.textContent=msg;document.getElementById('openWa').href=waLink(msg);
+    location.href=waLink(msg);
+    // if WhatsApp didn't open (desktop, some in-app browsers), show the message and the ways to send it
+    setTimeout(function(){sent.hidden=false},900);
   });
-  document.getElementById('copyBtn').addEventListener('click', function(){
-    var b = this, t = sentText.textContent;
-    function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy message'; }, 2000); }
-    if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function(){ selectIt(); });
-    else selectIt();
-    function selectIt(){ var r = document.createRange(); r.selectNodeContents(sentText); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected, now copy'; }
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    var b=this,t=sentText.textContent;
+    function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy message'},2000)}
+    function selectIt(){var r=document.createRange();r.selectNodeContents(sentText);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, now copy'}
+    if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,selectIt);else selectIt();
   });
+})();
+
+/* ===== Floating WhatsApp circle: shows after the hero, hides while the form is on screen ===== */
+(function(){
+  var fl=document.getElementById('float');if(!fl)return;
+  if(!CONFIG.FLOAT||!('IntersectionObserver' in window)){fl.remove();return}
+  var pastHero=false,formIn=false;
+  function sync(){var on=pastHero&&!formIn;fl.classList.toggle('on',on);fl.tabIndex=on?0:-1;fl.setAttribute('aria-hidden',on?'false':'true')}
+  new IntersectionObserver(function(es){pastHero=!es[0].isIntersecting;sync()},{threshold:.15}).observe(document.getElementById('hero'));
+  new IntersectionObserver(function(es){formIn=es[0].isIntersecting;sync()},{rootMargin:'-15% 0px -15% 0px'}).observe(document.getElementById('quoteForm'));
+  sync();
+})();
+
+/* ===== Fade-up: everything is visible at rest; only what starts below the first screen rises 12px in ===== */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('below');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  [].forEach.call(document.querySelectorAll('.rise'),function(el){if(el.getBoundingClientRect().top>innerHeight){el.classList.add('below');io.observe(el)}});
 })();
 </script>
 </body>
