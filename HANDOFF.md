@@ -24,6 +24,7 @@ The business hasn't been contacted yet, so the whole site was rebuilt under the 
 - **Process:** Impeccable sweep (audit, critique, polish, clarify, distill, harden, adapt, optimize, animate, colorize, typeset, layout, delight, bolder, quieter) plus the finish reviewer. Their fixes are applied; the conflicts are listed below. The detector is clean apart from two recorded exceptions (the band texture, and a type-scale reading that ignores the clamped headings). DESIGN.md was regenerated from the new build.
 
 ## Verified
+- **Live:** the Pages build of `6062528` is served at the link above, checked in WebKit at 390px (new hero, Cal Sans loaded, og image 200). The Call Sheet already had this URL (`call-sheet-site.sh` printed UNCHANGED).
 - Chromium and WebKit at 320, 360, 390, 430, 844×390 (landscape) and 1440:
   - no sideways scroll
   - tap targets 44px or more
@@ -87,6 +88,7 @@ The business hasn't been contacted yet, so the whole site was rebuilt under the 
   - the gold last phrase on dark-band headings (Impeccable: "gold stops meaning anything"; the house rule asks for it)
   - row focus shown on the arrow only (Impeccable wants a whole-row ring)
 - **Not applied, for other reasons:**
+  - The calm kit's header shadow on scroll: the header isn't sticky (same as DPG), so there's nothing for a shadow to separate.
   - The floating circle can sit over a service row's arrow as you scroll on phones. Tapping it still opens WhatsApp, and hiding it over the services would leave it hidden most of the page.
   - Without JS the form does nothing useful (same as DPG).
 
