@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T01:52:27+00:00",
+  "title": "Design System: Cleaning Luna LLC",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Night Paper",
+        "canonical": "#f4f6fb",
+        "oklch": "oklch(97.3% 0.007 268.5)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#232428",
+          "#414246",
+          "#616367",
+          "#84868a",
+          "#a9abaf",
+          "#ccced2",
+          "#eceef3"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#424242",
+          "#636363",
+          "#868686",
+          "#ababab",
+          "#cecece",
+          "#eeeeee"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Frost Field",
+        "canonical": "#e6ecf5",
+        "oklch": "oklch(94.1% 0.014 258.3)",
+        "tonalRamp": [
+          "#080b10",
+          "#20242b",
+          "#3e434a",
+          "#5e646b",
+          "#81878f",
+          "#a6abb4",
+          "#c8ced7",
+          "#eaeff7"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Midnight Ink",
+        "canonical": "#0a2350",
+        "oklch": "oklch(26.8% 0.088 261.0)",
+        "tonalRamp": [
+          "#020a1f",
+          "#122341",
+          "#2b426a",
+          "#466395",
+          "#6987ba",
+          "#91acd9",
+          "#b8cff6",
+          "#dcf0ff"
+        ]
+      },
+      "body": {
+        "role": "neutral",
+        "displayName": "Slate Body",
+        "canonical": "#26364d",
+        "oklch": "oklch(33.0% 0.046 257.4)",
+        "tonalRamp": [
+          "#050b17",
+          "#192535",
+          "#344358",
+          "#53647e",
+          "#7588a2",
+          "#9bacc5",
+          "#c0cfe4",
+          "#e3f0ff"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Slate Soft",
+        "canonical": "#4a5870",
+        "oklch": "oklch(45.8% 0.043 261.1)",
+        "tonalRamp": [
+          "#050b16",
+          "#1b2434",
+          "#374357",
+          "#55647c",
+          "#7887a1",
+          "#9eacc3",
+          "#c2cee3",
+          "#e5efff"
+        ]
+      },
+      "navy": {
+        "role": "secondary",
+        "displayName": "Moonlit Navy",
+        "canonical": "#173d7a",
+        "oklch": "oklch(37.0% 0.113 259.6)",
+        "tonalRamp": [
+          "#000924",
+          "#0b2248",
+          "#224174",
+          "#3b62a2",
+          "#5e86c7",
+          "#89ace4",
+          "#b1cfff",
+          "#d7f0ff"
+        ]
+      },
+      "deep": {
+        "role": "secondary",
+        "displayName": "Midnight",
+        "canonical": "#0a2350",
+        "oklch": "oklch(26.8% 0.088 261.0)",
+        "tonalRamp": [
+          "#020a1f",
+          "#122341",
+          "#2b426a",
+          "#466395",
+          "#6987ba",
+          "#91acd9",
+          "#b8cff6",
+          "#dcf0ff"
+        ]
+      },
+      "on-dark": {
+        "role": "neutral",
+        "displayName": "Moonlight",
+        "canonical": "#f4f7fb",
+        "oklch": "oklch(97.5% 0.006 255.5)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#404346",
+          "#616367",
+          "#84868a",
+          "#a8abaf",
+          "#cbced2",
+          "#eceff3"
+        ]
+      },
+      "on-dark-soft": {
+        "role": "neutral",
+        "displayName": "Moonlight Soft",
+        "canonical": "#c9d6ea",
+        "oklch": "oklch(87.2% 0.031 258.9)",
+        "tonalRamp": [
+          "#060b14",
+          "#1d2430",
+          "#394352",
+          "#596475",
+          "#7b8799",
+          "#a0acbd",
+          "#c4cfde",
+          "#e6effd"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Moon Gold",
+        "canonical": "#d6a035",
+        "oklch": "oklch(73.9% 0.134 80.4)",
+        "tonalRamp": [
+          "#1a0500",
+          "#3a1c00",
+          "#603900",
+          "#895800",
+          "#ae7c03",
+          "#cea357",
+          "#ecc88a",
+          "#ffeab8"
+        ]
+      },
+      "gold-2": {
+        "role": "primary",
+        "displayName": "Lit Gold",
+        "canonical": "#e2b452",
+        "oklch": "oklch(79.3% 0.127 83.8)",
+        "tonalRamp": [
+          "#180600",
+          "#371e00",
+          "#5c3b00",
+          "#845b00",
+          "#a87f18",
+          "#c9a55c",
+          "#e8ca8e",
+          "#ffebbb"
+        ]
+      },
+      "gold-ink": {
+        "role": "primary",
+        "displayName": "Old Brass",
+        "canonical": "#7f5a12",
+        "oklch": "oklch(49.5% 0.096 78.4)",
+        "tonalRamp": [
+          "#170700",
+          "#351f00",
+          "#593c00",
+          "#805c16",
+          "#a47f41",
+          "#c6a572",
+          "#e5c99e",
+          "#ffebc7"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Signal Red",
+        "canonical": "#b3261e",
+        "oklch": "oklch(50.1% 0.178 28.7)",
+        "tonalRamp": [
+          "#270000",
+          "#4f0000",
+          "#7e0e0a",
+          "#b02a21",
+          "#d85548",
+          "#f78577",
+          "#ffb0a2",
+          "#ffd7cb"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(10,35,80,.12)",
+        "tonalRamp": []
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only; bounces in letter by letter."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2s."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service rows, care claims, step titles, field labels."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Buttons and the header phone number."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Paragraph under an H2, max 38ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text and inputs."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase service group headings on navy."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Optional-field hints and small print."
+      }
+    },
+    "textures": [
+      {
+        "name": "night-lines",
+        "value": "repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)",
+        "purpose": "Hero and midnight bands (How it works, footer) only."
+      }
+    ],
+    "shadows": [
+      {
+        "name": "float",
+        "value": "0 10px 28px rgba(6,20,46,.3)",
+        "purpose": "The floating WhatsApp circle only."
+      }
+    ],
+    "focus": [
+      {
+        "name": "focus-light",
+        "value": "3px solid #173d7a, offset 3px",
+        "purpose": "Default focus ring on paper and the white card."
+      },
+      {
+        "name": "focus-dark",
+        "value": "3px solid #d6a035, offset 3px",
+        "purpose": "Focus ring on navy, midnight, hero and footer."
+      }
+    ],
+    "motion": [
+      {
+        "name": "letter-in",
+        "value": "1s cubic-bezier(.34,1.56,.64,1), from translateX(50px) and opacity 0, 20ms stagger per letter",
+        "purpose": "Hero H1 bounce-in only; skipped without JS and under reduced motion."
+      },
+      {
+        "name": "rise",
+        "value": "opacity and translateY(12px), .4s ease-out",
+        "purpose": "The one fade-up for elements that start below the first screen."
+      },
+      {
+        "name": "float-in",
+        "value": "transform .35s cubic-bezier(.2,.8,.2,1), from translateY(120px)",
+        "purpose": "Floating WhatsApp circle entering and leaving."
+      },
+      {
+        "name": "state",
+        "value": ".2s (buttons, row arrows), .15s (fields, chips)",
+        "purpose": "Colour and border state changes."
+      },
+      {
+        "name": "press",
+        "value": "transform scale(.98), .12s",
+        "purpose": "Button press."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tiny",
+        "value": "max-width 340px"
+      },
+      {
+        "name": "narrow",
+        "value": "max-width 374px"
+      },
+      {
+        "name": "tablet",
+        "value": "min-width 760px"
+      },
+      {
+        "name": "desktop",
+        "value": "min-width 1024px"
+      },
+      {
+        "name": "short-landscape",
+        "value": "max-height 500px and landscape"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Gold pill with ink text; the one booking action per view.",
+      "html": "<div class=\"ds-band\"><a class=\"ds-btn ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9z\"/></svg>Book on WhatsApp</a></div>",
+      "css": ":root{--paper:#f4f6fb;--card:#fff;--field:#e6ecf5;--ink:#0a2350;--navy:#173d7a;--deep:#0a2350;--on-dark:#f4f7fb;--on-dark-soft:#c9d6ea;--gold:#d6a035;--gold-2:#e2b452;--gold-ink:#7f5a12;--soft:#4a5870;--error:#b3261e;--display:'Cal Sans','Avenir Next','Segoe UI',system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;--texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-band{background:var(--navy);padding:24px}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;font:400 18px/1 var(--display);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,color .2s,border-color .2s,transform .12s}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.ds-btn-primary{background:var(--gold);color:var(--ink);border-color:var(--gold)}.ds-btn-primary:hover{background:var(--gold-2);border-color:var(--gold-2)}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outlined pill beside a primary on a dark band.",
+      "html": "<div class=\"ds-band\"><a class=\"ds-btn ds-btn-ghost\" href=\"#\">Get a quote</a></div>",
+      "css": ":root{--paper:#f4f6fb;--card:#fff;--field:#e6ecf5;--ink:#0a2350;--navy:#173d7a;--deep:#0a2350;--on-dark:#f4f7fb;--on-dark-soft:#c9d6ea;--gold:#d6a035;--gold-2:#e2b452;--gold-ink:#7f5a12;--soft:#4a5870;--error:#b3261e;--display:'Cal Sans','Avenir Next','Segoe UI',system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;--texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-band{background:var(--navy);padding:24px}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;font:400 18px/1 var(--display);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,color .2s,border-color .2s,transform .12s}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.ds-btn-ghost{background:transparent;color:var(--on-dark);border-color:rgba(244,247,251,.7)}.ds-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Borderless tinted field on the white form card; navy border on hover and focus.",
+      "html": "<div class=\"ds-card\"><label class=\"ds-label\" for=\"ds-n\">Your name</label><input class=\"ds-input\" id=\"ds-n\" type=\"text\" placeholder=\"First name is fine\"></div>",
+      "css": ":root{--paper:#f4f6fb;--card:#fff;--field:#e6ecf5;--ink:#0a2350;--navy:#173d7a;--deep:#0a2350;--on-dark:#f4f7fb;--on-dark-soft:#c9d6ea;--gold:#d6a035;--gold-2:#e2b452;--gold-ink:#7f5a12;--soft:#4a5870;--error:#b3261e;--display:'Cal Sans','Avenir Next','Segoe UI',system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;--texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-card{background:var(--card);border-radius:24px;padding:24px;display:grid;gap:8px;max-width:420px}.ds-label{font:400 18px/1.2 var(--display);color:var(--ink)}.ds-input{width:100%;box-sizing:border-box;font:16px/1.4 var(--text);color:var(--ink);background:var(--field);border:2px solid transparent;border-radius:10px;padding:13px 14px;min-height:52px;caret-color:var(--navy);transition:border-color .15s}.ds-input::placeholder{color:var(--soft)}.ds-input:hover,.ds-input:focus{outline:none;border-color:var(--navy)}"
+    },
+    {
+      "name": "Service Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill checkboxes for what needs cleaning; selected fills ink.",
+      "html": "<div class=\"ds-chips\"><input type=\"checkbox\" id=\"ds-c1\" checked><label for=\"ds-c1\">House cleaning</label><input type=\"checkbox\" id=\"ds-c2\"><label for=\"ds-c2\">Offices</label><input type=\"checkbox\" id=\"ds-c3\"><label for=\"ds-c3\">Debris &amp; trash removal</label></div>",
+      "css": ":root{--paper:#f4f6fb;--card:#fff;--field:#e6ecf5;--ink:#0a2350;--navy:#173d7a;--deep:#0a2350;--on-dark:#f4f7fb;--on-dark-soft:#c9d6ea;--gold:#d6a035;--gold-2:#e2b452;--gold-ink:#7f5a12;--soft:#4a5870;--error:#b3261e;--display:'Cal Sans','Avenir Next','Segoe UI',system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;--texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:10px;background:#fff;padding:20px;border-radius:24px}.ds-chips input{position:absolute;width:1px;height:1px;opacity:0;margin:0}.ds-chips label{display:flex;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:6px 12px;border-radius:999px;background:var(--field);border:2px solid transparent;font:16px/1.2 var(--text);color:var(--ink);cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}.ds-chips label:hover{border-color:var(--navy)}.ds-chips input:checked+label{background:var(--ink);color:#fff}.ds-chips input:checked+label:hover{outline:2px solid var(--navy);outline-offset:2px}.ds-chips input:focus-visible+label{border-color:var(--navy);outline:3px solid var(--navy);outline-offset:2px}"
+    },
+    {
+      "name": "Quote Form Card",
+      "kind": "card",
+      "refersTo": "card-form",
+      "description": "The only white surface: a 24px, shadowless card on paper.",
+      "html": "<div class=\"ds-paper\"><div class=\"ds-form\"><span class=\"ds-label\">What needs cleaning?</span><p class=\"ds-after\">Opens WhatsApp with this written out.</p></div></div>",
+      "css": ":root{--paper:#f4f6fb;--card:#fff;--field:#e6ecf5;--ink:#0a2350;--navy:#173d7a;--deep:#0a2350;--on-dark:#f4f7fb;--on-dark-soft:#c9d6ea;--gold:#d6a035;--gold-2:#e2b452;--gold-ink:#7f5a12;--soft:#4a5870;--error:#b3261e;--display:'Cal Sans','Avenir Next','Segoe UI',system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;--texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-paper{background:var(--paper);padding:24px}.ds-form{background:var(--card);border-radius:24px;padding:clamp(20px,5vw,32px);display:grid;gap:22px;max-width:640px}.ds-label{font:400 18px/1.2 var(--display);color:var(--ink)}.ds-after{margin:0;font:14px/1.7 var(--text);color:var(--soft)}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Whole-row link on navy; only the arrow circle changes on hover or focus.",
+      "html": "<div class=\"ds-navy\"><ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\">House cleaning<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\">Deep cleaning<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a></li></ul></div>",
+      "css": ":root{--paper:#f4f6fb;--card:#fff;--field:#e6ecf5;--ink:#0a2350;--navy:#173d7a;--deep:#0a2350;--on-dark:#f4f7fb;--on-dark-soft:#c9d6ea;--gold:#d6a035;--gold-2:#e2b452;--gold-ink:#7f5a12;--soft:#4a5870;--error:#b3261e;--display:'Cal Sans','Avenir Next','Segoe UI',system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;--texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-navy{background:var(--navy);padding:16px 24px}.ds-rows{list-style:none;margin:0;padding:0}.ds-rows li+li{border-top:1px solid rgba(255,255,255,.12)}.ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:8px 0;color:var(--on-dark);text-decoration:none;font:400 22px/1.2 var(--display)}.ds-row:focus-visible{outline:none}.ds-arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:var(--on-dark);transition:background-color .2s,color .2s}.ds-row:hover .ds-arrow{background:var(--gold);color:var(--ink)}.ds-row:focus-visible .ds-arrow{background:var(--gold);color:var(--ink);outline:3px solid var(--gold);outline-offset:3px}"
+    },
+    {
+      "name": "Numbered Steps",
+      "kind": "custom",
+      "refersTo": "step-number",
+      "description": "Gold counter discs on the textured midnight band.",
+      "html": "<div class=\"ds-deep\"><ol class=\"ds-steps\"><li><div><b>Message us on WhatsApp.</b><span>Say what needs cleaning and where.</span></div></li><li><div><b>Pick a day.</b><span>We confirm on WhatsApp.</span></div></li></ol></div>",
+      "css": ":root{--paper:#f4f6fb;--card:#fff;--field:#e6ecf5;--ink:#0a2350;--navy:#173d7a;--deep:#0a2350;--on-dark:#f4f7fb;--on-dark-soft:#c9d6ea;--gold:#d6a035;--gold-2:#e2b452;--gold-ink:#7f5a12;--soft:#4a5870;--error:#b3261e;--display:'Cal Sans','Avenir Next','Segoe UI',system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;--texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-deep{background-color:var(--deep);background-image:var(--texture);color:var(--on-dark-soft);padding:24px;font:16px/1.7 var(--text)}.ds-steps{list-style:none;margin:0;padding:0;display:grid;gap:24px;counter-reset:s}.ds-steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;counter-increment:s}.ds-steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);font:400 20px/1 var(--display)}.ds-steps b{display:block;font:400 21px/1.2 var(--display);color:var(--on-dark);margin-top:4px}.ds-steps span{display:block;margin-top:4px}"
+    },
+    {
+      "name": "Floating WhatsApp Circle",
+      "kind": "custom",
+      "refersTo": "whatsapp-float",
+      "description": "The one floating control and the one shadow; appears after the hero.",
+      "html": "<div class=\"ds-stage\"><a class=\"ds-float\" href=\"#\" aria-label=\"Message on WhatsApp\"><svg viewBox=\"0 0 24 24\" width=\"28\" height=\"28\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9z\"/></svg></a></div>",
+      "css": ":root{--paper:#f4f6fb;--card:#fff;--field:#e6ecf5;--ink:#0a2350;--navy:#173d7a;--deep:#0a2350;--on-dark:#f4f7fb;--on-dark-soft:#c9d6ea;--gold:#d6a035;--gold-2:#e2b452;--gold-ink:#7f5a12;--soft:#4a5870;--error:#b3261e;--display:'Cal Sans','Avenir Next','Segoe UI',system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;--texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-stage{background:var(--paper);padding:24px;display:flex;justify-content:flex-end}.ds-float{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);box-shadow:0 10px 28px rgba(6,20,46,.3)}.ds-float:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 3px #fff,0 10px 28px rgba(6,20,46,.3)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Moonlit Night Shift",
+    "overview": "The whole system is the logo's night: an off-white paper ground, two navies for the bands (a moonlit navy and a midnight with faint diagonal lines), and the crescent moon's gold as the one warm accent. Full-bleed bands alternate light and dark so each section is obvious on a phone, and inside them everything is soft and borderless: pill buttons, a 24px form card, tinted fields. It is the calm band house style, built without photos because the client supplied none.\n\nDensity is low and mobile-first. One display face (Cal Sans, always at 400) carries hierarchy by size alone; the system stack sets running text at 16/1.7. Motion is rationed: the hero headline bounces in letter by letter, everything else below the first screen rises 12px once, and nothing is ever hidden at rest, without JS, or under reduced motion.\n\nGold is precious. It fills the primary button, the step numbers, the service-row arrow on hover and the floating WhatsApp circle, and it colours the last phrase of a dark-band heading. Everywhere else the page is navy on paper or pale blue on navy.",
+    "keyCharacteristics": [
+      "Paper, navy and midnight bands, full-bleed, alternating light and dark.",
+      "Gold as a fill with navy text on it; a darker gold-ink when gold must be text on light.",
+      "Cal Sans at one weight for headings, rows, buttons and labels; system stack for body.",
+      "Soft geometry: 24px card, 10px fields, full pills, circles for icons and counters.",
+      "Flat surfaces; the floating WhatsApp circle is the only thing that casts a shadow.",
+      "One letter bounce-in (hero H1 only) and one 12px fade-up."
+    ],
+    "rules": [
+      {
+        "name": "The Fill-Only Gold Rule",
+        "body": "Gold is a fill, and text on a gold fill is Midnight Ink. Gold never sets text on paper or white; use Old Brass there. Gold text on a dark band is limited to heading-size accent phrases.",
+        "section": "colors"
+      },
+      {
+        "name": "The Night Bands Rule",
+        "body": "Sections are full-bleed bands in paper, navy or midnight, alternating light and dark. The ground is never black. The diagonal line texture belongs to the hero and to midnight bands, never to a plain navy content band.",
+        "section": "colors"
+      },
+      {
+        "name": "The Faint Lines Rule",
+        "body": "The texture is `repeating-linear-gradient(135deg, transparent 0 22px, rgba(255,255,255,.035) 22px 23px)`. Never stronger than about 4% white, so it never reads as lines through text.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Weight Rule",
+        "body": "Cal Sans is set at 400 everywhere. Hierarchy comes from size and colour, never from a heavier weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The Display Voice Rule",
+        "body": "Anything the visitor taps or reads as a name (buttons, service rows, phone numbers, field labels) is in Cal Sans; sentences are in the system stack.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Shadow Rule",
+        "body": "Only the element that floats over the page casts a shadow. Cards, buttons, rows and fields stay flat; their states change fill, border or outline instead.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do put Midnight Ink on every gold fill, and use Old Brass (#7f5a12) when gold has to be text or an icon on light.",
+      "Do alternate full-bleed paper, navy and midnight bands, and put the 135deg line texture only on the hero and midnight bands, at about 4% white or fainter.",
+      "Do set every Cal Sans element at weight 400 and carry hierarchy with the clamp()ed sizes.",
+      "Do keep fields and chips on Frost Field (#e6ecf5) inside the white card, with a 2px border that turns navy on hover and focus and red on error.",
+      "Do gate hover styles behind `(hover:hover)` so taps never leave a stuck state.",
+      "Do keep every tap target at 44px or larger and every input at 16px or larger.",
+      "Do keep content visible at rest; motion only ever reveals something that is already there for no-JS and reduced-motion visitors."
+    ],
+    "donts": [
+      "Don't set text in gold on paper or white, or white text on gold.",
+      "Don't use a black ground or a pure-white page ground; white is for the form card only.",
+      "Don't give the bounce-in letter animation to any heading other than the hero H1, or add a second kind of scroll animation.",
+      "Don't add shadows to cards, buttons or rows; the floating circle is the only shadow.",
+      "Don't change anything but the arrow when a service row is hovered or focused.",
+      "Don't turn the floating circle into a bottom bar, or show it while the form or the closing WhatsApp link is in view.",
+      "Don't add a heavier Cal Sans weight or a second body font."
+    ]
+  }
+}
