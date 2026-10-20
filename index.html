@@ -69,6 +69,8 @@ section{padding:64px 0}
 .on-navy .accent,.on-deep .accent,.hero .accent{color:var(--gold)}
 .head{display:grid;gap:16px;justify-items:start;max-width:640px}
 .lede{font-size:clamp(17px,4.6vw,19px);color:var(--soft);max-width:38ch}
+.lede.gap{margin-top:16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .on-navy .lede,.on-deep .lede{color:var(--on-dark-soft)}
 
 /* Eyebrow: a few key headings only. A label, not a button. */
@@ -89,15 +91,16 @@ section{padding:64px 0}
 .brand{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;line-height:1}
 .brand img{width:40px;height:40px;flex:none;mix-blend-mode:multiply}
 .brand b{display:block;font:400 20px/1 var(--display);letter-spacing:.01em;white-space:nowrap}
-.brand small{display:block;font:600 11px/1 var(--text);letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
+.brand small{display:block;font:600 12px/1 var(--text);letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
 .tel{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font:400 18px/1 var(--display);text-decoration:none;white-space:nowrap}
 .tel svg{width:18px;height:18px;flex:none;color:var(--gold-ink)}
+@media (max-width:340px){.brand img{width:34px;height:34px}.top .wrap{gap:8px}.tel svg{display:none}.brand b{font-size:17px!important}}
 @media (max-width:374px){.brand small{display:none}.brand b{font-size:19px}.tel{font-size:16px;gap:6px}.tel svg{width:16px;height:16px}}
 
 /* ---------- Hero ---------- */
 .hero{padding:0;position:relative;background-color:var(--navy);background-image:var(--texture);color:var(--on-dark);overflow:hidden}
 .hero-copy{position:relative;z-index:1;display:grid;gap:20px;justify-items:start;padding-top:56px;padding-bottom:72px}
-.hero h1{color:#fff;font-size:clamp(44px,12.4vw,84px);line-height:1.02;max-width:11ch}
+.hero h1{color:#fff;font-size:clamp(40px,min(12.4vw,15vh),84px);line-height:1.02;max-width:11ch}
 /* H1 bounce-in (after lpmr.co.uk): each letter slides in from 50px right with a slight overshoot, 20ms apart */
 .hero h1 .w,.hero h1 .accent{display:inline-block;white-space:nowrap}
 .hero h1 .c{display:inline-block;opacity:0;transform:translateX(50px);animation:letter-in 1s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:calc(var(--i) * 20ms)}
@@ -143,9 +146,9 @@ input[type=text],textarea{width:100%;font:16px/1.4 var(--text);color:var(--ink);
 textarea{min-height:110px;resize:vertical}
 input::placeholder,textarea::placeholder{color:var(--soft)}
 input[type=text]:focus,textarea:focus{outline:none;border-color:var(--focus)}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:10px}
 .chips input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
-.chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--pill);background:var(--field);border:2px solid transparent;font:16px/1.2 var(--text);color:var(--ink);cursor:pointer;margin:0;transition:border-color .15s,background-color .15s,color .15s}
+.chips label{display:flex;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:6px 12px;border-radius:var(--pill);background:var(--field);border:2px solid transparent;font:16px/1.2 var(--text);color:var(--ink);cursor:pointer;margin:0;transition:border-color .15s,background-color .15s,color .15s}
 .chips input:focus-visible+label{border-color:var(--focus);outline:3px solid var(--focus);outline-offset:2px}
 .chips input:checked+label{background:var(--ink);color:#fff}
 .err{display:none;font-size:16px;color:var(--error)}
@@ -160,7 +163,7 @@ form .btn-primary:focus-visible{outline:2px solid var(--focus);outline-offset:2p
 .sent .again{display:flex;flex-wrap:wrap;gap:10px}
 .btn-soft{min-height:48px;padding:0 20px;font-size:16px;background:var(--field);color:var(--ink)}
 .sent a.nw{display:inline-block;padding:11px 0;margin:-11px 0}
-@media (max-width:380px){.chips label{padding:0 14px}}
+@media (max-width:380px){.chips label{padding:6px 10px}}
 
 /* ---------- Close ---------- */
 .close .who{margin-top:14px;font-size:clamp(18px,5vw,20px);color:var(--on-dark-soft)}
@@ -199,7 +202,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-d
   .actions .btn{min-width:240px}
 }
 @media (min-width:1024px){
-  .moon{right:max(40px,calc(50% - 560px));top:50%;width:300px;height:300px;transform:translateY(-50%)}
+  .moon{right:max(40px,calc(50% - 560px));top:50%;width:clamp(300px,28vw,380px);height:clamp(300px,28vw,380px);transform:translateY(-50%)}
   .hero h1{max-width:12ch}
   .split{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;align-items:start}
   .split .claims{margin-top:0}
@@ -226,6 +229,8 @@ form .btn-primary:hover,.btn-soft:hover{outline:2px solid var(--focus);outline-o
 .bigtel:hover{color:var(--gold)}
 footer a:hover{color:var(--gold)}
 }
+@media (max-height:500px) and (orientation:landscape){.top .wrap{min-height:60px}.hero-copy{padding-top:28px;padding-bottom:40px;gap:16px}.hero h1{font-size:12vh;max-width:none}}
+@media print{.js .rise.below{opacity:1!important;transform:none!important}.float{display:none}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .rise,.float,.btn{transition:none}
@@ -259,7 +264,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="hero" id="hero" aria-labelledby="h1">
   <svg class="moon" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d58a"/><stop offset=".55" stop-color="#d6a035"/><stop offset="1" stop-color="#a8761f"/></linearGradient></defs><path d="M58 8a44 44 0 1 0 34 64A36 36 0 1 1 58 8z" fill="url(#mg)"/><path d="M84 14l2 6.5 6.5 2-6.5 2-2 6.5-2-6.5-6.5-2 6.5-2z" fill="#e2b452"/></svg>
   <div class="wrap hero-copy">
-    <p class="eyebrow">Homes, rentals &amp; businesses</p>
+    <p class="eyebrow">Homes, businesses &amp; job sites</p>
     <h1 id="h1">In Elizabeth,<br> we clean. <span class="accent">You relax.</span></h1>
     <p class="promise">You book with one message. We take it from there.</p>
     <div class="actions">
@@ -273,7 +278,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap split">
     <div class="rise">
       <h2 id="h-care">We treat your place like our own.</h2>
-      <p class="lede" style="margin-top:16px">You're letting us into your home or your business. We take that seriously on every visit, big job or small.</p>
+      <p class="lede gap">You're letting us into your home or your business. We take that seriously on every visit, big job or small.</p>
     </div>
     <ul class="claims">
       <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="8" width="30" height="27" rx="4"/><path d="M5 16h30M13 4v7M27 4v7"/><path d="M14 25l4 4 8-8"/></svg>Reliable service</li>
@@ -290,27 +295,27 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div class="group rise">
         <h3>Homes</h3>
         <ul class="rows">
-          <li><a class="row" href="#ask" data-svc="House Cleaning">House cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="row" href="#ask" data-svc="Deep Cleaning">Deep cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="row" href="#ask" data-svc="Apartment &amp; Condo Cleaning">Apartments &amp; condos<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="row" href="#ask" data-svc="Move-In &amp; Move-Out Cleaning">Move-in &amp; move-out<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="row" href="#ask" data-svc="Organization &amp; Detailed Cleaning">Organizing &amp; detail work<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="House Cleaning">House cleaning<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Deep Cleaning">Deep cleaning<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Apartment &amp; Condo Cleaning">Apartments &amp; condos<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Move-In &amp; Move-Out Cleaning">Move-in &amp; move-out<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Organization &amp; Detailed Cleaning">Organizing &amp; detail work<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
         </ul>
       </div>
       <div class="group rise">
         <h3>Rentals &amp; businesses</h3>
         <ul class="rows">
-          <li><a class="row" href="#ask" data-svc="Airbnb &amp; Rental Property Cleaning">Airbnb &amp; rentals<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="row" href="#ask" data-svc="Office Cleaning">Offices<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="row" href="#ask" data-svc="Commercial Cleaning">Commercial spaces<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Airbnb &amp; Rental Property Cleaning">Airbnb &amp; rentals<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Office Cleaning">Offices<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Commercial Cleaning">Commercial spaces<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
         </ul>
       </div>
       <div class="group rise">
         <h3>Job sites</h3>
         <ul class="rows">
-          <li><a class="row" href="#ask" data-svc="Post-Construction Cleaning">Post-construction cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="row" href="#ask" data-svc="Construction Debris &amp; Trash Removal">Debris &amp; trash removal<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="row" href="#ask" data-svc="Concrete, Wood &amp; Job-Site Debris Removal">Concrete &amp; wood haul-away<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Post-Construction Cleaning">Post-construction cleaning<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Construction Debris &amp; Trash Removal">Debris &amp; trash removal<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="row" href="#ask" data-svc="Concrete, Wood &amp; Job-Site Debris Removal">Concrete &amp; wood haul-away<span class="sr">, get a quote</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
         </ul>
       </div>
     </div>
@@ -323,7 +328,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <ol class="steps">
       <li class="rise"><div><b>Message us on WhatsApp.</b><span>Say what needs cleaning and where.</span></div></li>
       <li class="rise"><div><b>Pick a day.</b><span>Tell us what day suits you and we'll confirm on WhatsApp.</span></div></li>
-      <li class="rise"><div><b>Come home to it.</b><span>Walk in and put your feet up.</span></div></li>
+      <li class="rise"><div><b>We do the cleaning.</b><span>You put your feet up.</span></div></li>
     </ol>
   </div>
 </section>
@@ -332,8 +337,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <div class="head rise">
       <p class="eyebrow">Big job or small</p>
-      <h2 id="h-ask">Tell us about your place</h2>
-      <p class="lede">We'll read it on WhatsApp and get back to you with a quote.</p>
+      <h2 id="h-ask">Tell us about your place.</h2>
     </div>
     <form id="quoteForm" class="rise" novalidate>
       <div class="field" id="f-name">
@@ -346,17 +350,17 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <div class="chips">
           <input type="checkbox" name="svc" id="s1" value="House Cleaning"><label for="s1">House cleaning</label>
           <input type="checkbox" name="svc" id="s2" value="Deep Cleaning"><label for="s2">Deep cleaning</label>
-          <input type="checkbox" name="svc" id="s3" value="Apartment &amp; Condo Cleaning"><label for="s3">Apartment or condo</label>
-          <input type="checkbox" name="svc" id="s4" value="Move-In &amp; Move-Out Cleaning"><label for="s4">Move-in or move-out</label>
-          <input type="checkbox" name="svc" id="s5" value="Organization &amp; Detailed Cleaning"><label for="s5">Organizing &amp; detail</label>
-          <input type="checkbox" name="svc" id="s6" value="Airbnb &amp; Rental Property Cleaning"><label for="s6">Airbnb or rental</label>
-          <input type="checkbox" name="svc" id="s7" value="Office Cleaning"><label for="s7">Office</label>
-          <input type="checkbox" name="svc" id="s8" value="Commercial Cleaning"><label for="s8">Commercial space</label>
-          <input type="checkbox" name="svc" id="s9" value="Post-Construction Cleaning"><label for="s9">Post-construction</label>
-          <input type="checkbox" name="svc" id="s10" value="Construction Debris &amp; Trash Removal"><label for="s10">Debris &amp; trash</label>
-          <input type="checkbox" name="svc" id="s11" value="Concrete, Wood &amp; Job-Site Debris Removal"><label for="s11">Concrete &amp; wood</label>
+          <input type="checkbox" name="svc" id="s3" value="Apartment &amp; Condo Cleaning"><label for="s3">Apartments &amp; condos</label>
+          <input type="checkbox" name="svc" id="s4" value="Move-In &amp; Move-Out Cleaning"><label for="s4">Move-in &amp; move-out</label>
+          <input type="checkbox" name="svc" id="s5" value="Organization &amp; Detailed Cleaning"><label for="s5">Organizing &amp; detail work</label>
+          <input type="checkbox" name="svc" id="s6" value="Airbnb &amp; Rental Property Cleaning"><label for="s6">Airbnb &amp; rentals</label>
+          <input type="checkbox" name="svc" id="s7" value="Office Cleaning"><label for="s7">Offices</label>
+          <input type="checkbox" name="svc" id="s8" value="Commercial Cleaning"><label for="s8">Commercial spaces</label>
+          <input type="checkbox" name="svc" id="s9" value="Post-Construction Cleaning"><label for="s9">Post-construction cleaning</label>
+          <input type="checkbox" name="svc" id="s10" value="Construction Debris &amp; Trash Removal"><label for="s10">Debris &amp; trash removal</label>
+          <input type="checkbox" name="svc" id="s11" value="Concrete, Wood &amp; Job-Site Debris Removal"><label for="s11">Concrete &amp; wood haul-away</label>
         </div>
-        <p class="err" id="e-svc">Pick at least one, even if it's a guess.</p>
+        <p class="err" id="e-svc" role="alert">Pick at least one, even if it's a guess.</p>
       </fieldset>
       <div class="field" id="f-where">
         <label for="qWhere">Your town or street</label>
@@ -373,7 +377,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </div>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send on WhatsApp</button>
       <div class="sent" id="sent" role="status" hidden>
-        <p><strong>WhatsApp should be opening.</strong> If it didn't, send this on WhatsApp to <span class="nw">973-246-2624</span>:</p>
+        <p><strong><span id="thanks"></span>WhatsApp should be opening.</strong> If it didn't, send this on WhatsApp to <span class="nw">973-246-2624</span>:</p>
         <pre id="sentText"></pre>
         <div class="again"><a class="btn btn-soft" id="openWa" href="https://wa.me/19732462624">Open WhatsApp</a><button class="btn btn-soft" type="button" id="copyBtn">Copy message</button></div>
       </div>
@@ -386,7 +390,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <div class="rise">
       <h2 id="h-close">Book your cleaning <span class="accent">today.</span></h2>
-      <p class="who">Cleaning Luna LLC. We clean. You relax.</p>
+      <p class="who">Cleaning Luna LLC</p>
       <p class="area">Elizabeth, NJ and the surrounding areas. Not sure we cover your street? Ask us.</p>
     </div>
     <a class="bigtel rise" id="closeWa" data-wa="Hi Cleaning Luna! I'd like to book a cleaning." href="https://wa.me/19732462624" aria-label="Book on WhatsApp: 973-246-2624"><svg aria-hidden="true"><use href="#i-wa"/></svg>973-246-2624</a>
@@ -467,7 +471,7 @@ function waLink(msg){return 'https://wa.me/'+CONFIG.WA+'?text='+encodeURICompone
     mark('f-name',!name);mark('f-svc',!picked.length);mark('f-where',!where);
     var bad=form.querySelector('.field.bad');if(bad){bad.querySelector('input').focus();return}
     var msg="Hi Cleaning Luna! I'd like a quote.\nName: "+name+'\nCleaning: '+picked.join(', ')+'\nWhere: '+where+(when?'\nWhen: '+when:'')+(notes?'\nNotes: '+notes:'');
-    sentText.textContent=msg;document.getElementById('openWa').href=waLink(msg);
+    sentText.textContent=msg;document.getElementById('thanks').textContent='Thanks, '+name+'. ';document.getElementById('openWa').href=waLink(msg);
     location.href=waLink(msg);
     // if WhatsApp didn't open (desktop, some in-app browsers), show the message and the ways to send it
     setTimeout(function(){sent.hidden=false},900);
