@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-20T01:52:27+00:00",
+  "generatedAt": "2026-10-20T01:54:29.481304+00:00",
   "title": "Design System: Cleaning Luna LLC",
   "extensions": {
     "colorMeta": {
@@ -409,6 +409,14 @@
       "description": "The one floating control and the one shadow; appears after the hero.",
       "html": "<div class=\"ds-stage\"><a class=\"ds-float\" href=\"#\" aria-label=\"Message on WhatsApp\"><svg viewBox=\"0 0 24 24\" width=\"28\" height=\"28\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9z\"/></svg></a></div>",
       "css": ":root{--paper:#f4f6fb;--card:#fff;--field:#e6ecf5;--ink:#0a2350;--navy:#173d7a;--deep:#0a2350;--on-dark:#f4f7fb;--on-dark-soft:#c9d6ea;--gold:#d6a035;--gold-2:#e2b452;--gold-ink:#7f5a12;--soft:#4a5870;--error:#b3261e;--display:'Cal Sans','Avenir Next','Segoe UI',system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;--texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-stage{background:var(--paper);padding:24px;display:flex;justify-content:flex-end}.ds-float{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);box-shadow:0 10px 28px rgba(6,20,46,.3)}.ds-float:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 3px #fff,0 10px 28px rgba(6,20,46,.3)}"
+    },
+    {
+      "name": "Eyebrow Pill",
+      "kind": "label",
+      "refersTo": "eyebrow",
+      "description": "Ellie's house choice (calm band style, 2026-10-19): a quiet 14px label with a gold dot above the hero H1 and one or two section headings. A <p>, never a heading; no arrow, hover or shadow.",
+      "html": "<div class=\"ds-band\"><p class=\"ds-eyebrow\">Big job or small</p></div>",
+      "css": ".ds-eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 14px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.02em;color:#f4f7fb;background:rgba(255,255,255,.12);padding:9px 14px;border-radius:999px;margin:0}.ds-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:#d6a035}"
     }
   ],
   "narrative": {

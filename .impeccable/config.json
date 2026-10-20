@@ -20,6 +20,24 @@
         ],
         "createdAt": "2026-10-20T01:42:14.717Z",
         "reason": "Agent: detector reads only the fixed small UI sizes (14-20px); hierarchy is carried by the clamp()ed Cal Sans h1 (44-84px) and h2 (30-48px) it doesn't count"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "6px",
+        "createdAt": "2026-10-20T01:54:29.327Z",
+        "reason": "Agent: focus-ring corner radius on :focus-visible, copied from the DPG calm reference; not a surface shape"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "20px",
+        "createdAt": "2026-10-20T01:54:29.394Z",
+        "reason": "Agent: upper clamp bound of the hero promise line (17-20px), per ellie-taste 'one-line pitch, 20px max'"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "22px",
+        "createdAt": "2026-10-20T01:54:29.457Z",
+        "reason": "Agent: desktop step-title size, documented in DESIGN.md Numbered Steps (21-22px)"
       }
     ]
   }
